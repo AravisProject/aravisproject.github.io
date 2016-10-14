@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>ArvStream: Aravis Reference Manual</title>
-<meta name="generator" content="DocBook XSL Stylesheets V1.78.1">
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
 <link rel="home" href="index.html" title="Aravis Reference Manual">
 <link rel="up" href="ch04.html" title="Base">
 <link rel="prev" href="ArvDevice.html" title="ArvDevice">
@@ -36,7 +36,7 @@
 </tr></table></div>
 <div class="refsect1">
 <a name="ArvStream.functions"></a><h2>Functions</h2>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="functions_return">
 <col class="functions_name">
@@ -135,7 +135,7 @@
 </div>
 <div class="refsect1">
 <a name="ArvStream.properties"></a><h2>Properties</h2>
-<div class="informaltable"><table border="0">
+<div class="informaltable"><table class="informaltable" border="0">
 <colgroup>
 <col width="150px" class="properties_type">
 <col width="300px" class="properties_name">
@@ -150,7 +150,7 @@
 </div>
 <div class="refsect1">
 <a name="ArvStream.signals"></a><h2>Signals</h2>
-<div class="informaltable"><table border="0">
+<div class="informaltable"><table class="informaltable" border="0">
 <colgroup>
 <col width="150px" class="signals_return">
 <col width="300px" class="signals_name">
@@ -165,7 +165,7 @@
 </div>
 <div class="refsect1">
 <a name="ArvStream.other"></a><h2>Types and Values</h2>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="name">
 <col class="description">
@@ -220,7 +220,7 @@ and will free all the buffers still in its queues when destroyed.</p>
 <p>This method is thread safe.</p>
 <div class="refsect3">
 <a name="arv-stream-push-buffer.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -254,7 +254,7 @@ This function blocks until a buffer is available.</p>
 <p>This method is thread safe.</p>
 <div class="refsect3">
 <a name="arv-stream-pop-buffer.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -286,7 +286,7 @@ This is the non blocking version of pop_buffer.</p>
 <p>This method is thread safe.</p>
 <div class="refsect3">
 <a name="arv-stream-try-pop-buffer.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -319,7 +319,7 @@ may contain an invalid image. Caller should check the buffer status before using
 <p>This method is thread safe.</p>
 <div class="refsect3">
 <a name="arv-stream-timeout-pop-buffer.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -356,7 +356,7 @@ arv_stream_get_n_buffers (<em class="parameter"><code><a class="link" href="ArvS
 <p>An accessor to the stream buffer queue lengths.</p>
 <div class="refsect3">
 <a name="arv-stream-get-n-buffers.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -394,7 +394,7 @@ arv_stream_get_statistics (<em class="parameter"><code><a class="link" href="Arv
 <p>An accessor to the stream statistics.</p>
 <div class="refsect3">
 <a name="arv-stream-get-statistics.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -434,7 +434,7 @@ arv_stream_get_emit_signals (<em class="parameter"><code><a class="link" href="A
 <p>Check if stream will emit its signals.</p>
 <div class="refsect3">
 <a name="arv-stream-get-emit-signals.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -466,7 +466,7 @@ by default disabled because signal emission is expensive and unneeded when
 the application prefers to operate in pull mode.</p>
 <div class="refsect3">
 <a name="arv-stream-set-emit-signals.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -495,7 +495,7 @@ the application prefers to operate in pull mode.</p>
 arv_make_thread_realtime (<em class="parameter"><code><span class="type">int</span> priority</code></em>);</pre>
 <div class="refsect3">
 <a name="arv-make-thread-realtime.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -523,7 +523,7 @@ and if it fails, use rtkit.</p>
 arv_make_thread_high_priority (<em class="parameter"><code><span class="type">int</span> nice_level</code></em>);</pre>
 <div class="refsect3">
 <a name="arv-make-thread-high-priority.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">
@@ -551,7 +551,7 @@ arv_make_thread_high_priority (<em class="parameter"><code><span class="type">in
 <p>Describes when the stream callback is called.</p>
 <div class="refsect3">
 <a name="ArvStreamCallbackType.members"></a><h4>Members</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="300px" class="enum_members_name">
 <col class="enum_members_description">
@@ -621,7 +621,7 @@ user_function (<a class="link" href="ArvStream.html" title="ArvStream"><span cla
 set to <a href="/usr/share/gtk-doc/html/glibglib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>, which it is not by default for performance reasons.</p>
 <div class="refsect3">
 <a name="ArvStream-new-buffer.parameters"></a><h4>Parameters</h4>
-<div class="informaltable"><table width="100%" border="0">
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
 <col class="parameters_description">

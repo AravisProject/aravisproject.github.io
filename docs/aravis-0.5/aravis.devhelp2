@@ -21,7 +21,6 @@
         <sub name="ArvGcPropertyNode" link="ArvGcPropertyNode.html"/>
         <sub name="ArvGcIndexNode" link="ArvGcIndexNode.html"/>
         <sub name="ArvGcInvalidatorNode" link="ArvGcInvalidatorNode.html"/>
-        <sub name="ArvGcVariableNode" link="ArvGcVariableNode.html"/>
         <sub name="ArvGcFeatureNode" link="ArvGcFeatureNode.html"/>
         <sub name="ArvGcRegisterDescriptionNode" link="ArvGcRegisterDescriptionNode.html"/>
         <sub name="ArvGcGroupNode" link="ArvGcGroupNode.html"/>
@@ -95,6 +94,7 @@
     </sub>
   </chapters>
   <functions>
+    <keyword type="macro" name="ARAVIS_CHECK_VERSION()" link="ArvCamera.html#ARAVIS-CHECK-VERSION:CAPS" since="0.6.0"/>
     <keyword type="function" name="arv_auto_from_string ()" link="ArvCamera.html#arv-auto-from-string"/>
     <keyword type="function" name="arv_auto_to_string ()" link="ArvCamera.html#arv-auto-to-string"/>
     <keyword type="function" name="arv_camera_new ()" link="ArvCamera.html#arv-camera-new" since="0.2.0"/>
@@ -169,7 +169,11 @@
     <keyword type="function" name="arv_camera_create_chunk_parser ()" link="ArvCamera.html#arv-camera-create-chunk-parser" since="0.4.0"/>
     <keyword type="function" name="arv_acquisition_mode_to_string ()" link="ArvCamera.html#arv-acquisition-mode-to-string"/>
     <keyword type="function" name="arv_acquisition_mode_from_string ()" link="ArvCamera.html#arv-acquisition-mode-from-string"/>
+    <keyword type="macro" name="ARAVIS_MAJOR_VERSION" link="ArvCamera.html#ARAVIS-MAJOR-VERSION:CAPS" since="0.6.0"/>
+    <keyword type="macro" name="ARAVIS_MICRO_VERSION" link="ArvCamera.html#ARAVIS-MICRO-VERSION:CAPS" since="0.6.0"/>
+    <keyword type="macro" name="ARAVIS_MINOR_VERSION" link="ArvCamera.html#ARAVIS-MINOR-VERSION:CAPS" since="0.6.0"/>
     <keyword type="macro" name="ARAVIS_HAS_PACKET_SOCKET" link="ArvCamera.html#ARAVIS-HAS-PACKET-SOCKET:CAPS" since="0.6.0"/>
+    <keyword type="macro" name="ARAVIS_HAS_USB" link="ArvCamera.html#ARAVIS-HAS-USB:CAPS" since="0.6.0"/>
     <keyword type="enum" name="enum ArvAuto" link="ArvCamera.html#ArvAuto"/>
     <keyword type="struct" name="ArvCamera" link="ArvCamera.html#ArvCamera-struct"/>
     <keyword type="enum" name="enum ArvAcquisitionMode" link="ArvCamera.html#ArvAcquisitionMode"/>
@@ -361,11 +365,13 @@
     <keyword type="function" name="arv_gc_property_node_new_p_minimum ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-p-minimum"/>
     <keyword type="function" name="arv_gc_property_node_new_p_port ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-p-port"/>
     <keyword type="function" name="arv_gc_property_node_new_p_value ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-p-value"/>
+    <keyword type="function" name="arv_gc_property_node_new_p_variable ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-p-variable"/>
     <keyword type="function" name="arv_gc_property_node_new_polling_time ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-polling-time"/>
     <keyword type="function" name="arv_gc_property_node_new_sign ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-sign"/>
     <keyword type="function" name="arv_gc_property_node_new_tooltip ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-tooltip"/>
     <keyword type="function" name="arv_gc_property_node_new_unit ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-unit"/>
     <keyword type="function" name="arv_gc_property_node_new_value ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-value"/>
+    <keyword type="function" name="arv_gc_property_node_get_name ()" link="ArvGcPropertyNode.html#arv-gc-property-node-get-name" since="0.6.0"/>
     <keyword type="function" name="arv_gc_property_node_get_node_type ()" link="ArvGcPropertyNode.html#arv-gc-property-node-get-node-type"/>
     <keyword type="function" name="arv_gc_property_node_get_linked_node ()" link="ArvGcPropertyNode.html#arv-gc-property-node-get-linked-node"/>
     <keyword type="function" name="arv_gc_property_node_get_double ()" link="ArvGcPropertyNode.html#arv-gc-property-node-get-double"/>
@@ -382,9 +388,6 @@
     <keyword type="function" name="arv_gc_invalidator_node_get_modification_count ()" link="ArvGcInvalidatorNode.html#arv-gc-invalidator-node-get-modification-count"/>
     <keyword type="function" name="arv_gc_invalidator_node_set_modification_count ()" link="ArvGcInvalidatorNode.html#arv-gc-invalidator-node-set-modification-count"/>
     <keyword type="struct" name="ArvGcInvalidatorNode" link="ArvGcInvalidatorNode.html#ArvGcInvalidatorNode-struct"/>
-    <keyword type="function" name="arv_gc_variable_node_get_name ()" link="ArvGcVariableNode.html#arv-gc-variable-node-get-name"/>
-    <keyword type="function" name="arv_gc_variable_node_new ()" link="ArvGcVariableNode.html#arv-gc-variable-node-new"/>
-    <keyword type="struct" name="ArvGcVariableNode" link="ArvGcVariableNode.html#ArvGcVariableNode-struct"/>
     <keyword type="function" name="arv_gc_feature_node_new ()" link="ArvGcFeatureNode.html#arv-gc-feature-node-new"/>
     <keyword type="function" name="arv_gc_feature_node_get_value_type ()" link="ArvGcFeatureNode.html#arv-gc-feature-node-get-value-type"/>
     <keyword type="function" name="arv_gc_feature_node_get_value_as_string ()" link="ArvGcFeatureNode.html#arv-gc-feature-node-get-value-as-string"/>
@@ -563,7 +566,6 @@
     <keyword type="struct" name="ArvGvspDataTrailer" link="aravis-ArvGvsp.html#ArvGvspDataTrailer"/>
     <keyword type="struct" name="ArvGvspHeader" link="aravis-ArvGvsp.html#ArvGvspHeader"/>
     <keyword type="struct" name="ArvGvspPacket" link="aravis-ArvGvsp.html#ArvGvspPacket"/>
-    <keyword type="macro" name="ARAVIS_HAS_USB" link="aravis-ArvUvInterface.html#ARAVIS-HAS-USB:CAPS" since="0.6.0"/>
     <keyword type="function" name="arv_uvcp_next_packet_id ()" link="aravis-ArvUvcp.html#arv-uvcp-next-packet-id"/>
     <keyword type="function" name="arv_uvcp_packet_debug ()" link="aravis-ArvUvcp.html#arv-uvcp-packet-debug"/>
     <keyword type="function" name="arv_uvcp_packet_free ()" link="aravis-ArvUvcp.html#arv-uvcp-packet-free"/>
@@ -675,6 +677,10 @@
     <keyword type="function" name="arv_evaluator_new ()" link="ArvEvaluator.html#arv-evaluator-new"/>
     <keyword type="function" name="arv_evaluator_set_expression ()" link="ArvEvaluator.html#arv-evaluator-set-expression"/>
     <keyword type="function" name="arv_evaluator_get_expression ()" link="ArvEvaluator.html#arv-evaluator-get-expression"/>
+    <keyword type="function" name="arv_evaluator_get_constant ()" link="ArvEvaluator.html#arv-evaluator-get-constant" since="0.6.0"/>
+    <keyword type="function" name="arv_evaluator_get_sub_expression ()" link="ArvEvaluator.html#arv-evaluator-get-sub-expression" since="0.6.0"/>
+    <keyword type="function" name="arv_evaluator_set_constant ()" link="ArvEvaluator.html#arv-evaluator-set-constant" since="0.6.0"/>
+    <keyword type="function" name="arv_evaluator_set_sub_expression ()" link="ArvEvaluator.html#arv-evaluator-set-sub-expression" since="0.6.0"/>
     <keyword type="function" name="arv_evaluator_evaluate_as_double ()" link="ArvEvaluator.html#arv-evaluator-evaluate-as-double"/>
     <keyword type="function" name="arv_evaluator_evaluate_as_int64 ()" link="ArvEvaluator.html#arv-evaluator-evaluate-as-int64"/>
     <keyword type="function" name="arv_evaluator_set_double_variable ()" link="ArvEvaluator.html#arv-evaluator-set-double-variable"/>
