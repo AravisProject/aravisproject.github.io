@@ -8,7 +8,7 @@
 <link rel="up" href="ch04.html" title="Base">
 <link rel="prev" href="ArvDevice.html" title="ArvDevice">
 <link rel="next" href="ArvBuffer.html" title="ArvBuffer">
-<meta name="generator" content="GTK-Doc V1.29 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.32 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -16,7 +16,8 @@
 <td width="100%" align="left" class="shortcuts">
 <a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
                   <a href="#ArvStream.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
-                  <a href="#ArvStream.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#ArvStream.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_interfaces">  <span class="dim">|</span> 
+                  <a href="#ArvStream.implemented-interfaces" class="shortcut">Implemented Interfaces</a></span><span id="nav_properties">  <span class="dim">|</span> 
                   <a href="#ArvStream.properties" class="shortcut">Properties</a></span><span id="nav_signals">  <span class="dim">|</span> 
                   <a href="#ArvStream.signals" class="shortcut">Signals</a></span>
 </td>
@@ -38,8 +39,8 @@
 <a name="ArvStream.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_return">
-<col class="functions_name">
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
 </colgroup>
 <tbody>
 <tr>
@@ -156,20 +157,38 @@
 <col width="300px" class="properties_name">
 <col width="200px" class="properties_flags">
 </colgroup>
-<tbody><tr>
+<tbody>
+<tr>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a></td>
+<td class="property_name"><a class="link" href="ArvStream.html#ArvStream--callback" title="The “callback” property">callback</a></td>
+<td class="property_flags">Read / Write / Construct Only</td>
+</tr>
+<tr>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a></td>
+<td class="property_name"><a class="link" href="ArvStream.html#ArvStream--callback-data" title="The “callback-data” property">callback-data</a></td>
+<td class="property_flags">Read / Write / Construct Only</td>
+</tr>
+<tr>
+<td class="property_type">
+<a class="link" href="ArvDevice.html" title="ArvDevice"><span class="type">ArvDevice</span></a> *</td>
+<td class="property_name"><a class="link" href="ArvStream.html#ArvStream--device" title="The “device” property">device</a></td>
+<td class="property_flags">Read / Write / Construct Only</td>
+</tr>
+<tr>
 <td class="property_type"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></td>
 <td class="property_name"><a class="link" href="ArvStream.html#ArvStream--emit-signals" title="The “emit-signals” property">emit-signals</a></td>
 <td class="property_flags">Read / Write</td>
-</tr></tbody>
+</tr>
+</tbody>
 </table></div>
 </div>
 <div class="refsect1">
 <a name="ArvStream.signals"></a><h2>Signals</h2>
 <div class="informaltable"><table class="informaltable" border="0">
 <colgroup>
-<col width="150px" class="signals_return">
-<col width="300px" class="signals_name">
-<col width="200px" class="signals_flags">
+<col width="150px" class="signal_proto_type">
+<col width="300px" class="signal_proto_name">
+<col width="200px" class="signal_proto_flags">
 </colgroup>
 <tbody><tr>
 <td class="signal_type"><span class="returnvalue">void</span></td>
@@ -182,8 +201,8 @@
 <a name="ArvStream.other"></a><h2>Types and Values</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="name">
-<col class="description">
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
 </colgroup>
 <tbody>
 <tr>
@@ -205,6 +224,12 @@
         <span class="lineart">├──</span> <a class="link" href="ArvGvStream.html" title="ArvGvStream">ArvGvStream</a>
         <span class="lineart">╰──</span> <a class="link" href="ArvUvStream.html" title="ArvUvStream">ArvUvStream</a>
 </pre>
+</div>
+<div class="refsect1">
+<a name="ArvStream.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+ArvStream implements
+ <a href="../gio/GInitable.html#GInitable-struct">GInitable</a>.</p>
 </div>
 <div class="refsect1">
 <a name="ArvStream.description"></a><h2>Description</h2>
@@ -680,9 +705,34 @@ arv_stream_get_statistics (<em class="parameter"><code><a class="link" href="Arv
 <div class="refsect1">
 <a name="ArvStream.property-details"></a><h2>Property Details</h2>
 <div class="refsect2">
+<a name="ArvStream--callback"></a><h3>The <code class="literal">“callback”</code> property</h3>
+<pre class="programlisting">  “callback”                 <a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a></pre>
+<p>Optional user callback.</p>
+<p>Owner: ArvStream</p>
+<p>Flags: Read / Write / Construct Only</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ArvStream--callback-data"></a><h3>The <code class="literal">“callback-data”</code> property</h3>
+<pre class="programlisting">  “callback-data”            <a href="../glib/glib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a></pre>
+<p>Optional user callback data.</p>
+<p>Owner: ArvStream</p>
+<p>Flags: Read / Write / Construct Only</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ArvStream--device"></a><h3>The <code class="literal">“device”</code> property</h3>
+<pre class="programlisting">  “device”                   <a class="link" href="ArvDevice.html" title="ArvDevice"><span class="type">ArvDevice</span></a> *</pre>
+<p>A ArvDevice parent object.</p>
+<p>Owner: ArvStream</p>
+<p>Flags: Read / Write / Construct Only</p>
+</div>
+<hr>
+<div class="refsect2">
 <a name="ArvStream--emit-signals"></a><h3>The <code class="literal">“emit-signals”</code> property</h3>
 <pre class="programlisting">  “emit-signals”             <a href="../glib/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a></pre>
 <p>Emit signals.</p>
+<p>Owner: ArvStream</p>
 <p>Flags: Read / Write</p>
 <p>Default value: FALSE</p>
 </div>
@@ -728,6 +778,6 @@ set to <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="litera
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.29</div>
+<hr>Generated by GTK-Doc V1.32</div>
 </body>
 </html>

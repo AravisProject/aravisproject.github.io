@@ -8,7 +8,7 @@
 <link rel="up" href="ch06.html" title="Ethernet cameras">
 <link rel="prev" href="ArvGvDevice.html" title="ArvGvDevice">
 <link rel="next" href="ArvGvFakeCamera.html" title="ArvGvFakeCamera">
-<meta name="generator" content="GTK-Doc V1.29 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.32 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -16,7 +16,8 @@
 <td width="100%" align="left" class="shortcuts">
 <a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
                   <a href="#ArvGvStream.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
-                  <a href="#ArvGvStream.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#ArvGvStream.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_interfaces">  <span class="dim">|</span> 
+                  <a href="#ArvGvStream.implemented-interfaces" class="shortcut">Implemented Interfaces</a></span><span id="nav_properties">  <span class="dim">|</span> 
                   <a href="#ArvGvStream.properties" class="shortcut">Properties</a></span>
 </td>
 <td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
@@ -37,8 +38,8 @@
 <a name="ArvGvStream.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_return">
-<col class="functions_name">
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
 </colgroup>
 <tbody>
 <tr>
@@ -106,8 +107,8 @@
 <a name="ArvGvStream.other"></a><h2>Types and Values</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="name">
-<col class="description">
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
 </colgroup>
 <tbody>
 <tr>
@@ -137,6 +138,12 @@
 </pre>
 </div>
 <div class="refsect1">
+<a name="ArvGvStream.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+ArvGvStream implements
+ <a href="../gio/GInitable.html#GInitable-struct">GInitable</a>.</p>
+</div>
+<div class="refsect1">
 <a name="ArvGvStream.description"></a><h2>Description</h2>
 </div>
 <div class="refsect1">
@@ -153,6 +160,33 @@ arv_gv_stream_get_port (<em class="parameter"><code><a class="link" href="ArvGvS
 arv_gv_stream_get_statistics (<em class="parameter"><code><a class="link" href="ArvGvStream.html" title="ArvGvStream"><span class="type">ArvGvStream</span></a> *gv_stream</code></em>,
                               <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint64"><span class="type">guint64</span></a> *n_resent_packets</code></em>,
                               <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint64"><span class="type">guint64</span></a> *n_missing_packets</code></em>);</pre>
+<div class="refsect3">
+<a name="arv-gv-stream-get-statistics.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>gv_stream</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ArvGvStream.html" title="ArvGvStream"><span class="type">ArvGvStream</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>n_resent_packets</p></td>
+<td class="parameter_description"><p>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>n_missing_packets</p></td>
+<td class="parameter_description"><p>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
 </div>
 </div>
 <div class="refsect1">
@@ -258,8 +292,8 @@ arv_gv_stream_get_statistics (<em class="parameter"><code><a class="link" href="
 <a name="ArvGvStream--frame-retention"></a><h3>The <code class="literal">“frame-retention”</code> property</h3>
 <pre class="programlisting">  “frame-retention”          <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
 <p>Packet retention, in µs.</p>
+<p>Owner: ArvGvStream</p>
 <p>Flags: Read / Write</p>
-<p>Allowed values: [1000,10000000]</p>
 <p>Default value: 200000</p>
 </div>
 <hr>
@@ -267,6 +301,7 @@ arv_gv_stream_get_statistics (<em class="parameter"><code><a class="link" href="
 <a name="ArvGvStream--packet-request-ratio"></a><h3>The <code class="literal">“packet-request-ratio”</code> property</h3>
 <pre class="programlisting">  “packet-request-ratio”     <a href="../glib/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a></pre>
 <p>Packet resend request limit as a percentage of frame packet number.</p>
+<p>Owner: ArvGvStream</p>
 <p>Flags: Read / Write</p>
 <p>Allowed values: [0,2]</p>
 <p>Default value: 0.1</p>
@@ -276,6 +311,7 @@ arv_gv_stream_get_statistics (<em class="parameter"><code><a class="link" href="
 <a name="ArvGvStream--packet-resend"></a><h3>The <code class="literal">“packet-resend”</code> property</h3>
 <pre class="programlisting">  “packet-resend”            <a class="link" href="ArvGvStream.html#ArvGvStreamPacketResend" title="enum ArvGvStreamPacketResend"><span class="type">ArvGvStreamPacketResend</span></a></pre>
 <p>Packet resend behaviour.</p>
+<p>Owner: ArvGvStream</p>
 <p>Flags: Read / Write</p>
 <p>Default value: ARV_GV_STREAM_PACKET_RESEND_ALWAYS</p>
 </div>
@@ -284,8 +320,8 @@ arv_gv_stream_get_statistics (<em class="parameter"><code><a class="link" href="
 <a name="ArvGvStream--packet-timeout"></a><h3>The <code class="literal">“packet-timeout”</code> property</h3>
 <pre class="programlisting">  “packet-timeout”           <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
 <p>Packet timeout, in µs.</p>
+<p>Owner: ArvGvStream</p>
 <p>Flags: Read / Write</p>
-<p>Allowed values: [1000,10000000]</p>
 <p>Default value: 40000</p>
 </div>
 <hr>
@@ -293,6 +329,7 @@ arv_gv_stream_get_statistics (<em class="parameter"><code><a class="link" href="
 <a name="ArvGvStream--socket-buffer"></a><h3>The <code class="literal">“socket-buffer”</code> property</h3>
 <pre class="programlisting">  “socket-buffer”            <a class="link" href="ArvGvStream.html#ArvGvStreamSocketBuffer" title="enum ArvGvStreamSocketBuffer"><span class="type">ArvGvStreamSocketBuffer</span></a></pre>
 <p>Socket buffer behaviour.</p>
+<p>Owner: ArvGvStream</p>
 <p>Flags: Read / Write</p>
 <p>Default value: ARV_GV_STREAM_SOCKET_BUFFER_AUTO</p>
 </div>
@@ -301,6 +338,7 @@ arv_gv_stream_get_statistics (<em class="parameter"><code><a class="link" href="
 <a name="ArvGvStream--socket-buffer-size"></a><h3>The <code class="literal">“socket-buffer-size”</code> property</h3>
 <pre class="programlisting">  “socket-buffer-size”       <a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a></pre>
 <p>Socket buffer size, in bytes.</p>
+<p>Owner: ArvGvStream</p>
 <p>Flags: Read / Write</p>
 <p>Allowed values: &gt;= -1</p>
 <p>Default value: 0</p>
@@ -308,6 +346,6 @@ arv_gv_stream_get_statistics (<em class="parameter"><code><a class="link" href="
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.29</div>
+<hr>Generated by GTK-Doc V1.32</div>
 </body>
 </html>

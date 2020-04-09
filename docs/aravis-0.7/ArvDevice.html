@@ -8,7 +8,7 @@
 <link rel="up" href="ch04.html" title="Base">
 <link rel="prev" href="ArvInterface.html" title="ArvInterface">
 <link rel="next" href="ArvStream.html" title="ArvStream">
-<meta name="generator" content="GTK-Doc V1.29 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.32 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -16,7 +16,8 @@
 <td width="100%" align="left" class="shortcuts">
 <a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
                   <a href="#ArvDevice.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
-                  <a href="#ArvDevice.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_signals">  <span class="dim">|</span> 
+                  <a href="#ArvDevice.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_interfaces">  <span class="dim">|</span> 
+                  <a href="#ArvDevice.implemented-interfaces" class="shortcut">Implemented Interfaces</a></span><span id="nav_signals">  <span class="dim">|</span> 
                   <a href="#ArvDevice.signals" class="shortcut">Signals</a></span>
 </td>
 <td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
@@ -37,8 +38,8 @@
 <a name="ArvDevice.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_return">
-<col class="functions_name">
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
 </colgroup>
 <tbody>
 <tr>
@@ -110,6 +111,14 @@
 </td>
 <td class="function_name">
 <a class="link" href="ArvDevice.html#arv-device-get-feature" title="arv_device_get_feature ()">arv_device_get_feature</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="ArvDevice.html#arv-device-is-feature-available" title="arv_device_is_feature_available ()">arv_device_is_feature_available</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -212,21 +221,29 @@
 <a href="../glib/glib-Basic-Types.html#gint64"><span class="returnvalue">gint64</span></a> *
 </td>
 <td class="function_name">
-<a class="link" href="ArvDevice.html#arv-device-get-available-enumeration-feature-values" title="arv_device_get_available_enumeration_feature_values ()">arv_device_get_available_enumeration_feature_values</a> <span class="c_punctuation">()</span>
+<a class="link" href="ArvDevice.html#arv-device-dup-available-enumeration-feature-values" title="arv_device_dup_available_enumeration_feature_values ()">arv_device_dup_available_enumeration_feature_values</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
 <td class="function_type">const <span class="returnvalue">char</span> **
 </td>
 <td class="function_name">
-<a class="link" href="ArvDevice.html#arv-device-get-available-enumeration-feature-values-as-strings" title="arv_device_get_available_enumeration_feature_values_as_strings ()">arv_device_get_available_enumeration_feature_values_as_strings</a> <span class="c_punctuation">()</span>
+<a class="link" href="ArvDevice.html#arv-device-dup-available-enumeration-feature-values-as-strings" title="arv_device_dup_available_enumeration_feature_values_as_strings ()">arv_device_dup_available_enumeration_feature_values_as_strings</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
 <td class="function_type">const <span class="returnvalue">char</span> **
 </td>
 <td class="function_name">
-<a class="link" href="ArvDevice.html#arv-device-get-available-enumeration-feature-values-as-display-names" title="arv_device_get_available_enumeration_feature_values_as_display_names ()">arv_device_get_available_enumeration_feature_values_as_display_names</a> <span class="c_punctuation">()</span>
+<a class="link" href="ArvDevice.html#arv-device-dup-available-enumeration-feature-values-as-display-names" title="arv_device_dup_available_enumeration_feature_values_as_display_names ()">arv_device_dup_available_enumeration_feature_values_as_display_names</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="ArvDevice.html#arv-device-set-features-from-string" title="arv_device_set_features_from_string ()">arv_device_set_features_from_string</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -244,9 +261,9 @@
 <a name="ArvDevice.signals"></a><h2>Signals</h2>
 <div class="informaltable"><table class="informaltable" border="0">
 <colgroup>
-<col width="150px" class="signals_return">
-<col width="300px" class="signals_name">
-<col width="200px" class="signals_flags">
+<col width="150px" class="signal_proto_type">
+<col width="300px" class="signal_proto_name">
+<col width="200px" class="signal_proto_flags">
 </colgroup>
 <tbody><tr>
 <td class="signal_type"><span class="returnvalue">void</span></td>
@@ -259,13 +276,23 @@
 <a name="ArvDevice.other"></a><h2>Types and Values</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="name">
-<col class="description">
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
 </colgroup>
-<tbody><tr>
+<tbody>
+<tr>
+<td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="ArvDevice.html#ARV-DEVICE-ERROR:CAPS" title="ARV_DEVICE_ERROR">ARV_DEVICE_ERROR</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="ArvDevice.html#ArvDeviceError" title="enum ArvDeviceError">ArvDeviceError</a></td>
+</tr>
+<tr>
 <td class="datatype_keyword"> </td>
 <td class="function_name"><a class="link" href="ArvDevice.html#ArvDevice-struct" title="ArvDevice">ArvDevice</a></td>
-</tr></tbody>
+</tr>
+</tbody>
 </table></div>
 </div>
 <div class="refsect1">
@@ -276,6 +303,12 @@
         <span class="lineart">├──</span> <a class="link" href="ArvGvDevice.html" title="ArvGvDevice">ArvGvDevice</a>
         <span class="lineart">╰──</span> <a class="link" href="ArvUvDevice.html" title="ArvUvDevice">ArvUvDevice</a>
 </pre>
+</div>
+<div class="refsect1">
+<a name="ArvDevice.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+ArvDevice implements
+ <a href="../gio/GInitable.html#GInitable-struct">GInitable</a>.</p>
 </div>
 <div class="refsect1">
 <a name="ArvDevice.description"></a><h2>Description</h2>
@@ -290,7 +323,8 @@ advanced uses.</p>
 <pre class="programlisting"><a class="link" href="ArvStream.html" title="ArvStream"><span class="returnvalue">ArvStream</span></a> *
 arv_device_create_stream (<em class="parameter"><code><a class="link" href="ArvDevice.html" title="ArvDevice"><span class="type">ArvDevice</span></a> *device</code></em>,
                           <em class="parameter"><code><a class="link" href="ArvStream.html#ArvStreamCallback" title="ArvStreamCallback ()"><span class="type">ArvStreamCallback</span></a> callback</code></em>,
-                          <em class="parameter"><code><span class="type">void</span> *user_data</code></em>);</pre>
+                          <em class="parameter"><code><span class="type">void</span> *user_data</code></em>,
+                          <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
 <p>Creates a new <a class="link" href="ArvStream.html" title="ArvStream"><span class="type">ArvStream</span></a> for video stream handling. See
 <em class="parameter"><code>ArvStreamCallback</code></em>
  for details regarding the callback function.</p>
@@ -318,6 +352,11 @@ arv_device_create_stream (<em class="parameter"><code><a class="link" href="ArvD
 <td class="parameter_description"><p>user data for <em class="parameter"><code>callback</code></em>
 . </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>][<acronym title="This parameter is a 'user_data', for callbacks; many bindings can pass NULL here."><span class="acronym">closure</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>a <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> placeholder, <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</p></td>
+<td class="parameter_annotations"> </td>
 </tr>
 </tbody>
 </table></div>
@@ -587,7 +626,7 @@ arv_device_get_genicam_xml (<em class="parameter"><code><a class="link" href="Ar
 </tr>
 <tr>
 <td class="parameter_name"><p>size</p></td>
-<td class="parameter_description"><p>placeholder for the returned data size (bytes) // BUG: (skip) seems ignored. </p></td>
+<td class="parameter_description"><p>placeholder for the returned data size (bytes). </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
 </tr>
 </tbody>
@@ -662,6 +701,43 @@ arv_device_get_feature (<em class="parameter"><code><a class="link" href="ArvDev
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 <p class="since">Since: <a class="link" href="ix02.html#api-index-0.2.0">0.2.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="arv-device-is-feature-available"></a><h3>arv_device_is_feature_available ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+arv_device_is_feature_available (<em class="parameter"><code><a class="link" href="ArvDevice.html" title="ArvDevice"><span class="type">ArvDevice</span></a> *device</code></em>,
+                                 <em class="parameter"><code>const <span class="type">char</span> *feature</code></em>,
+                                 <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Return: <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if feature is available, <a href="../glib/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if not or on error.</p>
+<div class="refsect3">
+<a name="arv-device-is-feature-available.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>device</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ArvDevice.html" title="ArvDevice"><span class="type">ArvDevice</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>feature</p></td>
+<td class="parameter_description"><p>feature name</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>a <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> placeholder, <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="ix05.html#api-index-0.8.0">0.8.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1175,9 +1251,9 @@ arv_device_get_float_feature_bounds (<em class="parameter"><code><a class="link"
 </div>
 <hr>
 <div class="refsect2">
-<a name="arv-device-get-available-enumeration-feature-values"></a><h3>arv_device_get_available_enumeration_feature_values ()</h3>
+<a name="arv-device-dup-available-enumeration-feature-values"></a><h3>arv_device_dup_available_enumeration_feature_values ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gint64"><span class="returnvalue">gint64</span></a> *
-arv_device_get_available_enumeration_feature_values
+arv_device_dup_available_enumeration_feature_values
                                (<em class="parameter"><code><a class="link" href="ArvDevice.html" title="ArvDevice"><span class="type">ArvDevice</span></a> *device</code></em>,
                                 <em class="parameter"><code>const <span class="type">char</span> *feature</code></em>,
                                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> *n_values</code></em>,
@@ -1185,7 +1261,7 @@ arv_device_get_available_enumeration_feature_values
 <p>Get all the available values of <em class="parameter"><code>feature</code></em>
 , as integers.</p>
 <div class="refsect3">
-<a name="arv-device-get-available-enumeration-feature-values.parameters"></a><h4>Parameters</h4>
+<a name="arv-device-dup-available-enumeration-feature-values.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1217,7 +1293,7 @@ arv_device_get_available_enumeration_feature_values
 </table></div>
 </div>
 <div class="refsect3">
-<a name="arv-device-get-available-enumeration-feature-values.returns"></a><h4>Returns</h4>
+<a name="arv-device-dup-available-enumeration-feature-values.returns"></a><h4>Returns</h4>
 <p>a newly created array of 64 bit integers, which must freed after use using g_free,
 or NULL on error. </p>
 <p><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=n_values][<acronym title="Free data container after the code is done."><span class="acronym">transfer container</span></acronym>]</span></p>
@@ -1226,9 +1302,9 @@ or NULL on error. </p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="arv-device-get-available-enumeration-feature-values-as-strings"></a><h3>arv_device_get_available_enumeration_feature_values_as_strings ()</h3>
+<a name="arv-device-dup-available-enumeration-feature-values-as-strings"></a><h3>arv_device_dup_available_enumeration_feature_values_as_strings ()</h3>
 <pre class="programlisting">const <span class="returnvalue">char</span> **
-arv_device_get_available_enumeration_feature_values_as_strings
+arv_device_dup_available_enumeration_feature_values_as_strings
                                (<em class="parameter"><code><a class="link" href="ArvDevice.html" title="ArvDevice"><span class="type">ArvDevice</span></a> *device</code></em>,
                                 <em class="parameter"><code>const <span class="type">char</span> *feature</code></em>,
                                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> *n_values</code></em>,
@@ -1236,7 +1312,7 @@ arv_device_get_available_enumeration_feature_values_as_strings
 <p>Get all the available values of <em class="parameter"><code>feature</code></em>
 , as strings.</p>
 <div class="refsect3">
-<a name="arv-device-get-available-enumeration-feature-values-as-strings.parameters"></a><h4>Parameters</h4>
+<a name="arv-device-dup-available-enumeration-feature-values-as-strings.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1268,7 +1344,7 @@ arv_device_get_available_enumeration_feature_values_as_strings
 </table></div>
 </div>
 <div class="refsect3">
-<a name="arv-device-get-available-enumeration-feature-values-as-strings.returns"></a><h4>Returns</h4>
+<a name="arv-device-dup-available-enumeration-feature-values-as-strings.returns"></a><h4>Returns</h4>
 <p>a newly created array of const strings, which must freed after use using g_free,
 or NULL on error. </p>
 <p><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=n_values][<acronym title="Free data container after the code is done."><span class="acronym">transfer container</span></acronym>]</span></p>
@@ -1277,9 +1353,9 @@ or NULL on error. </p>
 </div>
 <hr>
 <div class="refsect2">
-<a name="arv-device-get-available-enumeration-feature-values-as-display-names"></a><h3>arv_device_get_available_enumeration_feature_values_as_display_names ()</h3>
+<a name="arv-device-dup-available-enumeration-feature-values-as-display-names"></a><h3>arv_device_dup_available_enumeration_feature_values_as_display_names ()</h3>
 <pre class="programlisting">const <span class="returnvalue">char</span> **
-arv_device_get_available_enumeration_feature_values_as_display_names
+arv_device_dup_available_enumeration_feature_values_as_display_names
                                (<em class="parameter"><code><a class="link" href="ArvDevice.html" title="ArvDevice"><span class="type">ArvDevice</span></a> *device</code></em>,
                                 <em class="parameter"><code>const <span class="type">char</span> *feature</code></em>,
                                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> *n_values</code></em>,
@@ -1287,7 +1363,7 @@ arv_device_get_available_enumeration_feature_values_as_display_names
 <p>Get display names of all the available entries of <em class="parameter"><code>feature</code></em>
 .</p>
 <div class="refsect3">
-<a name="arv-device-get-available-enumeration-feature-values-as-display-names.parameters"></a><h4>Parameters</h4>
+<a name="arv-device-dup-available-enumeration-feature-values-as-display-names.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
 <col width="150px" class="parameters_name">
@@ -1319,10 +1395,59 @@ arv_device_get_available_enumeration_feature_values_as_display_names
 </table></div>
 </div>
 <div class="refsect3">
-<a name="arv-device-get-available-enumeration-feature-values-as-display-names.returns"></a><h4>Returns</h4>
+<a name="arv-device-dup-available-enumeration-feature-values-as-display-names.returns"></a><h4>Returns</h4>
 <p>a newly created array of const strings, to be freed after use using g_free, or
 <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> on error. </p>
 <p><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=n_values][<acronym title="Free data container after the code is done."><span class="acronym">transfer container</span></acronym>]</span></p>
+</div>
+<p class="since">Since: <a class="link" href="ix05.html#api-index-0.8.0">0.8.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="arv-device-set-features-from-string"></a><h3>arv_device_set_features_from_string ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+arv_device_set_features_from_string (<em class="parameter"><code><a class="link" href="ArvDevice.html" title="ArvDevice"><span class="type">ArvDevice</span></a> *device</code></em>,
+                                     <em class="parameter"><code>const <span class="type">char</span> *string</code></em>,
+                                     <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Set features from a string containing a list of space separated feature assignments or command names. For example:</p>
+<div class="informalexample">
+  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td class="listing_lines" align="right"><pre>1</pre></td>
+        <td class="listing_code"><pre class="programlisting"><span class="n">arv_device_set_features_from_string</span> <span class="p">(</span><span class="n">device</span><span class="p">,</span> <span class="s">&quot;Width=256 Height=256 PixelFormat=&#39;Mono8&#39; TriggerStart&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">error</span><span class="p">);</span></pre></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p></p>
+<div class="refsect3">
+<a name="arv-device-set-features-from-string.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>device</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ArvDevice.html" title="ArvDevice"><span class="type">ArvDevice</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>string</p></td>
+<td class="parameter_description"><p>a space separated list of features assignments</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>a <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> placeholder, <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
 </div>
 <p class="since">Since: <a class="link" href="ix05.html#api-index-0.8.0">0.8.0</a></p>
 </div>
@@ -1332,10 +1457,130 @@ arv_device_get_available_enumeration_feature_values_as_display_names
 <pre class="programlisting"><span class="returnvalue">void</span>
 arv_device_set_register_cache_policy (<em class="parameter"><code><a class="link" href="ArvDevice.html" title="ArvDevice"><span class="type">ArvDevice</span></a> *device</code></em>,
                                       <em class="parameter"><code><a class="link" href="ArvGc.html#ArvRegisterCachePolicy" title="enum ArvRegisterCachePolicy"><span class="type">ArvRegisterCachePolicy</span></a> policy</code></em>);</pre>
+<p>Sets the register cache policy.</p>
+<div class="warning"><p>Be aware that some camera may have wrong Cachable properties defined in their Genicam metadata, which may
+lead to incorrect readouts. Using the debug cache policy, and activating genicam debug output (export ARV_DEBUG=genicam), can help you to
+check the cache validity. In this mode, every time the cache content is not in sync with the actual register value, a debug message is
+printed on the console.</p></div>
+<div class="refsect3">
+<a name="arv-device-set-register-cache-policy.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>device</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ArvDevice.html" title="ArvDevice"><span class="type">ArvDevice</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>policy</p></td>
+<td class="parameter_description"><p>cache policy</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="ix05.html#api-index-0.8.0">0.8.0</a></p>
 </div>
 </div>
 <div class="refsect1">
 <a name="ArvDevice.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="ARV-DEVICE-ERROR:CAPS"></a><h3>ARV_DEVICE_ERROR</h3>
+<pre class="programlisting">#define ARV_DEVICE_ERROR arv_device_error_quark()
+</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ArvDeviceError"></a><h3>enum ArvDeviceError</h3>
+<div class="refsect3">
+<a name="ArvDeviceError.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="ARV-DEVICE-ERROR-WRONG-FEATURE:CAPS"></a>ARV_DEVICE_ERROR_WRONG_FEATURE</p></td>
+<td class="enum_member_description">
+<p>Wrong feature type</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="ARV-DEVICE-ERROR-FEATURE-NOT-FOUND:CAPS"></a>ARV_DEVICE_ERROR_FEATURE_NOT_FOUND</p></td>
+<td class="enum_member_description">
+<p>Feature node not found</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="ARV-DEVICE-ERROR-NOT-CONNECTED:CAPS"></a>ARV_DEVICE_ERROR_NOT_CONNECTED</p></td>
+<td class="enum_member_description">
+<p>Device is not connected</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="ARV-DEVICE-ERROR-PROTOCOL-ERROR:CAPS"></a>ARV_DEVICE_ERROR_PROTOCOL_ERROR</p></td>
+<td class="enum_member_description">
+<p>Protocol error</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="ARV-DEVICE-ERROR-TRANSFER-ERROR:CAPS"></a>ARV_DEVICE_ERROR_TRANSFER_ERROR</p></td>
+<td class="enum_member_description">
+<p>Transfer error</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="ARV-DEVICE-ERROR-TIMEOUT:CAPS"></a>ARV_DEVICE_ERROR_TIMEOUT</p></td>
+<td class="enum_member_description">
+<p>Timeout detected</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="ARV-DEVICE-ERROR-NOT-FOUND:CAPS"></a>ARV_DEVICE_ERROR_NOT_FOUND</p></td>
+<td class="enum_member_description">
+<p>Device not found</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="ARV-DEVICE-ERROR-INVALID-PARAMETER:CAPS"></a>ARV_DEVICE_ERROR_INVALID_PARAMETER</p></td>
+<td class="enum_member_description">
+<p>Invalid construction parameter</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="ARV-DEVICE-ERROR-GENICAM-NOT-FOUND:CAPS"></a>ARV_DEVICE_ERROR_GENICAM_NOT_FOUND</p></td>
+<td class="enum_member_description">
+<p>Missing Genicam data</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="ARV-DEVICE-ERROR-UNKNOWN:CAPS"></a>ARV_DEVICE_ERROR_UNKNOWN</p></td>
+<td class="enum_member_description">
+<p>Unknown error</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
 <div class="refsect2">
 <a name="ArvDevice-struct"></a><h3>ArvDevice</h3>
 <pre class="programlisting">typedef struct _ArvDevice ArvDevice;</pre>
@@ -1379,6 +1624,6 @@ so please take care to shared data access from the callback.</p>
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.29</div>
+<hr>Generated by GTK-Doc V1.32</div>
 </body>
 </html>

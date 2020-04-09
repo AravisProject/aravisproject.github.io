@@ -8,7 +8,7 @@
 <link rel="up" href="ch08.html" title="Fake cameras">
 <link rel="prev" href="ArvFakeInterface.html" title="ArvFakeInterface">
 <link rel="next" href="ArvFakeStream.html" title="ArvFakeStream">
-<meta name="generator" content="GTK-Doc V1.29 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.32 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -16,7 +16,9 @@
 <td width="100%" align="left" class="shortcuts">
 <a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
                   <a href="#ArvFakeDevice.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
-                  <a href="#ArvFakeDevice.object-hierarchy" class="shortcut">Object Hierarchy</a></span>
+                  <a href="#ArvFakeDevice.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_interfaces">  <span class="dim">|</span> 
+                  <a href="#ArvFakeDevice.implemented-interfaces" class="shortcut">Implemented Interfaces</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#ArvFakeDevice.properties" class="shortcut">Properties</a></span>
 </td>
 <td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
 <td><a accesskey="u" href="ch08.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
@@ -36,8 +38,8 @@
 <a name="ArvFakeDevice.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_return">
-<col class="functions_name">
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
 </colgroup>
 <tbody>
 <tr>
@@ -60,11 +62,27 @@
 </table></div>
 </div>
 <div class="refsect1">
+<a name="ArvFakeDevice.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table class="informaltable" border="0">
+<colgroup>
+<col width="150px" class="properties_type">
+<col width="300px" class="properties_name">
+<col width="200px" class="properties_flags">
+</colgroup>
+<tbody><tr>
+<td class="property_type">
+<a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</td>
+<td class="property_name"><a class="link" href="ArvFakeDevice.html#ArvFakeDevice--serial-number" title="The “serial-number” property">serial-number</a></td>
+<td class="property_flags">Write / Construct Only</td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
 <a name="ArvFakeDevice.other"></a><h2>Types and Values</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="name">
-<col class="description">
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
 </colgroup>
 <tbody><tr>
 <td class="datatype_keyword"> </td>
@@ -80,6 +98,12 @@
 </pre>
 </div>
 <div class="refsect1">
+<a name="ArvFakeDevice.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+ArvFakeDevice implements
+ <a href="../gio/GInitable.html#GInitable-struct">GInitable</a>.</p>
+</div>
+<div class="refsect1">
 <a name="ArvFakeDevice.description"></a><h2>Description</h2>
 </div>
 <div class="refsect1">
@@ -87,7 +111,35 @@
 <div class="refsect2">
 <a name="arv-fake-device-new"></a><h3>arv_fake_device_new ()</h3>
 <pre class="programlisting"><a class="link" href="ArvDevice.html" title="ArvDevice"><span class="returnvalue">ArvDevice</span></a> *
-arv_fake_device_new (<em class="parameter"><code>const <span class="type">char</span> *serial_number</code></em>);</pre>
+arv_fake_device_new (<em class="parameter"><code>const <span class="type">char</span> *serial_number</code></em>,
+                     <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="refsect3">
+<a name="arv-fake-device-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>serial_number</p></td>
+<td class="parameter_description"><p>fake device serial number</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>a <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> placeholder, <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="arv-fake-device-new.returns"></a><h4>Returns</h4>
+<p> a newly created <a class="link" href="ArvDevice.html" title="ArvDevice"><span class="type">ArvDevice</span></a> simulating a real device</p>
+</div>
+<p class="since">Since: <a class="link" href="ix05.html#api-index-0.8.0">0.8.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -114,6 +166,7 @@ arv_fake_device_get_fake_camera (<em class="parameter"><code><a class="link" hre
 <p>the <a class="link" href="ArvFakeCamera.html" title="ArvFakeCamera"><span class="type">ArvFakeCamera</span></a> used by this device instance. </p>
 <p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
+<p class="since">Since: <a class="link" href="ix05.html#api-index-0.8.0">0.8.0</a></p>
 </div>
 </div>
 <div class="refsect1">
@@ -123,8 +176,19 @@ arv_fake_device_get_fake_camera (<em class="parameter"><code><a class="link" hre
 <pre class="programlisting">typedef struct _ArvFakeDevice ArvFakeDevice;</pre>
 </div>
 </div>
+<div class="refsect1">
+<a name="ArvFakeDevice.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="ArvFakeDevice--serial-number"></a><h3>The <code class="literal">“serial-number”</code> property</h3>
+<pre class="programlisting">  “serial-number”            <a href="../glib/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *</pre>
+<p>Fake device serial number.</p>
+<p>Owner: ArvFakeDevice</p>
+<p>Flags: Write / Construct Only</p>
+<p>Default value: NULL</p>
+</div>
+</div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.29</div>
+<hr>Generated by GTK-Doc V1.32</div>
 </body>
 </html>

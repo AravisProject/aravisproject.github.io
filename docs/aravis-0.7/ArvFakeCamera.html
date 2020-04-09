@@ -8,7 +8,7 @@
 <link rel="up" href="ch08.html" title="Fake cameras">
 <link rel="prev" href="ArvFakeStream.html" title="ArvFakeStream">
 <link rel="next" href="ch09.html" title="DOM">
-<meta name="generator" content="GTK-Doc V1.29 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.32 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -36,8 +36,8 @@
 <a name="ArvFakeCamera.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_return">
-<col class="functions_name">
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
 </colgroup>
 <tbody>
 <tr>
@@ -206,8 +206,8 @@
 <a name="ArvFakeCamera.other"></a><h2>Types and Values</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="name">
-<col class="description">
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
 </colgroup>
 <tbody><tr>
 <td class="datatype_keyword"> </td>
@@ -266,6 +266,37 @@ arv_fake_camera_write_memory (<em class="parameter"><code><a class="link" href="
 arv_fake_camera_read_register (<em class="parameter"><code><a class="link" href="ArvFakeCamera.html" title="ArvFakeCamera"><span class="type">ArvFakeCamera</span></a> *camera</code></em>,
                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> address</code></em>,
                                <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *value</code></em>);</pre>
+<div class="refsect3">
+<a name="arv-fake-camera-read-register.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>camera</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ArvFakeCamera.html" title="ArvFakeCamera"><span class="type">ArvFakeCamera</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>address</p></td>
+<td class="parameter_description"><p>the register address</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>value</p></td>
+<td class="parameter_description"><p>the register value. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="arv-fake-camera-read-register.returns"></a><h4>Returns</h4>
+<p> true if the read succeeded, false otherwise</p>
+</div>
 </div>
 <hr>
 <div class="refsect2">
@@ -288,6 +319,32 @@ arv_fake_camera_wait_for_next_frame (<em class="parameter"><code><a class="link"
 arv_fake_camera_get_sleep_time_for_next_frame
                                (<em class="parameter"><code><a class="link" href="ArvFakeCamera.html" title="ArvFakeCamera"><span class="type">ArvFakeCamera</span></a> *camera</code></em>,
                                 <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint64"><span class="type">guint64</span></a> *next_timestamp_us</code></em>);</pre>
+<div class="refsect3">
+<a name="arv-fake-camera-get-sleep-time-for-next-frame.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>camera</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ArvFakeCamera.html" title="ArvFakeCamera"><span class="type">ArvFakeCamera</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>next_timestamp_us</p></td>
+<td class="parameter_description"><p>the timestamp for the next frame in microseconds. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="arv-fake-camera-get-sleep-time-for-next-frame.returns"></a><h4>Returns</h4>
+<p> the sleep time for the next frame</p>
+</div>
 </div>
 <hr>
 <div class="refsect2">
@@ -296,6 +353,34 @@ arv_fake_camera_get_sleep_time_for_next_frame
 arv_fake_camera_fill_buffer (<em class="parameter"><code><a class="link" href="ArvFakeCamera.html" title="ArvFakeCamera"><span class="type">ArvFakeCamera</span></a> *camera</code></em>,
                              <em class="parameter"><code><a class="link" href="ArvBuffer.html" title="ArvBuffer"><span class="type">ArvBuffer</span></a> *buffer</code></em>,
                              <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *packet_size</code></em>);</pre>
+<p>Fill a buffer with data from the fake camera.</p>
+<div class="refsect3">
+<a name="arv-fake-camera-fill-buffer.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>camera</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ArvFakeCamera.html" title="ArvFakeCamera"><span class="type">ArvFakeCamera</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>buffer</p></td>
+<td class="parameter_description"><p>the <a class="link" href="ArvBuffer.html" title="ArvBuffer"><span class="type">ArvBuffer</span></a> to fill</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>packet_size</p></td>
+<td class="parameter_description"><p>the packet size. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
 </div>
 <hr>
 <div class="refsect2">
@@ -413,6 +498,33 @@ arv_fake_camera_set_trigger_frequency (<em class="parameter"><code><a class="lin
 <pre class="programlisting">const <span class="returnvalue">char</span> *
 arv_fake_camera_get_genicam_xml (<em class="parameter"><code><a class="link" href="ArvFakeCamera.html" title="ArvFakeCamera"><span class="type">ArvFakeCamera</span></a> *camera</code></em>,
                                  <em class="parameter"><code><span class="type">size_t</span> *size</code></em>);</pre>
+<div class="refsect3">
+<a name="arv-fake-camera-get-genicam-xml.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>camera</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ArvFakeCamera.html" title="ArvFakeCamera"><span class="type">ArvFakeCamera</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>size</p></td>
+<td class="parameter_description"><p>the size of the returned XML string. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="arv-fake-camera-get-genicam-xml.returns"></a><h4>Returns</h4>
+<p>the genicam XML description of the camera. </p>
+<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+</div>
 </div>
 <hr>
 <div class="refsect2">
@@ -430,6 +542,6 @@ arv_set_fake_camera_genicam_filename (<em class="parameter"><code>const <span cl
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.29</div>
+<hr>Generated by GTK-Doc V1.32</div>
 </body>
 </html>

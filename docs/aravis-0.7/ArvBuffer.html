@@ -8,7 +8,7 @@
 <link rel="up" href="ch04.html" title="Base">
 <link rel="prev" href="ArvStream.html" title="ArvStream">
 <link rel="next" href="ArvChunkParser.html" title="ArvChunkParser">
-<meta name="generator" content="GTK-Doc V1.29 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.32 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -36,8 +36,8 @@
 <a name="ArvBuffer.functions"></a><h2>Functions</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="functions_return">
-<col class="functions_name">
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
 </colgroup>
 <tbody>
 <tr>
@@ -135,7 +135,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="../glib/glib-Basic-Types.html#guint32"><span class="returnvalue">guint32</span></a>
+<a href="../glib/glib-Basic-Types.html#guint64"><span class="returnvalue">guint64</span></a>
 </td>
 <td class="function_name">
 <a class="link" href="ArvBuffer.html#arv-buffer-get-frame-id" title="arv_buffer_get_frame_id ()">arv_buffer_get_frame_id</a> <span class="c_punctuation">()</span>
@@ -218,8 +218,8 @@
 <a name="ArvBuffer.other"></a><h2>Types and Values</h2>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
 <colgroup>
-<col width="150px" class="name">
-<col class="description">
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
 </colgroup>
 <tbody>
 <tr>
@@ -900,7 +900,7 @@ nanoseconds.</p>
 <hr>
 <div class="refsect2">
 <a name="arv-buffer-get-frame-id"></a><h3>arv_buffer_get_frame_id ()</h3>
-<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint32"><span class="returnvalue">guint32</span></a>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint64"><span class="returnvalue">guint64</span></a>
 arv_buffer_get_frame_id (<em class="parameter"><code><a class="link" href="ArvBuffer.html" title="ArvBuffer"><span class="type">ArvBuffer</span></a> *buffer</code></em>);</pre>
 <p>Gets the buffer frame id. For GigEVision devices, valid values are in the
 1..65535 range.</p>
@@ -923,7 +923,7 @@ arv_buffer_get_frame_id (<em class="parameter"><code><a class="link" href="ArvBu
 <a name="arv-buffer-get-frame-id.returns"></a><h4>Returns</h4>
 <p> frame id, 0 on error.</p>
 </div>
-<p class="since">Since: <a class="link" href="ix03.html#api-index-0.4.0">0.4.0</a></p>
+<p class="since">Since: <a class="link" href="ix05.html#api-index-0.8.0">0.8.0</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1063,22 +1063,22 @@ arv_buffer_get_image_region (<em class="parameter"><code><a class="link" href="A
 <tr>
 <td class="parameter_name"><p>x</p></td>
 <td class="parameter_description"><p>image x offset placeholder. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>y</p></td>
 <td class="parameter_description"><p>image y offset placeholder. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>width</p></td>
 <td class="parameter_description"><p>image width placholder. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
 </tr>
 <tr>
 <td class="parameter_name"><p>height</p></td>
 <td class="parameter_description"><p>image height placeholder. </p></td>
-<td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>][<acronym title="NULL may be passed instead of a pointer to a location."><span class="acronym">optional</span></acronym>]</span></td>
 </tr>
 </tbody>
 </table></div>
@@ -1359,400 +1359,401 @@ arv_buffer_get_image_y (<em class="parameter"><code><a class="link" href="ArvBuf
 <a name="ArvPixelFormat"></a><h3>ArvPixelFormat</h3>
 <pre class="programlisting">typedef guint32 ArvPixelFormat;
 </pre>
+<p>A datatype to hold a pixel format.</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-BAYER-BG-10P:CAPS"></a><h3>ARV_PIXEL_FORMAT_BAYER_BG_10P</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_BG_10P		0x010a0052
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_BG_10P		((ArvPixelFormat) 0x010a0052u)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-BAYER-BG-10-PACKED:CAPS"></a><h3>ARV_PIXEL_FORMAT_BAYER_BG_10_PACKED</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_BG_10_PACKED 0x010c0029
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_BG_10_PACKED ((ArvPixelFormat) 0x010c0029u)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-BAYER-BG-12P:CAPS"></a><h3>ARV_PIXEL_FORMAT_BAYER_BG_12P</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_BG_12P		0x010c0053
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_BG_12P		((ArvPixelFormat) 0x010c0053u)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-BAYER-GB-10P:CAPS"></a><h3>ARV_PIXEL_FORMAT_BAYER_GB_10P</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_GB_10P		0x010a0054
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_GB_10P		((ArvPixelFormat) 0x010a0054u)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-BAYER-GB-10-PACKED:CAPS"></a><h3>ARV_PIXEL_FORMAT_BAYER_GB_10_PACKED</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_GB_10_PACKED 0x010c0028
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_GB_10_PACKED ((ArvPixelFormat) 0x010c0028u)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-BAYER-GB-12P:CAPS"></a><h3>ARV_PIXEL_FORMAT_BAYER_GB_12P</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_GB_12P		0x010c0055
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_GB_12P		((ArvPixelFormat) 0x010c0055u)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-BAYER-GR-10P:CAPS"></a><h3>ARV_PIXEL_FORMAT_BAYER_GR_10P</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_GR_10P		0x010a0056
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_GR_10P		((ArvPixelFormat) 0x010a0056u)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-BAYER-GR-10-PACKED:CAPS"></a><h3>ARV_PIXEL_FORMAT_BAYER_GR_10_PACKED</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_GR_10_PACKED 0x010c0026
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_GR_10_PACKED ((ArvPixelFormat) 0x010c0026u)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-BAYER-GR-12P:CAPS"></a><h3>ARV_PIXEL_FORMAT_BAYER_GR_12P</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_GR_12P		0x010c0057
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_GR_12P		((ArvPixelFormat) 0x010c0057u)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-BAYER-RG-10P:CAPS"></a><h3>ARV_PIXEL_FORMAT_BAYER_RG_10P</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_RG_10P		0x010a0058
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_RG_10P		((ArvPixelFormat) 0x010a0058u)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-BAYER-RG-10-PACKED:CAPS"></a><h3>ARV_PIXEL_FORMAT_BAYER_RG_10_PACKED</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_RG_10_PACKED 0x010c0027
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_RG_10_PACKED ((ArvPixelFormat) 0x010c0027u)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-BAYER-RG-12P:CAPS"></a><h3>ARV_PIXEL_FORMAT_BAYER_RG_12P</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_RG_12P		0x010c0059
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_RG_12P		((ArvPixelFormat) 0x010c0059u)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-BAYER-BG-10:CAPS"></a><h3>ARV_PIXEL_FORMAT_BAYER_BG_10</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_BG_10		0x0110000f
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_BG_10		((ArvPixelFormat) 0x0110000fu)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-BAYER-BG-12:CAPS"></a><h3>ARV_PIXEL_FORMAT_BAYER_BG_12</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_BG_12		0x01100013
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_BG_12		((ArvPixelFormat) 0x01100013u)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-BAYER-GR-12-PACKED:CAPS"></a><h3>ARV_PIXEL_FORMAT_BAYER_GR_12_PACKED</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_GR_12_PACKED 0x010c002a
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_GR_12_PACKED ((ArvPixelFormat) 0x010c002au)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-BAYER-GB-12-PACKED:CAPS"></a><h3>ARV_PIXEL_FORMAT_BAYER_GB_12_PACKED</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_GB_12_PACKED 0x010c002c
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_GB_12_PACKED ((ArvPixelFormat) 0x010c002cu)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-BAYER-RG-12-PACKED:CAPS"></a><h3>ARV_PIXEL_FORMAT_BAYER_RG_12_PACKED</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_RG_12_PACKED 0x010c002b
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_RG_12_PACKED ((ArvPixelFormat) 0x010c002bu)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-BAYER-BG-12-PACKED:CAPS"></a><h3>ARV_PIXEL_FORMAT_BAYER_BG_12_PACKED</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_BG_12_PACKED 0x010c002d
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_BG_12_PACKED ((ArvPixelFormat) 0x010c002du)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-BAYER-BG-8:CAPS"></a><h3>ARV_PIXEL_FORMAT_BAYER_BG_8</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_BG_8		0x0108000b
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_BG_8		((ArvPixelFormat) 0x0108000bu)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-BAYER-GB-10:CAPS"></a><h3>ARV_PIXEL_FORMAT_BAYER_GB_10</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_GB_10		0x0110000e
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_GB_10		((ArvPixelFormat) 0x0110000eu)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-BAYER-GB-12:CAPS"></a><h3>ARV_PIXEL_FORMAT_BAYER_GB_12</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_GB_12		0x01100012
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_GB_12		((ArvPixelFormat) 0x01100012u)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-BAYER-GB-8:CAPS"></a><h3>ARV_PIXEL_FORMAT_BAYER_GB_8</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_GB_8		0x0108000a
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_GB_8		((ArvPixelFormat) 0x0108000au)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-BAYER-GR-10:CAPS"></a><h3>ARV_PIXEL_FORMAT_BAYER_GR_10</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_GR_10		0x0110000c
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_GR_10		((ArvPixelFormat) 0x0110000cu)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-BAYER-GR-12:CAPS"></a><h3>ARV_PIXEL_FORMAT_BAYER_GR_12</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_GR_12		0x01100010
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_GR_12		((ArvPixelFormat) 0x01100010u)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-BAYER-GR-8:CAPS"></a><h3>ARV_PIXEL_FORMAT_BAYER_GR_8</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_GR_8		0x01080008
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_GR_8		((ArvPixelFormat) 0x01080008u)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-BAYER-RG-10:CAPS"></a><h3>ARV_PIXEL_FORMAT_BAYER_RG_10</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_RG_10		0x0110000d
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_RG_10		((ArvPixelFormat) 0x0110000du)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-BAYER-RG-12:CAPS"></a><h3>ARV_PIXEL_FORMAT_BAYER_RG_12</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_RG_12		0x01100011
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_RG_12		((ArvPixelFormat) 0x01100011u)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-BAYER-RG-8:CAPS"></a><h3>ARV_PIXEL_FORMAT_BAYER_RG_8</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_RG_8		0x01080009
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_RG_8		((ArvPixelFormat) 0x01080009u)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-BAYER-BG-16:CAPS"></a><h3>ARV_PIXEL_FORMAT_BAYER_BG_16</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_BG_16		0x01100031
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_BG_16		((ArvPixelFormat) 0x01100031u)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-BAYER-GB-16:CAPS"></a><h3>ARV_PIXEL_FORMAT_BAYER_GB_16</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_GB_16		0x01100030
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_GB_16		((ArvPixelFormat) 0x01100030u)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-BAYER-GR-16:CAPS"></a><h3>ARV_PIXEL_FORMAT_BAYER_GR_16</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_GR_16		0x0110002e
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_GR_16		((ArvPixelFormat) 0x0110002eu)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-BAYER-RG-16:CAPS"></a><h3>ARV_PIXEL_FORMAT_BAYER_RG_16</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_RG_16		0x0110002f
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_BAYER_RG_16		((ArvPixelFormat) 0x0110002fu)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-BGRA-8-PACKED:CAPS"></a><h3>ARV_PIXEL_FORMAT_BGRA_8_PACKED</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_BGRA_8_PACKED		0x02200017
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_BGRA_8_PACKED		((ArvPixelFormat) 0x02200017u)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-BGR-10-PACKED:CAPS"></a><h3>ARV_PIXEL_FORMAT_BGR_10_PACKED</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_BGR_10_PACKED		0x02300019
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_BGR_10_PACKED		((ArvPixelFormat) 0x02300019u)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-BGR-12-PACKED:CAPS"></a><h3>ARV_PIXEL_FORMAT_BGR_12_PACKED</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_BGR_12_PACKED		0x0230001b
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_BGR_12_PACKED		((ArvPixelFormat) 0x0230001bu)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-BGR-8-PACKED:CAPS"></a><h3>ARV_PIXEL_FORMAT_BGR_8_PACKED</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_BGR_8_PACKED		0x02180015
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_BGR_8_PACKED		((ArvPixelFormat) 0x02180015u)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-CUSTOM-BAYER-BG-12-PACKED:CAPS"></a><h3>ARV_PIXEL_FORMAT_CUSTOM_BAYER_BG_12_PACKED</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_CUSTOM_BAYER_BG_12_PACKED  	0x810c0004
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_CUSTOM_BAYER_BG_12_PACKED  	((ArvPixelFormat) 0x810c0004u)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-CUSTOM-BAYER-BG-16:CAPS"></a><h3>ARV_PIXEL_FORMAT_CUSTOM_BAYER_BG_16</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_CUSTOM_BAYER_BG_16		0x81100009
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_CUSTOM_BAYER_BG_16		((ArvPixelFormat) 0x81100009u)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-CUSTOM-BAYER-GB-12-PACKED:CAPS"></a><h3>ARV_PIXEL_FORMAT_CUSTOM_BAYER_GB_12_PACKED</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_CUSTOM_BAYER_GB_12_PACKED  	0x810c0003
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_CUSTOM_BAYER_GB_12_PACKED  	((ArvPixelFormat) 0x810c0003u)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-CUSTOM-BAYER-GB-16:CAPS"></a><h3>ARV_PIXEL_FORMAT_CUSTOM_BAYER_GB_16</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_CUSTOM_BAYER_GB_16		0x81100008
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_CUSTOM_BAYER_GB_16		((ArvPixelFormat) 0x81100008u)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-CUSTOM-BAYER-GR-12-PACKED:CAPS"></a><h3>ARV_PIXEL_FORMAT_CUSTOM_BAYER_GR_12_PACKED</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_CUSTOM_BAYER_GR_12_PACKED  	0x810c0001
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_CUSTOM_BAYER_GR_12_PACKED  	((ArvPixelFormat) 0x810c0001u)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-CUSTOM-BAYER-GR-16:CAPS"></a><h3>ARV_PIXEL_FORMAT_CUSTOM_BAYER_GR_16</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_CUSTOM_BAYER_GR_16		0x81100006
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_CUSTOM_BAYER_GR_16		((ArvPixelFormat) 0x81100006u)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-CUSTOM-BAYER-RG-12-PACKED:CAPS"></a><h3>ARV_PIXEL_FORMAT_CUSTOM_BAYER_RG_12_PACKED</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_CUSTOM_BAYER_RG_12_PACKED  	0x810c0002
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_CUSTOM_BAYER_RG_12_PACKED  	((ArvPixelFormat) 0x810c0002u)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-CUSTOM-BAYER-RG-16:CAPS"></a><h3>ARV_PIXEL_FORMAT_CUSTOM_BAYER_RG_16</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_CUSTOM_BAYER_RG_16		0x81100007
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_CUSTOM_BAYER_RG_16		((ArvPixelFormat) 0x81100007u)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-CUSTOM-YUV-422-YUYV-PACKED:CAPS"></a><h3>ARV_PIXEL_FORMAT_CUSTOM_YUV_422_YUYV_PACKED</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_CUSTOM_YUV_422_YUYV_PACKED 	0x82100005
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_CUSTOM_YUV_422_YUYV_PACKED 	((ArvPixelFormat) 0x82100005u)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-MONO-10:CAPS"></a><h3>ARV_PIXEL_FORMAT_MONO_10</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_MONO_10		0x01100003
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_MONO_10		((ArvPixelFormat) 0x01100003u)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-MONO-10-PACKED:CAPS"></a><h3>ARV_PIXEL_FORMAT_MONO_10_PACKED</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_MONO_10_PACKED		0x010c0004
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_MONO_10_PACKED		((ArvPixelFormat) 0x010c0004u)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-MONO-12:CAPS"></a><h3>ARV_PIXEL_FORMAT_MONO_12</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_MONO_12		0x01100005
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_MONO_12		((ArvPixelFormat) 0x01100005u)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-MONO-12-PACKED:CAPS"></a><h3>ARV_PIXEL_FORMAT_MONO_12_PACKED</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_MONO_12_PACKED		0x010c0006
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_MONO_12_PACKED		((ArvPixelFormat) 0x010c0006u)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-MONO-14:CAPS"></a><h3>ARV_PIXEL_FORMAT_MONO_14</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_MONO_14		0x01100025 /* https://bugzilla.gnome.org/show_bug.cgi?id=655131 */
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_MONO_14		((ArvPixelFormat) 0x01100025u) /* https://bugzilla.gnome.org/show_bug.cgi?id=655131 */
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-MONO-16:CAPS"></a><h3>ARV_PIXEL_FORMAT_MONO_16</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_MONO_16		0x01100007
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_MONO_16		((ArvPixelFormat) 0x01100007u)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-MONO-8:CAPS"></a><h3>ARV_PIXEL_FORMAT_MONO_8</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_MONO_8			0x01080001
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_MONO_8			((ArvPixelFormat) 0x01080001u)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-MONO-8-SIGNED:CAPS"></a><h3>ARV_PIXEL_FORMAT_MONO_8_SIGNED</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_MONO_8_SIGNED		0x01080002
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_MONO_8_SIGNED		((ArvPixelFormat) 0x01080002u)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-RGBA-8-PACKED:CAPS"></a><h3>ARV_PIXEL_FORMAT_RGBA_8_PACKED</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_RGBA_8_PACKED		0x02200016
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_RGBA_8_PACKED		((ArvPixelFormat) 0x02200016u)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-RGB-10-PACKED:CAPS"></a><h3>ARV_PIXEL_FORMAT_RGB_10_PACKED</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_RGB_10_PACKED		0x02300018
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_RGB_10_PACKED		((ArvPixelFormat) 0x02300018u)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-RGB-10-PLANAR:CAPS"></a><h3>ARV_PIXEL_FORMAT_RGB_10_PLANAR</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_RGB_10_PLANAR		0x02300022
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_RGB_10_PLANAR		((ArvPixelFormat) 0x02300022u)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-RGB-12-PACKED:CAPS"></a><h3>ARV_PIXEL_FORMAT_RGB_12_PACKED</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_RGB_12_PACKED		0x0230001a
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_RGB_12_PACKED		((ArvPixelFormat) 0x0230001au)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-RGB-12-PLANAR:CAPS"></a><h3>ARV_PIXEL_FORMAT_RGB_12_PLANAR</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_RGB_12_PLANAR		0x02300023
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_RGB_12_PLANAR		((ArvPixelFormat) 0x02300023u)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-RGB-16-PLANAR:CAPS"></a><h3>ARV_PIXEL_FORMAT_RGB_16_PLANAR</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_RGB_16_PLANAR		0x02300024
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_RGB_16_PLANAR		((ArvPixelFormat) 0x02300024u)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-RGB-8-PACKED:CAPS"></a><h3>ARV_PIXEL_FORMAT_RGB_8_PACKED</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_RGB_8_PACKED		0x02180014
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_RGB_8_PACKED		((ArvPixelFormat) 0x02180014u)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-RGB-8-PLANAR:CAPS"></a><h3>ARV_PIXEL_FORMAT_RGB_8_PLANAR</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_RGB_8_PLANAR		0x02180021
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_RGB_8_PLANAR		((ArvPixelFormat) 0x02180021u)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-YUV-411-PACKED:CAPS"></a><h3>ARV_PIXEL_FORMAT_YUV_411_PACKED</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_YUV_411_PACKED		0x020c001e
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_YUV_411_PACKED		((ArvPixelFormat) 0x020c001eu)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-YUV-422-PACKED:CAPS"></a><h3>ARV_PIXEL_FORMAT_YUV_422_PACKED</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_YUV_422_PACKED		0x0210001f
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_YUV_422_PACKED		((ArvPixelFormat) 0x0210001fu)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-YUV-422-YUYV-PACKED:CAPS"></a><h3>ARV_PIXEL_FORMAT_YUV_422_YUYV_PACKED</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_YUV_422_YUYV_PACKED 	0x02100032
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_YUV_422_YUYV_PACKED 	((ArvPixelFormat) 0x02100032u)
 </pre>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ARV-PIXEL-FORMAT-YUV-444-PACKED:CAPS"></a><h3>ARV_PIXEL_FORMAT_YUV_444_PACKED</h3>
-<pre class="programlisting">#define ARV_PIXEL_FORMAT_YUV_444_PACKED		0x02180020
+<pre class="programlisting">#define ARV_PIXEL_FORMAT_YUV_444_PACKED		((ArvPixelFormat) 0x02180020u)
 </pre>
 </div>
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.29</div>
+<hr>Generated by GTK-Doc V1.32</div>
 </body>
 </html>
