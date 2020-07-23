@@ -115,6 +115,38 @@
 <td class="datatype_keyword">enum</td>
 <td class="function_name"><a class="link" href="ArvGc.html#ArvRegisterCachePolicy" title="enum ArvRegisterCachePolicy">ArvRegisterCachePolicy</a></td>
 </tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="ArvGc.html#ArvGcNameSpace" title="enum ArvGcNameSpace">ArvGcNameSpace</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="ArvGc.html#ArvGcAccessMode" title="enum ArvGcAccessMode">ArvGcAccessMode</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="ArvGc.html#ArvGcCachable" title="enum ArvGcCachable">ArvGcCachable</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="ArvGc.html#ArvGcSignedness" title="enum ArvGcSignedness">ArvGcSignedness</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="ArvGc.html#ArvGcIsLinear" title="enum ArvGcIsLinear">ArvGcIsLinear</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="ArvGc.html#ArvGcVisibility" title="enum ArvGcVisibility">ArvGcVisibility</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="ArvGc.html#ArvGcRepresentation" title="enum ArvGcRepresentation">ArvGcRepresentation</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="ArvGc.html#ArvGcDisplayNotation" title="enum ArvGcDisplayNotation">ArvGcDisplayNotation</a></td>
+</tr>
 </tbody>
 </table></div>
 </div>
@@ -294,6 +326,385 @@ arv_gc_set_register_cache_policy (<em class="parameter"><code><a class="link" hr
 <td class="enum_member_name"><p><a name="ARV-REGISTER-CACHE-POLICY-DEFAULT:CAPS"></a>ARV_REGISTER_CACHE_POLICY_DEFAULT</p></td>
 <td class="enum_member_description">
 <p>default cache policy</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="ix05.html#api-index-0.8.0">0.8.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ArvGcNameSpace"></a><h3>enum ArvGcNameSpace</h3>
+<p>Specifies feature node or register name space type. Standard name space features are listed in
+Genicam materials. Any other vendor-specific features should use custom name space type.</p>
+<div class="refsect3">
+<a name="ArvGcNameSpace.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="ARV-GC-NAME-SPACE-UNDEFINED:CAPS"></a>ARV_GC_NAME_SPACE_UNDEFINED</p></td>
+<td class="enum_member_description">
+<p>undefined name space</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="ARV-GC-NAME-SPACE-STANDARD:CAPS"></a>ARV_GC_NAME_SPACE_STANDARD</p></td>
+<td class="enum_member_description">
+<p>Genicam standardized name space</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="ARV-GC-NAME-SPACE-CUSTOM:CAPS"></a>ARV_GC_NAME_SPACE_CUSTOM</p></td>
+<td class="enum_member_description">
+<p>non-standardized name space</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ArvGcAccessMode"></a><h3>enum ArvGcAccessMode</h3>
+<p>Specifies access mode for feature nodes and registers.</p>
+<div class="refsect3">
+<a name="ArvGcAccessMode.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="ARV-GC-ACCESS-MODE-UNDEFINED:CAPS"></a>ARV_GC_ACCESS_MODE_UNDEFINED</p></td>
+<td class="enum_member_description">
+<p>undefined access mode</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="ARV-GC-ACCESS-MODE-RO:CAPS"></a>ARV_GC_ACCESS_MODE_RO</p></td>
+<td class="enum_member_description">
+<p>read-only access</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="ARV-GC-ACCESS-MODE-WO:CAPS"></a>ARV_GC_ACCESS_MODE_WO</p></td>
+<td class="enum_member_description">
+<p>write-only access</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="ARV-GC-ACCESS-MODE-RW:CAPS"></a>ARV_GC_ACCESS_MODE_RW</p></td>
+<td class="enum_member_description">
+<p>read and write access</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ArvGcCachable"></a><h3>enum ArvGcCachable</h3>
+<p>Specifies caching mode for register values.</p>
+<div class="refsect3">
+<a name="ArvGcCachable.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="ARV-GC-CACHABLE-UNDEFINED:CAPS"></a>ARV_GC_CACHABLE_UNDEFINED</p></td>
+<td class="enum_member_description">
+<p>undefined cache mode</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="ARV-GC-CACHABLE-NO-CACHE:CAPS"></a>ARV_GC_CACHABLE_NO_CACHE</p></td>
+<td class="enum_member_description">
+<p>no value caching</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="ARV-GC-CACHABLE-WRITE-THROUGH:CAPS"></a>ARV_GC_CACHABLE_WRITE_THROUGH</p></td>
+<td class="enum_member_description">
+<p>write-through cache mode</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="ARV-GC-CACHABLE-WRITE-AROUND:CAPS"></a>ARV_GC_CACHABLE_WRITE_AROUND</p></td>
+<td class="enum_member_description">
+<p>write-around cache mode</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ArvGcSignedness"></a><h3>enum ArvGcSignedness</h3>
+<p>Specifies signedness of integer registers. Per standard Genicam internally uses signed 64-bit
+signed integers for representing all integer registers. Therefore unsigned 64-bit integers are
+not available.</p>
+<div class="refsect3">
+<a name="ArvGcSignedness.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="ARV-GC-SIGNEDNESS-UNDEFINED:CAPS"></a>ARV_GC_SIGNEDNESS_UNDEFINED</p></td>
+<td class="enum_member_description">
+<p>undefined sign</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="ARV-GC-SIGNEDNESS-SIGNED:CAPS"></a>ARV_GC_SIGNEDNESS_SIGNED</p></td>
+<td class="enum_member_description">
+<p>signed integer</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="ARV-GC-SIGNEDNESS-UNSIGNED:CAPS"></a>ARV_GC_SIGNEDNESS_UNSIGNED</p></td>
+<td class="enum_member_description">
+<p>unsigned integer</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ArvGcIsLinear"></a><h3>enum ArvGcIsLinear</h3>
+<p>Describes relationship between TO and FROM variables in Converter feature nodes.</p>
+<div class="refsect3">
+<a name="ArvGcIsLinear.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="ARV-GC-IS-LINEAR-UNDEFINED:CAPS"></a>ARV_GC_IS_LINEAR_UNDEFINED</p></td>
+<td class="enum_member_description">
+<p>undefined relationship between variables</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="ARV-GC-IS-LINEAR-NO:CAPS"></a>ARV_GC_IS_LINEAR_NO</p></td>
+<td class="enum_member_description">
+<p>non-linear relationship between variables</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="ARV-GC-IS-LINEAR-YES:CAPS"></a>ARV_GC_IS_LINEAR_YES</p></td>
+<td class="enum_member_description">
+<p>linear relationship between variables</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ArvGcVisibility"></a><h3>enum ArvGcVisibility</h3>
+<p>Specifies feature node recommended visibility in user interfaces.</p>
+<div class="refsect3">
+<a name="ArvGcVisibility.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="ARV-GC-VISIBILITY-UNDEFINED:CAPS"></a>ARV_GC_VISIBILITY_UNDEFINED</p></td>
+<td class="enum_member_description">
+<p>undefined feature visibility level</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="ARV-GC-VISIBILITY-INVISIBLE:CAPS"></a>ARV_GC_VISIBILITY_INVISIBLE</p></td>
+<td class="enum_member_description">
+<p>feature should be not be visible in user interface</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="ARV-GC-VISIBILITY-GURU:CAPS"></a>ARV_GC_VISIBILITY_GURU</p></td>
+<td class="enum_member_description">
+<p>very advanced feature to be shown to very experienced users</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="ARV-GC-VISIBILITY-EXPERT:CAPS"></a>ARV_GC_VISIBILITY_EXPERT</p></td>
+<td class="enum_member_description">
+<p>advanced feature to be shown to expert users</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="ARV-GC-VISIBILITY-BEGINNER:CAPS"></a>ARV_GC_VISIBILITY_BEGINNER</p></td>
+<td class="enum_member_description">
+<p>basic feature to be shown to all users</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ArvGcRepresentation"></a><h3>enum ArvGcRepresentation</h3>
+<p>Number representation formats.</p>
+<div class="refsect3">
+<a name="ArvGcRepresentation.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="ARV-GC-REPRESENTATION-UNDEFINED:CAPS"></a>ARV_GC_REPRESENTATION_UNDEFINED</p></td>
+<td class="enum_member_description">
+<p>undefined representation</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="ARV-GC-REPRESENTATION-LINEAR:CAPS"></a>ARV_GC_REPRESENTATION_LINEAR</p></td>
+<td class="enum_member_description">
+<p>number presented on linear scale (e.g. on a linear slider)</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="ARV-GC-REPRESENTATION-LOGARITHMIC:CAPS"></a>ARV_GC_REPRESENTATION_LOGARITHMIC</p></td>
+<td class="enum_member_description">
+<p>number presented on logarithmic scale (e.g. on a logarithmic slider)</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="ARV-GC-REPRESENTATION-BOOLEAN:CAPS"></a>ARV_GC_REPRESENTATION_BOOLEAN</p></td>
+<td class="enum_member_description">
+<p>binary choice (e.g. a checkbox)</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="ARV-GC-REPRESENTATION-PURE-NUMBER:CAPS"></a>ARV_GC_REPRESENTATION_PURE_NUMBER</p></td>
+<td class="enum_member_description">
+<p>number presented in an editable field (e.g. a spinbox)</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="ARV-GC-REPRESENTATION-HEX-NUMBER:CAPS"></a>ARV_GC_REPRESENTATION_HEX_NUMBER</p></td>
+<td class="enum_member_description">
+<p>number presented in hexadecimal format</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="ARV-GC-REPRESENTATION-IPV4-ADDRESS:CAPS"></a>ARV_GC_REPRESENTATION_IPV4_ADDRESS</p></td>
+<td class="enum_member_description">
+<p>IPv4 address</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="ARV-GC-REPRESENTATION-MAC-ADDRESS:CAPS"></a>ARV_GC_REPRESENTATION_MAC_ADDRESS</p></td>
+<td class="enum_member_description">
+<p>MAC address</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="ix05.html#api-index-0.8.0">0.8.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ArvGcDisplayNotation"></a><h3>enum ArvGcDisplayNotation</h3>
+<p>Number display notations for showing numbers in user interfaces.</p>
+<div class="refsect3">
+<a name="ArvGcDisplayNotation.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="ARV-GC-DISPLAY-NOTATION-UNDEFINED:CAPS"></a>ARV_GC_DISPLAY_NOTATION_UNDEFINED</p></td>
+<td class="enum_member_description">
+<p>undefined number notation</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="ARV-GC-DISPLAY-NOTATION-AUTOMATIC:CAPS"></a>ARV_GC_DISPLAY_NOTATION_AUTOMATIC</p></td>
+<td class="enum_member_description">
+<p>automatically detect whether to use fixed or scientific number notation</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="ARV-GC-DISPLAY-NOTATION-FIXED:CAPS"></a>ARV_GC_DISPLAY_NOTATION_FIXED</p></td>
+<td class="enum_member_description">
+<p>used fixed (i.e. decimal) notation for displaying numbers</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="ARV-GC-DISPLAY-NOTATION-SCIENTIFIC:CAPS"></a>ARV_GC_DISPLAY_NOTATION_SCIENTIFIC</p></td>
+<td class="enum_member_description">
+<p>use scientific notation for displaying numbers</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>

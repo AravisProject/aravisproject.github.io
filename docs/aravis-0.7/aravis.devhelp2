@@ -403,6 +403,14 @@
     <keyword type="function" name="arv_gc_set_register_cache_policy ()" link="ArvGc.html#arv-gc-set-register-cache-policy"/>
     <keyword type="struct" name="ArvGc" link="ArvGc.html#ArvGc-struct"/>
     <keyword type="enum" name="enum ArvRegisterCachePolicy" link="ArvGc.html#ArvRegisterCachePolicy" since="0.8.0"/>
+    <keyword type="enum" name="enum ArvGcNameSpace" link="ArvGc.html#ArvGcNameSpace"/>
+    <keyword type="enum" name="enum ArvGcAccessMode" link="ArvGc.html#ArvGcAccessMode"/>
+    <keyword type="enum" name="enum ArvGcCachable" link="ArvGc.html#ArvGcCachable"/>
+    <keyword type="enum" name="enum ArvGcSignedness" link="ArvGc.html#ArvGcSignedness"/>
+    <keyword type="enum" name="enum ArvGcIsLinear" link="ArvGc.html#ArvGcIsLinear"/>
+    <keyword type="enum" name="enum ArvGcVisibility" link="ArvGc.html#ArvGcVisibility"/>
+    <keyword type="enum" name="enum ArvGcRepresentation" link="ArvGc.html#ArvGcRepresentation" since="0.8.0"/>
+    <keyword type="enum" name="enum ArvGcDisplayNotation" link="ArvGc.html#ArvGcDisplayNotation" since="0.8.0"/>
     <keyword type="function" name="arv_gc_node_get_genicam ()" link="ArvGcNode.html#arv-gc-node-get-genicam"/>
     <keyword type="struct" name="ArvGcNode" link="ArvGcNode.html#ArvGcNode-struct"/>
     <keyword type="function" name="arv_gc_property_node_new_access_mode ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-access-mode"/>
@@ -413,7 +421,7 @@
     <keyword type="function" name="arv_gc_property_node_new_constant ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-constant"/>
     <keyword type="function" name="arv_gc_property_node_new_description ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-description"/>
     <keyword type="function" name="arv_gc_property_node_new_display_name ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-display-name"/>
-    <keyword type="function" name="arv_gc_property_node_new_endianess ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-endianess"/>
+    <keyword type="function" name="arv_gc_property_node_new_endianness ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-endianness"/>
     <keyword type="function" name="arv_gc_property_node_new_expression ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-expression"/>
     <keyword type="function" name="arv_gc_property_node_new_formula ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-formula"/>
     <keyword type="function" name="arv_gc_property_node_new_formula_from ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-formula-from"/>
@@ -463,12 +471,18 @@
     <keyword type="function" name="arv_gc_property_node_set_string ()" link="ArvGcPropertyNode.html#arv-gc-property-node-set-string"/>
     <keyword type="function" name="arv_gc_property_node_get_access_mode ()" link="ArvGcPropertyNode.html#arv-gc-property-node-get-access-mode"/>
     <keyword type="function" name="arv_gc_property_node_get_cachable ()" link="ArvGcPropertyNode.html#arv-gc-property-node-get-cachable"/>
-    <keyword type="function" name="arv_gc_property_node_get_endianess ()" link="ArvGcPropertyNode.html#arv-gc-property-node-get-endianess"/>
+    <keyword type="function" name="arv_gc_property_node_get_endianness ()" link="ArvGcPropertyNode.html#arv-gc-property-node-get-endianness"/>
     <keyword type="function" name="arv_gc_property_node_get_lsb ()" link="ArvGcPropertyNode.html#arv-gc-property-node-get-lsb"/>
     <keyword type="function" name="arv_gc_property_node_get_msb ()" link="ArvGcPropertyNode.html#arv-gc-property-node-get-msb"/>
     <keyword type="function" name="arv_gc_property_node_get_sign ()" link="ArvGcPropertyNode.html#arv-gc-property-node-get-sign"/>
     <keyword type="function" name="arv_gc_property_node_get_visibility ()" link="ArvGcPropertyNode.html#arv-gc-property-node-get-visibility"/>
     <keyword type="function" name="arv_gc_property_node_new_visibility ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-visibility"/>
+    <keyword type="function" name="arv_gc_property_node_get_representation ()" link="ArvGcPropertyNode.html#arv-gc-property-node-get-representation"/>
+    <keyword type="function" name="arv_gc_property_node_new_representation ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-representation"/>
+    <keyword type="function" name="arv_gc_property_node_get_display_notation ()" link="ArvGcPropertyNode.html#arv-gc-property-node-get-display-notation"/>
+    <keyword type="function" name="arv_gc_property_node_new_display_notation ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-display-notation"/>
+    <keyword type="function" name="arv_gc_property_node_get_display_precision ()" link="ArvGcPropertyNode.html#arv-gc-property-node-get-display-precision"/>
+    <keyword type="function" name="arv_gc_property_node_new_display_precision ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-display-precision"/>
     <keyword type="struct" name="ArvGcPropertyNode" link="ArvGcPropertyNode.html#ArvGcPropertyNode-struct"/>
     <keyword type="property" name="The “node-type” property" link="ArvGcPropertyNode.html#ArvGcPropertyNode--node-type"/>
     <keyword type="function" name="arv_gc_index_node_new ()" link="ArvGcIndexNode.html#arv-gc-index-node-new"/>
@@ -483,6 +497,7 @@
     <keyword type="function" name="arv_gc_feature_node_get_value_as_string ()" link="ArvGcFeatureNode.html#arv-gc-feature-node-get-value-as-string"/>
     <keyword type="function" name="arv_gc_feature_node_set_value_from_string ()" link="ArvGcFeatureNode.html#arv-gc-feature-node-set-value-from-string"/>
     <keyword type="function" name="arv_gc_feature_node_get_name ()" link="ArvGcFeatureNode.html#arv-gc-feature-node-get-name"/>
+    <keyword type="function" name="arv_gc_feature_node_get_name_space ()" link="ArvGcFeatureNode.html#arv-gc-feature-node-get-name-space" since="0.8.0"/>
     <keyword type="function" name="arv_gc_feature_node_get_display_name ()" link="ArvGcFeatureNode.html#arv-gc-feature-node-get-display-name"/>
     <keyword type="function" name="arv_gc_feature_node_get_tooltip ()" link="ArvGcFeatureNode.html#arv-gc-feature-node-get-tooltip"/>
     <keyword type="function" name="arv_gc_feature_node_get_description ()" link="ArvGcFeatureNode.html#arv-gc-feature-node-get-description"/>
@@ -493,7 +508,15 @@
     <keyword type="struct" name="ArvGcFeatureNode" link="ArvGcFeatureNode.html#ArvGcFeatureNode-struct"/>
     <keyword type="function" name="arv_gc_register_description_node_new ()" link="ArvGcRegisterDescriptionNode.html#arv-gc-register-description-node-new"/>
     <keyword type="function" name="arv_gc_register_description_node_compare_schema_version ()" link="ArvGcRegisterDescriptionNode.html#arv-gc-register-description-node-compare-schema-version" since="0.6.0"/>
-    <keyword type="function" name="arv_gc_register_description_node_check_schema_version ()" link="ArvGcRegisterDescriptionNode.html#arv-gc-register-description-node-check-schema-version"/>
+    <keyword type="function" name="arv_gc_register_description_node_check_schema_version ()" link="ArvGcRegisterDescriptionNode.html#arv-gc-register-description-node-check-schema-version" since="0.6.0"/>
+    <keyword type="function" name="arv_gc_register_description_node_get_model_name ()" link="ArvGcRegisterDescriptionNode.html#arv-gc-register-description-node-get-model-name" since="0.8.0"/>
+    <keyword type="function" name="arv_gc_register_description_node_get_vendor_name ()" link="ArvGcRegisterDescriptionNode.html#arv-gc-register-description-node-get-vendor-name" since="0.8.0"/>
+    <keyword type="function" name="arv_gc_register_description_node_get_major_version ()" link="ArvGcRegisterDescriptionNode.html#arv-gc-register-description-node-get-major-version" since="0.8.0"/>
+    <keyword type="function" name="arv_gc_register_description_node_get_minor_version ()" link="ArvGcRegisterDescriptionNode.html#arv-gc-register-description-node-get-minor-version" since="0.8.0"/>
+    <keyword type="function" name="arv_gc_register_description_node_get_subminor_version ()" link="ArvGcRegisterDescriptionNode.html#arv-gc-register-description-node-get-subminor-version" since="0.8.0"/>
+    <keyword type="function" name="arv_gc_register_description_node_get_schema_major_version ()" link="ArvGcRegisterDescriptionNode.html#arv-gc-register-description-node-get-schema-major-version" since="0.8.0"/>
+    <keyword type="function" name="arv_gc_register_description_node_get_schema_minor_version ()" link="ArvGcRegisterDescriptionNode.html#arv-gc-register-description-node-get-schema-minor-version" since="0.8.0"/>
+    <keyword type="function" name="arv_gc_register_description_node_get_schema_subminor_version ()" link="ArvGcRegisterDescriptionNode.html#arv-gc-register-description-node-get-schema-subminor-version" since="0.8.0"/>
     <keyword type="function" name="arv_gc_register_feature_node ()" link="ArvGcRegisterDescriptionNode.html#arv-gc-register-feature-node"/>
     <keyword type="struct" name="ArvGcRegisterDescriptionNode" link="ArvGcRegisterDescriptionNode.html#ArvGcRegisterDescriptionNode-struct"/>
     <keyword type="function" name="arv_gc_group_node_new ()" link="ArvGcGroupNode.html#arv-gc-group-node-new"/>
@@ -508,6 +531,7 @@
     <keyword type="function" name="arv_gc_integer_get_min ()" link="ArvGcInteger.html#arv-gc-integer-get-min"/>
     <keyword type="function" name="arv_gc_integer_get_max ()" link="ArvGcInteger.html#arv-gc-integer-get-max"/>
     <keyword type="function" name="arv_gc_integer_get_inc ()" link="ArvGcInteger.html#arv-gc-integer-get-inc"/>
+    <keyword type="function" name="arv_gc_integer_get_representation ()" link="ArvGcInteger.html#arv-gc-integer-get-representation"/>
     <keyword type="function" name="arv_gc_integer_get_unit ()" link="ArvGcInteger.html#arv-gc-integer-get-unit"/>
     <keyword type="function" name="arv_gc_integer_impose_min ()" link="ArvGcInteger.html#arv-gc-integer-impose-min"/>
     <keyword type="function" name="arv_gc_integer_impose_max ()" link="ArvGcInteger.html#arv-gc-integer-impose-max"/>
@@ -517,7 +541,10 @@
     <keyword type="function" name="arv_gc_float_get_min ()" link="ArvGcFloat.html#arv-gc-float-get-min"/>
     <keyword type="function" name="arv_gc_float_get_max ()" link="ArvGcFloat.html#arv-gc-float-get-max"/>
     <keyword type="function" name="arv_gc_float_get_inc ()" link="ArvGcFloat.html#arv-gc-float-get-inc"/>
+    <keyword type="function" name="arv_gc_float_get_representation ()" link="ArvGcFloat.html#arv-gc-float-get-representation"/>
     <keyword type="function" name="arv_gc_float_get_unit ()" link="ArvGcFloat.html#arv-gc-float-get-unit"/>
+    <keyword type="function" name="arv_gc_float_get_display_notation ()" link="ArvGcFloat.html#arv-gc-float-get-display-notation" since="0.8.0"/>
+    <keyword type="function" name="arv_gc_float_get_display_precision ()" link="ArvGcFloat.html#arv-gc-float-get-display-precision" since="0.8.0"/>
     <keyword type="function" name="arv_gc_float_impose_min ()" link="ArvGcFloat.html#arv-gc-float-impose-min"/>
     <keyword type="function" name="arv_gc_float_impose_max ()" link="ArvGcFloat.html#arv-gc-float-impose-max"/>
     <keyword type="struct" name="ArvGcFloat" link="ArvGcFloat.html#ArvGcFloat-struct"/>
@@ -780,6 +807,8 @@
     <keyword type="constant" name="ARV_DEVICE_ERROR_NOT_FOUND" link="ArvDevice.html#ARV-DEVICE-ERROR-NOT-FOUND:CAPS"/>
     <keyword type="constant" name="ARV_DEVICE_ERROR_INVALID_PARAMETER" link="ArvDevice.html#ARV-DEVICE-ERROR-INVALID-PARAMETER:CAPS"/>
     <keyword type="constant" name="ARV_DEVICE_ERROR_GENICAM_NOT_FOUND" link="ArvDevice.html#ARV-DEVICE-ERROR-GENICAM-NOT-FOUND:CAPS"/>
+    <keyword type="constant" name="ARV_DEVICE_ERROR_NO_STREAM_CHANNEL" link="ArvDevice.html#ARV-DEVICE-ERROR-NO-STREAM-CHANNEL:CAPS"/>
+    <keyword type="constant" name="ARV_DEVICE_ERROR_NOT_CONTROLLER" link="ArvDevice.html#ARV-DEVICE-ERROR-NOT-CONTROLLER:CAPS"/>
     <keyword type="constant" name="ARV_DEVICE_ERROR_UNKNOWN" link="ArvDevice.html#ARV-DEVICE-ERROR-UNKNOWN:CAPS"/>
     <keyword type="constant" name="ARV_STREAM_CALLBACK_TYPE_INIT" link="ArvStream.html#ARV-STREAM-CALLBACK-TYPE-INIT:CAPS"/>
     <keyword type="constant" name="ARV_STREAM_CALLBACK_TYPE_EXIT" link="ArvStream.html#ARV-STREAM-CALLBACK-TYPE-EXIT:CAPS"/>
@@ -812,6 +841,40 @@
     <keyword type="constant" name="ARV_REGISTER_CACHE_POLICY_ENABLE" link="ArvGc.html#ARV-REGISTER-CACHE-POLICY-ENABLE:CAPS"/>
     <keyword type="constant" name="ARV_REGISTER_CACHE_POLICY_DEBUG" link="ArvGc.html#ARV-REGISTER-CACHE-POLICY-DEBUG:CAPS"/>
     <keyword type="constant" name="ARV_REGISTER_CACHE_POLICY_DEFAULT" link="ArvGc.html#ARV-REGISTER-CACHE-POLICY-DEFAULT:CAPS"/>
+    <keyword type="constant" name="ARV_GC_NAME_SPACE_UNDEFINED" link="ArvGc.html#ARV-GC-NAME-SPACE-UNDEFINED:CAPS"/>
+    <keyword type="constant" name="ARV_GC_NAME_SPACE_STANDARD" link="ArvGc.html#ARV-GC-NAME-SPACE-STANDARD:CAPS"/>
+    <keyword type="constant" name="ARV_GC_NAME_SPACE_CUSTOM" link="ArvGc.html#ARV-GC-NAME-SPACE-CUSTOM:CAPS"/>
+    <keyword type="constant" name="ARV_GC_ACCESS_MODE_UNDEFINED" link="ArvGc.html#ARV-GC-ACCESS-MODE-UNDEFINED:CAPS"/>
+    <keyword type="constant" name="ARV_GC_ACCESS_MODE_RO" link="ArvGc.html#ARV-GC-ACCESS-MODE-RO:CAPS"/>
+    <keyword type="constant" name="ARV_GC_ACCESS_MODE_WO" link="ArvGc.html#ARV-GC-ACCESS-MODE-WO:CAPS"/>
+    <keyword type="constant" name="ARV_GC_ACCESS_MODE_RW" link="ArvGc.html#ARV-GC-ACCESS-MODE-RW:CAPS"/>
+    <keyword type="constant" name="ARV_GC_CACHABLE_UNDEFINED" link="ArvGc.html#ARV-GC-CACHABLE-UNDEFINED:CAPS"/>
+    <keyword type="constant" name="ARV_GC_CACHABLE_NO_CACHE" link="ArvGc.html#ARV-GC-CACHABLE-NO-CACHE:CAPS"/>
+    <keyword type="constant" name="ARV_GC_CACHABLE_WRITE_THROUGH" link="ArvGc.html#ARV-GC-CACHABLE-WRITE-THROUGH:CAPS"/>
+    <keyword type="constant" name="ARV_GC_CACHABLE_WRITE_AROUND" link="ArvGc.html#ARV-GC-CACHABLE-WRITE-AROUND:CAPS"/>
+    <keyword type="constant" name="ARV_GC_SIGNEDNESS_UNDEFINED" link="ArvGc.html#ARV-GC-SIGNEDNESS-UNDEFINED:CAPS"/>
+    <keyword type="constant" name="ARV_GC_SIGNEDNESS_SIGNED" link="ArvGc.html#ARV-GC-SIGNEDNESS-SIGNED:CAPS"/>
+    <keyword type="constant" name="ARV_GC_SIGNEDNESS_UNSIGNED" link="ArvGc.html#ARV-GC-SIGNEDNESS-UNSIGNED:CAPS"/>
+    <keyword type="constant" name="ARV_GC_IS_LINEAR_UNDEFINED" link="ArvGc.html#ARV-GC-IS-LINEAR-UNDEFINED:CAPS"/>
+    <keyword type="constant" name="ARV_GC_IS_LINEAR_NO" link="ArvGc.html#ARV-GC-IS-LINEAR-NO:CAPS"/>
+    <keyword type="constant" name="ARV_GC_IS_LINEAR_YES" link="ArvGc.html#ARV-GC-IS-LINEAR-YES:CAPS"/>
+    <keyword type="constant" name="ARV_GC_VISIBILITY_UNDEFINED" link="ArvGc.html#ARV-GC-VISIBILITY-UNDEFINED:CAPS"/>
+    <keyword type="constant" name="ARV_GC_VISIBILITY_INVISIBLE" link="ArvGc.html#ARV-GC-VISIBILITY-INVISIBLE:CAPS"/>
+    <keyword type="constant" name="ARV_GC_VISIBILITY_GURU" link="ArvGc.html#ARV-GC-VISIBILITY-GURU:CAPS"/>
+    <keyword type="constant" name="ARV_GC_VISIBILITY_EXPERT" link="ArvGc.html#ARV-GC-VISIBILITY-EXPERT:CAPS"/>
+    <keyword type="constant" name="ARV_GC_VISIBILITY_BEGINNER" link="ArvGc.html#ARV-GC-VISIBILITY-BEGINNER:CAPS"/>
+    <keyword type="constant" name="ARV_GC_REPRESENTATION_UNDEFINED" link="ArvGc.html#ARV-GC-REPRESENTATION-UNDEFINED:CAPS"/>
+    <keyword type="constant" name="ARV_GC_REPRESENTATION_LINEAR" link="ArvGc.html#ARV-GC-REPRESENTATION-LINEAR:CAPS"/>
+    <keyword type="constant" name="ARV_GC_REPRESENTATION_LOGARITHMIC" link="ArvGc.html#ARV-GC-REPRESENTATION-LOGARITHMIC:CAPS"/>
+    <keyword type="constant" name="ARV_GC_REPRESENTATION_BOOLEAN" link="ArvGc.html#ARV-GC-REPRESENTATION-BOOLEAN:CAPS"/>
+    <keyword type="constant" name="ARV_GC_REPRESENTATION_PURE_NUMBER" link="ArvGc.html#ARV-GC-REPRESENTATION-PURE-NUMBER:CAPS"/>
+    <keyword type="constant" name="ARV_GC_REPRESENTATION_HEX_NUMBER" link="ArvGc.html#ARV-GC-REPRESENTATION-HEX-NUMBER:CAPS"/>
+    <keyword type="constant" name="ARV_GC_REPRESENTATION_IPV4_ADDRESS" link="ArvGc.html#ARV-GC-REPRESENTATION-IPV4-ADDRESS:CAPS"/>
+    <keyword type="constant" name="ARV_GC_REPRESENTATION_MAC_ADDRESS" link="ArvGc.html#ARV-GC-REPRESENTATION-MAC-ADDRESS:CAPS"/>
+    <keyword type="constant" name="ARV_GC_DISPLAY_NOTATION_UNDEFINED" link="ArvGc.html#ARV-GC-DISPLAY-NOTATION-UNDEFINED:CAPS"/>
+    <keyword type="constant" name="ARV_GC_DISPLAY_NOTATION_AUTOMATIC" link="ArvGc.html#ARV-GC-DISPLAY-NOTATION-AUTOMATIC:CAPS"/>
+    <keyword type="constant" name="ARV_GC_DISPLAY_NOTATION_FIXED" link="ArvGc.html#ARV-GC-DISPLAY-NOTATION-FIXED:CAPS"/>
+    <keyword type="constant" name="ARV_GC_DISPLAY_NOTATION_SCIENTIFIC" link="ArvGc.html#ARV-GC-DISPLAY-NOTATION-SCIENTIFIC:CAPS"/>
     <keyword type="constant" name="ARV_GV_STREAM_OPTION_NONE" link="ArvGvStream.html#ARV-GV-STREAM-OPTION-NONE:CAPS"/>
     <keyword type="constant" name="ARV_GV_STREAM_OPTION_PACKET_SOCKET_DISABLED" link="ArvGvStream.html#ARV-GV-STREAM-OPTION-PACKET-SOCKET-DISABLED:CAPS"/>
     <keyword type="constant" name="ARV_GV_STREAM_SOCKET_BUFFER_FIXED" link="ArvGvStream.html#ARV-GV-STREAM-SOCKET-BUFFER-FIXED:CAPS"/>
