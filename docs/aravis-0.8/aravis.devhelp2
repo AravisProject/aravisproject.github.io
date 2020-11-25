@@ -90,6 +90,7 @@
       <sub name="Index of new symbols in 0.4" link="ix03.html"/>
       <sub name="Index of new symbols in 0.6" link="ix04.html"/>
       <sub name="Index of new symbols in 0.8" link="ix05.html"/>
+      <sub name="Index of new symbols in 0.8.3" link="ix06.html"/>
       <sub name="Annotation Glossary" link="annotation-glossary.html"/>
     </sub>
     <sub name="Ethernet protocol (GV)" link="aravis-gv.html">
@@ -208,6 +209,7 @@
     <keyword type="function" name="arv_camera_gv_get_packet_size ()" link="ArvCamera.html#arv-camera-gv-get-packet-size" since="0.8.0"/>
     <keyword type="function" name="arv_camera_gv_set_packet_size ()" link="ArvCamera.html#arv-camera-gv-set-packet-size" since="0.8.0"/>
     <keyword type="function" name="arv_camera_gv_auto_packet_size ()" link="ArvCamera.html#arv-camera-gv-auto-packet-size" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_gv_set_packet_size_adjustement ()" link="ArvCamera.html#arv-camera-gv-set-packet-size-adjustement" since="0.8.3"/>
     <keyword type="function" name="arv_camera_gv_set_stream_options ()" link="ArvCamera.html#arv-camera-gv-set-stream-options" since="0.6.0"/>
     <keyword type="function" name="arv_camera_is_uv_device ()" link="ArvCamera.html#arv-camera-is-uv-device" since="0.6.0"/>
     <keyword type="function" name="arv_camera_uv_get_bandwidth ()" link="ArvCamera.html#arv-camera-uv-get-bandwidth" since="0.8.0"/>
@@ -231,6 +233,7 @@
     <keyword type="macro" name="ARAVIS_HAS_FAST_HEARTBEAT" link="ArvCamera.html#ARAVIS-HAS-FAST-HEARTBEAT:CAPS" since="0.8.0"/>
     <keyword type="enum" name="enum ArvAuto" link="ArvCamera.html#ArvAuto"/>
     <keyword type="struct" name="ArvCamera" link="ArvCamera.html#ArvCamera-struct"/>
+    <keyword type="enum" name="enum ArvGvPacketSizeAdjustement" link="ArvCamera.html#ArvGvPacketSizeAdjustement"/>
     <keyword type="enum" name="enum ArvAcquisitionMode" link="ArvCamera.html#ArvAcquisitionMode"/>
     <keyword type="property" name="The “device” property" link="ArvCamera.html#ArvCamera--device"/>
     <keyword type="property" name="The “name” property" link="ArvCamera.html#ArvCamera--name"/>
@@ -307,6 +310,7 @@
     <keyword type="function" name="arv_buffer_set_timestamp ()" link="ArvBuffer.html#arv-buffer-set-timestamp" since="0.4.0"/>
     <keyword type="function" name="arv_buffer_get_system_timestamp ()" link="ArvBuffer.html#arv-buffer-get-system-timestamp" since="0.6.0"/>
     <keyword type="function" name="arv_buffer_set_system_timestamp ()" link="ArvBuffer.html#arv-buffer-set-system-timestamp" since="0.6.0"/>
+    <keyword type="function" name="arv_buffer_set_frame_id ()" link="ArvBuffer.html#arv-buffer-set-frame-id" since="0.8.3"/>
     <keyword type="function" name="arv_buffer_get_frame_id ()" link="ArvBuffer.html#arv-buffer-get-frame-id" since="0.8.0"/>
     <keyword type="function" name="arv_buffer_get_payload_type ()" link="ArvBuffer.html#arv-buffer-get-payload-type" since="0.4.0"/>
     <keyword type="function" name="arv_buffer_get_status ()" link="ArvBuffer.html#arv-buffer-get-status" since="0.4.0"/>
@@ -621,13 +625,17 @@
     <keyword type="function" name="arv_gv_device_get_interface_address ()" link="ArvGvDevice.html#arv-gv-device-get-interface-address" since="0.2.0"/>
     <keyword type="function" name="arv_gv_device_get_packet_size ()" link="ArvGvDevice.html#arv-gv-device-get-packet-size"/>
     <keyword type="function" name="arv_gv_device_set_packet_size ()" link="ArvGvDevice.html#arv-gv-device-set-packet-size"/>
+    <keyword type="function" name="arv_gv_device_set_packet_size_adjustement ()" link="ArvGvDevice.html#arv-gv-device-set-packet-size-adjustement" since="0.8.3"/>
     <keyword type="function" name="arv_gv_device_get_stream_options ()" link="ArvGvDevice.html#arv-gv-device-get-stream-options" since="0.6.0"/>
     <keyword type="function" name="arv_gv_device_set_stream_options ()" link="ArvGvDevice.html#arv-gv-device-set-stream-options" since="0.6.0"/>
     <keyword type="function" name="arv_gv_device_auto_packet_size ()" link="ArvGvDevice.html#arv-gv-device-auto-packet-size" since="0.6.0"/>
+    <keyword type="function" name="arv_gv_device_take_control ()" link="ArvGvDevice.html#arv-gv-device-take-control" since="0.8.3"/>
+    <keyword type="function" name="arv_gv_device_leave_control ()" link="ArvGvDevice.html#arv-gv-device-leave-control" since="0.8.3"/>
     <keyword type="function" name="arv_gv_device_is_controller ()" link="ArvGvDevice.html#arv-gv-device-is-controller" since="0.8.0"/>
     <keyword type="struct" name="ArvGvDevice" link="ArvGvDevice.html#ArvGvDevice-struct"/>
     <keyword type="property" name="The “device-address” property" link="ArvGvDevice.html#ArvGvDevice--device-address"/>
     <keyword type="property" name="The “interface-address” property" link="ArvGvDevice.html#ArvGvDevice--interface-address"/>
+    <keyword type="property" name="The “packet-size-adjustement” property" link="ArvGvDevice.html#ArvGvDevice--packet-size-adjustement"/>
     <keyword type="function" name="arv_gv_stream_get_port ()" link="ArvGvStream.html#arv-gv-stream-get-port"/>
     <keyword type="function" name="arv_gv_stream_get_statistics ()" link="ArvGvStream.html#arv-gv-stream-get-statistics"/>
     <keyword type="enum" name="enum ArvGvStreamOption" link="ArvGvStream.html#ArvGvStreamOption"/>
@@ -796,6 +804,11 @@
     <keyword type="constant" name="ARV_AUTO_OFF" link="ArvCamera.html#ARV-AUTO-OFF:CAPS"/>
     <keyword type="constant" name="ARV_AUTO_ONCE" link="ArvCamera.html#ARV-AUTO-ONCE:CAPS"/>
     <keyword type="constant" name="ARV_AUTO_CONTINUOUS" link="ArvCamera.html#ARV-AUTO-CONTINUOUS:CAPS"/>
+    <keyword type="constant" name="ARV_GV_PACKET_SIZE_ADJUSTEMENT_NEVER" link="ArvCamera.html#ARV-GV-PACKET-SIZE-ADJUSTEMENT-NEVER:CAPS"/>
+    <keyword type="constant" name="ARV_GV_PACKET_SIZE_ADJUSTEMENT_ON_FAILURE_ONCE" link="ArvCamera.html#ARV-GV-PACKET-SIZE-ADJUSTEMENT-ON-FAILURE-ONCE:CAPS"/>
+    <keyword type="constant" name="ARV_GV_PACKET_SIZE_ADJUSTEMENT_ON_FAILURE" link="ArvCamera.html#ARV-GV-PACKET-SIZE-ADJUSTEMENT-ON-FAILURE:CAPS"/>
+    <keyword type="constant" name="ARV_GV_PACKET_SIZE_ADJUSTEMENT_ONCE" link="ArvCamera.html#ARV-GV-PACKET-SIZE-ADJUSTEMENT-ONCE:CAPS"/>
+    <keyword type="constant" name="ARV_GV_PACKET_SIZE_ADJUSTEMENT_ALWAYS" link="ArvCamera.html#ARV-GV-PACKET-SIZE-ADJUSTEMENT-ALWAYS:CAPS"/>
     <keyword type="constant" name="ARV_ACQUISITION_MODE_CONTINUOUS" link="ArvCamera.html#ARV-ACQUISITION-MODE-CONTINUOUS:CAPS"/>
     <keyword type="constant" name="ARV_ACQUISITION_MODE_SINGLE_FRAME" link="ArvCamera.html#ARV-ACQUISITION-MODE-SINGLE-FRAME:CAPS"/>
     <keyword type="constant" name="ARV_ACQUISITION_MODE_MULTI_FRAME" link="ArvCamera.html#ARV-ACQUISITION-MODE-MULTI-FRAME:CAPS"/>
