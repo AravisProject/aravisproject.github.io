@@ -8,7 +8,7 @@
 <link rel="up" href="ch05.html" title="Genicam">
 <link rel="prev" href="ch05.html" title="Genicam">
 <link rel="next" href="ArvGcNode.html" title="ArvGcNode">
-<meta name="generator" content="GTK-Doc V1.33.0 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -82,6 +82,22 @@
 </tr>
 <tr>
 <td class="function_type">
+<a class="link" href="ArvGc.html#ArvRangeCheckPolicy" title="enum ArvRangeCheckPolicy"><span class="returnvalue">ArvRangeCheckPolicy</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="ArvGc.html#arv-gc-get-range-check-policy" title="arv_gc_get_range_check_policy ()">arv_gc_get_range_check_policy</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ArvGc.html#arv-gc-set-range-check-policy" title="arv_gc_set_range_check_policy ()">arv_gc_set_range_check_policy</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
 <a class="link" href="ArvGc.html#ArvRegisterCachePolicy" title="enum ArvRegisterCachePolicy"><span class="returnvalue">ArvRegisterCachePolicy</span></a>
 </td>
 <td class="function_name">
@@ -110,6 +126,10 @@
 <tr>
 <td class="datatype_keyword"> </td>
 <td class="function_name"><a class="link" href="ArvGc.html#ArvGc-struct" title="ArvGc">ArvGc</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="ArvGc.html#ArvRangeCheckPolicy" title="enum ArvRangeCheckPolicy">ArvRangeCheckPolicy</a></td>
 </tr>
 <tr>
 <td class="datatype_keyword">enum</td>
@@ -146,6 +166,10 @@
 <tr>
 <td class="datatype_keyword">enum</td>
 <td class="function_name"><a class="link" href="ArvGc.html#ArvGcDisplayNotation" title="enum ArvGcDisplayNotation">ArvGcDisplayNotation</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="ArvGc.html#ArvGcStreamable" title="enum ArvGcStreamable">ArvGcStreamable</a></td>
 </tr>
 </tbody>
 </table></div>
@@ -205,7 +229,7 @@ arv_gc_get_node (<em class="parameter"><code><a class="link" href="ArvGc.html" t
 <div class="refsect3">
 <a name="arv-gc-get-node.returns"></a><h4>Returns</h4>
 <p>a <a class="link" href="ArvGcNode.html" title="ArvGcNode"><span class="type">ArvGcNode</span></a>, null if not found. </p>
-<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 </div>
 <hr>
@@ -232,7 +256,7 @@ arv_gc_get_device (<em class="parameter"><code><a class="link" href="ArvGc.html"
 <div class="refsect3">
 <a name="arv-gc-get-device.returns"></a><h4>Returns</h4>
 <p>a <a class="link" href="ArvDevice.html" title="ArvDevice"><span class="type">ArvDevice</span></a>. </p>
-<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 </div>
 <hr>
@@ -259,7 +283,7 @@ arv_gc_get_buffer (<em class="parameter"><code><a class="link" href="ArvGc.html"
 <div class="refsect3">
 <a name="arv-gc-get-buffer.returns"></a><h4>Returns</h4>
 <p>a <a class="link" href="ArvBuffer.html" title="ArvBuffer"><span class="type">ArvBuffer</span></a>. </p>
-<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 </div>
 <hr>
@@ -268,6 +292,19 @@ arv_gc_get_buffer (<em class="parameter"><code><a class="link" href="ArvGc.html"
 <pre class="programlisting"><span class="returnvalue">void</span>
 arv_gc_set_buffer (<em class="parameter"><code><a class="link" href="ArvGc.html" title="ArvGc"><span class="type">ArvGc</span></a> *genicam</code></em>,
                    <em class="parameter"><code><a class="link" href="ArvBuffer.html" title="ArvBuffer"><span class="type">ArvBuffer</span></a> *buffer</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="arv-gc-get-range-check-policy"></a><h3>arv_gc_get_range_check_policy ()</h3>
+<pre class="programlisting"><a class="link" href="ArvGc.html#ArvRangeCheckPolicy" title="enum ArvRangeCheckPolicy"><span class="returnvalue">ArvRangeCheckPolicy</span></a>
+arv_gc_get_range_check_policy (<em class="parameter"><code><a class="link" href="ArvGc.html" title="ArvGc"><span class="type">ArvGc</span></a> *genicam</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="arv-gc-set-range-check-policy"></a><h3>arv_gc_set_range_check_policy ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+arv_gc_set_range_check_policy (<em class="parameter"><code><a class="link" href="ArvGc.html" title="ArvGc"><span class="type">ArvGc</span></a> *genicam</code></em>,
+                               <em class="parameter"><code><a class="link" href="ArvGc.html#ArvRangeCheckPolicy" title="enum ArvRangeCheckPolicy"><span class="type">ArvRangeCheckPolicy</span></a> policy</code></em>);</pre>
 </div>
 <hr>
 <div class="refsect2">
@@ -288,6 +325,51 @@ arv_gc_set_register_cache_policy (<em class="parameter"><code><a class="link" hr
 <div class="refsect2">
 <a name="ArvGc-struct"></a><h3>ArvGc</h3>
 <pre class="programlisting">typedef struct _ArvGc ArvGc;</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ArvRangeCheckPolicy"></a><h3>enum ArvRangeCheckPolicy</h3>
+<div class="refsect3">
+<a name="ArvRangeCheckPolicy.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="ARV-RANGE-CHECK-POLICY-DISABLE:CAPS"></a>ARV_RANGE_CHECK_POLICY_DISABLE</p></td>
+<td class="enum_member_description">
+<p>never check if float or integer node value is in min/max range</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="ARV-RANGE-CHECK-POLICY-ENABLE:CAPS"></a>ARV_RANGE_CHECK_POLICY_ENABLE</p></td>
+<td class="enum_member_description">
+<p>always check if if float or integer node is in min/max range</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="ARV-RANGE-CHECK-POLICY-DEBUG:CAPS"></a>ARV_RANGE_CHECK_POLICY_DEBUG</p></td>
+<td class="enum_member_description">
+<p>check the value, but only display an error message if the value is not allowed (Since 0.8.8)</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="ARV-RANGE-CHECK-POLICY-DEFAULT:CAPS"></a>ARV_RANGE_CHECK_POLICY_DEFAULT</p></td>
+<td class="enum_member_description">
+<p>default range check policy</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="ix05.html#api-index-0.8.6">0.8.6</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -713,9 +795,50 @@ not available.</p>
 </div>
 <p class="since">Since: <a class="link" href="ix05.html#api-index-0.8.0">0.8.0</a></p>
 </div>
+<hr>
+<div class="refsect2">
+<a name="ArvGcStreamable"></a><h3>enum ArvGcStreamable</h3>
+<p>Denotes that the corresponding feature is prepared to be stored to and loaded from a file via the node tree.
+The idea is to persist the state of a camera by storing the features marked as Streamable and restore the state by
+writing those features back to the node tree.</p>
+<div class="refsect3">
+<a name="ArvGcStreamable.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="ARV-GC-STREAMABLE-UNDEFINED:CAPS"></a>ARV_GC_STREAMABLE_UNDEFINED</p></td>
+<td class="enum_member_description">
+<p>undefined streamable</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="ARV-GC-STREAMABLE-NO:CAPS"></a>ARV_GC_STREAMABLE_NO</p></td>
+<td class="enum_member_description">
+<p>the feature can't be used for camera state persistence</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="ARV-GC-STREAMABLE-YES:CAPS"></a>ARV_GC_STREAMABLE_YES</p></td>
+<td class="enum_member_description">
+<p>the feature can be used for camera state persistence</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="ix05.html#api-index-0.8.8">0.8.8</a></p>
+</div>
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.33.0</div>
+<hr>Generated by GTK-Doc V1.33.1</div>
 </body>
 </html>

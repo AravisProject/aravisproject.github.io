@@ -90,7 +90,6 @@
       <sub name="Index of new symbols in 0.4" link="ix03.html"/>
       <sub name="Index of new symbols in 0.6" link="ix04.html"/>
       <sub name="Index of new symbols in 0.8" link="ix05.html"/>
-      <sub name="Index of new symbols in 0.8.3" link="ix06.html"/>
       <sub name="Annotation Glossary" link="annotation-glossary.html"/>
     </sub>
     <sub name="Ethernet protocol (GV)" link="aravis-gv.html">
@@ -119,10 +118,12 @@
     <keyword type="function" name="arv_auto_from_string ()" link="ArvCamera.html#arv-auto-from-string"/>
     <keyword type="function" name="arv_auto_to_string ()" link="ArvCamera.html#arv-auto-to-string"/>
     <keyword type="function" name="arv_camera_new ()" link="ArvCamera.html#arv-camera-new" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_new_with_device ()" link="ArvCamera.html#arv-camera-new-with-device" since="0.8.6"/>
     <keyword type="function" name="arv_camera_create_stream ()" link="ArvCamera.html#arv-camera-create-stream" since="0.2.0"/>
     <keyword type="function" name="arv_camera_get_device ()" link="ArvCamera.html#arv-camera-get-device" since="0.2.0"/>
     <keyword type="function" name="arv_camera_get_vendor_name ()" link="ArvCamera.html#arv-camera-get-vendor-name" since="0.8.0"/>
     <keyword type="function" name="arv_camera_get_model_name ()" link="ArvCamera.html#arv-camera-get-model-name" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_get_device_serial_number ()" link="ArvCamera.html#arv-camera-get-device-serial-number" since="0.8.8"/>
     <keyword type="function" name="arv_camera_get_device_id ()" link="ArvCamera.html#arv-camera-get-device-id" since="0.8.0"/>
     <keyword type="function" name="arv_camera_get_sensor_size ()" link="ArvCamera.html#arv-camera-get-sensor-size" since="0.8.0"/>
     <keyword type="function" name="arv_camera_set_region ()" link="ArvCamera.html#arv-camera-set-region" since="0.8.0"/>
@@ -176,6 +177,7 @@
     <keyword type="function" name="arv_camera_get_exposure_time_bounds ()" link="ArvCamera.html#arv-camera-get-exposure-time-bounds" since="0.8.0"/>
     <keyword type="function" name="arv_camera_set_exposure_time_auto ()" link="ArvCamera.html#arv-camera-set-exposure-time-auto" since="0.8.0"/>
     <keyword type="function" name="arv_camera_get_exposure_time_auto ()" link="ArvCamera.html#arv-camera-get-exposure-time-auto" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_set_exposure_mode ()" link="ArvCamera.html#arv-camera-set-exposure-mode"/>
     <keyword type="function" name="arv_camera_is_gain_available ()" link="ArvCamera.html#arv-camera-is-gain-available" since="0.8.0"/>
     <keyword type="function" name="arv_camera_is_gain_auto_available ()" link="ArvCamera.html#arv-camera-is-gain-auto-available" since="0.8.0"/>
     <keyword type="function" name="arv_camera_set_gain ()" link="ArvCamera.html#arv-camera-set-gain" since="0.8.0"/>
@@ -200,6 +202,8 @@
     <keyword type="function" name="arv_camera_set_float ()" link="ArvCamera.html#arv-camera-set-float" since="0.8.0"/>
     <keyword type="function" name="arv_camera_set_integer ()" link="ArvCamera.html#arv-camera-set-integer" since="0.8.0"/>
     <keyword type="function" name="arv_camera_set_string ()" link="ArvCamera.html#arv-camera-set-string" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_set_range_check_policy ()" link="ArvCamera.html#arv-camera-set-range-check-policy" since="0.8.8"/>
+    <keyword type="function" name="arv_camera_set_register_cache_policy ()" link="ArvCamera.html#arv-camera-set-register-cache-policy" since="0.8.8"/>
     <keyword type="function" name="arv_camera_is_gv_device ()" link="ArvCamera.html#arv-camera-is-gv-device" since="0.4.0"/>
     <keyword type="function" name="arv_camera_gv_get_n_stream_channels ()" link="ArvCamera.html#arv-camera-gv-get-n-stream-channels" since="0.8.0"/>
     <keyword type="function" name="arv_camera_gv_select_stream_channel ()" link="ArvCamera.html#arv-camera-gv-select-stream-channel" since="0.8.0"/>
@@ -216,6 +220,7 @@
     <keyword type="function" name="arv_camera_uv_get_bandwidth_bounds ()" link="ArvCamera.html#arv-camera-uv-get-bandwidth-bounds" since="0.8.0"/>
     <keyword type="function" name="arv_camera_uv_is_bandwidth_control_available ()" link="ArvCamera.html#arv-camera-uv-is-bandwidth-control-available" since="0.8.0"/>
     <keyword type="function" name="arv_camera_uv_set_bandwidth ()" link="ArvCamera.html#arv-camera-uv-set-bandwidth" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_are_chunks_available ()" link="ArvCamera.html#arv-camera-are-chunks-available" since="0.8.8"/>
     <keyword type="function" name="arv_camera_get_chunk_mode ()" link="ArvCamera.html#arv-camera-get-chunk-mode" since="0.8.0"/>
     <keyword type="function" name="arv_camera_get_chunk_state ()" link="ArvCamera.html#arv-camera-get-chunk-state" since="0.8.0"/>
     <keyword type="function" name="arv_camera_set_chunk_mode ()" link="ArvCamera.html#arv-camera-set-chunk-mode" since="0.8.0"/>
@@ -224,6 +229,8 @@
     <keyword type="function" name="arv_camera_create_chunk_parser ()" link="ArvCamera.html#arv-camera-create-chunk-parser" since="0.4.0"/>
     <keyword type="function" name="arv_acquisition_mode_to_string ()" link="ArvCamera.html#arv-acquisition-mode-to-string"/>
     <keyword type="function" name="arv_acquisition_mode_from_string ()" link="ArvCamera.html#arv-acquisition-mode-from-string"/>
+    <keyword type="function" name="arv_exposure_mode_from_string ()" link="ArvCamera.html#arv-exposure-mode-from-string"/>
+    <keyword type="function" name="arv_exposure_mode_to_string ()" link="ArvCamera.html#arv-exposure-mode-to-string"/>
     <keyword type="macro" name="ARAVIS_VERSION" link="ArvCamera.html#ARAVIS-VERSION:CAPS" since="0.8.0"/>
     <keyword type="macro" name="ARAVIS_MAJOR_VERSION" link="ArvCamera.html#ARAVIS-MAJOR-VERSION:CAPS" since="0.6.0"/>
     <keyword type="macro" name="ARAVIS_MICRO_VERSION" link="ArvCamera.html#ARAVIS-MICRO-VERSION:CAPS" since="0.6.0"/>
@@ -235,6 +242,7 @@
     <keyword type="struct" name="ArvCamera" link="ArvCamera.html#ArvCamera-struct"/>
     <keyword type="enum" name="enum ArvGvPacketSizeAdjustment" link="ArvCamera.html#ArvGvPacketSizeAdjustment"/>
     <keyword type="enum" name="enum ArvAcquisitionMode" link="ArvCamera.html#ArvAcquisitionMode"/>
+    <keyword type="enum" name="enum ArvExposureMode" link="ArvCamera.html#ArvExposureMode"/>
     <keyword type="property" name="The “device” property" link="ArvCamera.html#ArvCamera--device"/>
     <keyword type="property" name="The “name” property" link="ArvCamera.html#ArvCamera--name"/>
     <keyword type="function" name="arv_interface_get_device_address ()" link="ArvInterface.html#arv-interface-get-device-address" since="0.2.0"/>
@@ -273,6 +281,7 @@
     <keyword type="function" name="arv_device_dup_available_enumeration_feature_values_as_strings ()" link="ArvDevice.html#arv-device-dup-available-enumeration-feature-values-as-strings" since="0.8.0"/>
     <keyword type="function" name="arv_device_dup_available_enumeration_feature_values_as_display_names ()" link="ArvDevice.html#arv-device-dup-available-enumeration-feature-values-as-display-names" since="0.8.0"/>
     <keyword type="function" name="arv_device_set_features_from_string ()" link="ArvDevice.html#arv-device-set-features-from-string" since="0.8.0"/>
+    <keyword type="function" name="arv_device_set_range_check_policy ()" link="ArvDevice.html#arv-device-set-range-check-policy" since="0.8.6"/>
     <keyword type="function" name="arv_device_set_register_cache_policy ()" link="ArvDevice.html#arv-device-set-register-cache-policy" since="0.8.0"/>
     <keyword type="macro" name="ARV_DEVICE_ERROR" link="ArvDevice.html#ARV-DEVICE-ERROR:CAPS"/>
     <keyword type="enum" name="enum ArvDeviceError" link="ArvDevice.html#ArvDeviceError"/>
@@ -404,9 +413,12 @@
     <keyword type="function" name="arv_gc_get_device ()" link="ArvGc.html#arv-gc-get-device"/>
     <keyword type="function" name="arv_gc_get_buffer ()" link="ArvGc.html#arv-gc-get-buffer"/>
     <keyword type="function" name="arv_gc_set_buffer ()" link="ArvGc.html#arv-gc-set-buffer"/>
+    <keyword type="function" name="arv_gc_get_range_check_policy ()" link="ArvGc.html#arv-gc-get-range-check-policy"/>
+    <keyword type="function" name="arv_gc_set_range_check_policy ()" link="ArvGc.html#arv-gc-set-range-check-policy"/>
     <keyword type="function" name="arv_gc_get_register_cache_policy ()" link="ArvGc.html#arv-gc-get-register-cache-policy"/>
     <keyword type="function" name="arv_gc_set_register_cache_policy ()" link="ArvGc.html#arv-gc-set-register-cache-policy"/>
     <keyword type="struct" name="ArvGc" link="ArvGc.html#ArvGc-struct"/>
+    <keyword type="enum" name="enum ArvRangeCheckPolicy" link="ArvGc.html#ArvRangeCheckPolicy" since="0.8.6"/>
     <keyword type="enum" name="enum ArvRegisterCachePolicy" link="ArvGc.html#ArvRegisterCachePolicy" since="0.8.0"/>
     <keyword type="enum" name="enum ArvGcNameSpace" link="ArvGc.html#ArvGcNameSpace"/>
     <keyword type="enum" name="enum ArvGcAccessMode" link="ArvGc.html#ArvGcAccessMode"/>
@@ -416,6 +428,7 @@
     <keyword type="enum" name="enum ArvGcVisibility" link="ArvGc.html#ArvGcVisibility"/>
     <keyword type="enum" name="enum ArvGcRepresentation" link="ArvGc.html#ArvGcRepresentation" since="0.8.0"/>
     <keyword type="enum" name="enum ArvGcDisplayNotation" link="ArvGc.html#ArvGcDisplayNotation" since="0.8.0"/>
+    <keyword type="enum" name="enum ArvGcStreamable" link="ArvGc.html#ArvGcStreamable" since="0.8.8"/>
     <keyword type="function" name="arv_gc_node_get_genicam ()" link="ArvGcNode.html#arv-gc-node-get-genicam"/>
     <keyword type="struct" name="ArvGcNode" link="ArvGcNode.html#ArvGcNode-struct"/>
     <keyword type="function" name="arv_gc_property_node_new_access_mode ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-access-mode"/>
@@ -488,6 +501,8 @@
     <keyword type="function" name="arv_gc_property_node_new_display_notation ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-display-notation"/>
     <keyword type="function" name="arv_gc_property_node_get_display_precision ()" link="ArvGcPropertyNode.html#arv-gc-property-node-get-display-precision"/>
     <keyword type="function" name="arv_gc_property_node_new_display_precision ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-display-precision"/>
+    <keyword type="function" name="arv_gc_property_node_new_streamable ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-streamable"/>
+    <keyword type="function" name="arv_gc_property_node_get_streamable ()" link="ArvGcPropertyNode.html#arv-gc-property-node-get-streamable"/>
     <keyword type="struct" name="ArvGcPropertyNode" link="ArvGcPropertyNode.html#ArvGcPropertyNode-struct"/>
     <keyword type="property" name="The “node-type” property" link="ArvGcPropertyNode.html#ArvGcPropertyNode--node-type"/>
     <keyword type="function" name="arv_gc_index_node_new ()" link="ArvGcIndexNode.html#arv-gc-index-node-new"/>
@@ -809,9 +824,14 @@
     <keyword type="constant" name="ARV_GV_PACKET_SIZE_ADJUSTMENT_ON_FAILURE" link="ArvCamera.html#ARV-GV-PACKET-SIZE-ADJUSTMENT-ON-FAILURE:CAPS"/>
     <keyword type="constant" name="ARV_GV_PACKET_SIZE_ADJUSTMENT_ONCE" link="ArvCamera.html#ARV-GV-PACKET-SIZE-ADJUSTMENT-ONCE:CAPS"/>
     <keyword type="constant" name="ARV_GV_PACKET_SIZE_ADJUSTMENT_ALWAYS" link="ArvCamera.html#ARV-GV-PACKET-SIZE-ADJUSTMENT-ALWAYS:CAPS"/>
+    <keyword type="constant" name="ARV_GV_PACKET_SIZE_ADJUSTMENT_DEFAULT" link="ArvCamera.html#ARV-GV-PACKET-SIZE-ADJUSTMENT-DEFAULT:CAPS"/>
     <keyword type="constant" name="ARV_ACQUISITION_MODE_CONTINUOUS" link="ArvCamera.html#ARV-ACQUISITION-MODE-CONTINUOUS:CAPS"/>
     <keyword type="constant" name="ARV_ACQUISITION_MODE_SINGLE_FRAME" link="ArvCamera.html#ARV-ACQUISITION-MODE-SINGLE-FRAME:CAPS"/>
     <keyword type="constant" name="ARV_ACQUISITION_MODE_MULTI_FRAME" link="ArvCamera.html#ARV-ACQUISITION-MODE-MULTI-FRAME:CAPS"/>
+    <keyword type="constant" name="ARV_EXPOSURE_MODE_OFF" link="ArvCamera.html#ARV-EXPOSURE-MODE-OFF:CAPS"/>
+    <keyword type="constant" name="ARV_EXPOSURE_MODE_TIMED" link="ArvCamera.html#ARV-EXPOSURE-MODE-TIMED:CAPS"/>
+    <keyword type="constant" name="ARV_EXPOSURE_MODE_TRIGGER_WIDTH" link="ArvCamera.html#ARV-EXPOSURE-MODE-TRIGGER-WIDTH:CAPS"/>
+    <keyword type="constant" name="ARV_EXPOSURE_MODE_TRIGGER_CONTROLLED" link="ArvCamera.html#ARV-EXPOSURE-MODE-TRIGGER-CONTROLLED:CAPS"/>
     <keyword type="constant" name="ARV_DEVICE_ERROR_WRONG_FEATURE" link="ArvDevice.html#ARV-DEVICE-ERROR-WRONG-FEATURE:CAPS"/>
     <keyword type="constant" name="ARV_DEVICE_ERROR_FEATURE_NOT_FOUND" link="ArvDevice.html#ARV-DEVICE-ERROR-FEATURE-NOT-FOUND:CAPS"/>
     <keyword type="constant" name="ARV_DEVICE_ERROR_NOT_CONNECTED" link="ArvDevice.html#ARV-DEVICE-ERROR-NOT-CONNECTED:CAPS"/>
@@ -851,6 +871,10 @@
     <keyword type="constant" name="ARV_CHUNK_PARSER_ERROR_INVALID_FEATURE_TYPE" link="ArvChunkParser.html#ARV-CHUNK-PARSER-ERROR-INVALID-FEATURE-TYPE:CAPS"/>
     <keyword type="constant" name="ARV_CHUNK_PARSER_ERROR_BUFFER_NOT_FOUND" link="ArvChunkParser.html#ARV-CHUNK-PARSER-ERROR-BUFFER-NOT-FOUND:CAPS"/>
     <keyword type="constant" name="ARV_CHUNK_PARSER_ERROR_CHUNK_NOT_FOUND" link="ArvChunkParser.html#ARV-CHUNK-PARSER-ERROR-CHUNK-NOT-FOUND:CAPS"/>
+    <keyword type="constant" name="ARV_RANGE_CHECK_POLICY_DISABLE" link="ArvGc.html#ARV-RANGE-CHECK-POLICY-DISABLE:CAPS"/>
+    <keyword type="constant" name="ARV_RANGE_CHECK_POLICY_ENABLE" link="ArvGc.html#ARV-RANGE-CHECK-POLICY-ENABLE:CAPS"/>
+    <keyword type="constant" name="ARV_RANGE_CHECK_POLICY_DEBUG" link="ArvGc.html#ARV-RANGE-CHECK-POLICY-DEBUG:CAPS"/>
+    <keyword type="constant" name="ARV_RANGE_CHECK_POLICY_DEFAULT" link="ArvGc.html#ARV-RANGE-CHECK-POLICY-DEFAULT:CAPS"/>
     <keyword type="constant" name="ARV_REGISTER_CACHE_POLICY_DISABLE" link="ArvGc.html#ARV-REGISTER-CACHE-POLICY-DISABLE:CAPS"/>
     <keyword type="constant" name="ARV_REGISTER_CACHE_POLICY_ENABLE" link="ArvGc.html#ARV-REGISTER-CACHE-POLICY-ENABLE:CAPS"/>
     <keyword type="constant" name="ARV_REGISTER_CACHE_POLICY_DEBUG" link="ArvGc.html#ARV-REGISTER-CACHE-POLICY-DEBUG:CAPS"/>
@@ -889,6 +913,9 @@
     <keyword type="constant" name="ARV_GC_DISPLAY_NOTATION_AUTOMATIC" link="ArvGc.html#ARV-GC-DISPLAY-NOTATION-AUTOMATIC:CAPS"/>
     <keyword type="constant" name="ARV_GC_DISPLAY_NOTATION_FIXED" link="ArvGc.html#ARV-GC-DISPLAY-NOTATION-FIXED:CAPS"/>
     <keyword type="constant" name="ARV_GC_DISPLAY_NOTATION_SCIENTIFIC" link="ArvGc.html#ARV-GC-DISPLAY-NOTATION-SCIENTIFIC:CAPS"/>
+    <keyword type="constant" name="ARV_GC_STREAMABLE_UNDEFINED" link="ArvGc.html#ARV-GC-STREAMABLE-UNDEFINED:CAPS"/>
+    <keyword type="constant" name="ARV_GC_STREAMABLE_NO" link="ArvGc.html#ARV-GC-STREAMABLE-NO:CAPS"/>
+    <keyword type="constant" name="ARV_GC_STREAMABLE_YES" link="ArvGc.html#ARV-GC-STREAMABLE-YES:CAPS"/>
     <keyword type="constant" name="ARV_GV_STREAM_OPTION_NONE" link="ArvGvStream.html#ARV-GV-STREAM-OPTION-NONE:CAPS"/>
     <keyword type="constant" name="ARV_GV_STREAM_OPTION_PACKET_SOCKET_DISABLED" link="ArvGvStream.html#ARV-GV-STREAM-OPTION-PACKET-SOCKET-DISABLED:CAPS"/>
     <keyword type="constant" name="ARV_GV_STREAM_SOCKET_BUFFER_FIXED" link="ArvGvStream.html#ARV-GV-STREAM-SOCKET-BUFFER-FIXED:CAPS"/>

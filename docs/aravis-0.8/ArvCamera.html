@@ -8,7 +8,7 @@
 <link rel="up" href="ch04.html" title="Base">
 <link rel="prev" href="aravis-Arv.html" title="Arv">
 <link rel="next" href="ArvInterface.html" title="ArvInterface">
-<meta name="generator" content="GTK-Doc V1.33.0 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.33.1 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -73,6 +73,14 @@
 </tr>
 <tr>
 <td class="function_type">
+<a class="link" href="ArvCamera.html" title="ArvCamera"><span class="returnvalue">ArvCamera</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="ArvCamera.html#arv-camera-new-with-device" title="arv_camera_new_with_device ()">arv_camera_new_with_device</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
 <a class="link" href="ArvStream.html" title="ArvStream"><span class="returnvalue">ArvStream</span></a> *
 </td>
 <td class="function_name">
@@ -99,6 +107,13 @@
 </td>
 <td class="function_name">
 <a class="link" href="ArvCamera.html#arv-camera-get-model-name" title="arv_camera_get_model_name ()">arv_camera_get_model_name</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">char</span> *
+</td>
+<td class="function_name">
+<a class="link" href="ArvCamera.html#arv-camera-get-device-serial-number" title="arv_camera_get_device_serial_number ()">arv_camera_get_device_serial_number</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 <tr>
@@ -520,6 +535,14 @@
 </tr>
 <tr>
 <td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ArvCamera.html#arv-camera-set-exposure-mode" title="arv_camera_set_exposure_mode ()">arv_camera_set_exposure_mode</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
 <a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 </td>
 <td class="function_name">
@@ -709,6 +732,22 @@
 </tr>
 <tr>
 <td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ArvCamera.html#arv-camera-set-range-check-policy" title="arv_camera_set_range_check_policy ()">arv_camera_set_range_check_policy</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ArvCamera.html#arv-camera-set-register-cache-policy" title="arv_camera_set_register_cache_policy ()">arv_camera_set_register_cache_policy</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
 <a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 </td>
 <td class="function_name">
@@ -840,6 +879,14 @@
 <a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 </td>
 <td class="function_name">
+<a class="link" href="ArvCamera.html#arv-camera-are-chunks-available" title="arv_camera_are_chunks_available ()">arv_camera_are_chunks_available</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
 <a class="link" href="ArvCamera.html#arv-camera-get-chunk-mode" title="arv_camera_get_chunk_mode ()">arv_camera_get_chunk_mode</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
@@ -896,6 +943,21 @@
 </td>
 <td class="function_name">
 <a class="link" href="ArvCamera.html#arv-acquisition-mode-from-string" title="arv_acquisition_mode_from_string ()">arv_acquisition_mode_from_string</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="ArvCamera.html#ArvExposureMode" title="enum ArvExposureMode"><span class="returnvalue">ArvExposureMode</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="ArvCamera.html#arv-exposure-mode-from-string" title="arv_exposure_mode_from_string ()">arv_exposure_mode_from_string</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">const <span class="returnvalue">char</span> *
+</td>
+<td class="function_name">
+<a class="link" href="ArvCamera.html#arv-exposure-mode-to-string" title="arv_exposure_mode_to_string ()">arv_exposure_mode_to_string</a> <span class="c_punctuation">()</span>
 </td>
 </tr>
 </tbody>
@@ -976,6 +1038,10 @@
 <tr>
 <td class="datatype_keyword">enum</td>
 <td class="function_name"><a class="link" href="ArvCamera.html#ArvAcquisitionMode" title="enum ArvAcquisitionMode">ArvAcquisitionMode</a></td>
+</tr>
+<tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="ArvCamera.html#ArvExposureMode" title="enum ArvExposureMode">ArvExposureMode</a></td>
 </tr>
 </tbody>
 </table></div>
@@ -1159,13 +1225,13 @@ drawback of not exposing all the available features. See <a class="link" href="A
 <span class="k">static</span> <span class="n">gboolean</span> <span class="n">cancel</span> <span class="o">=</span> <span class="n">FALSE</span><span class="p">;</span>
 
 <span class="k">static</span> <span class="kt">void</span>
-<span class="nf">set_cancel</span> <span class="p">(</span><span class="kt">int</span> <span class="n">signal</span><span class="p">)</span>
+<span class="n">set_cancel</span> <span class="p">(</span><span class="kt">int</span> <span class="n">signal</span><span class="p">)</span>
 <span class="p">{</span>
 	<span class="n">cancel</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="k">static</span> <span class="kt">void</span>
-<span class="nf">new_buffer_cb</span> <span class="p">(</span><span class="n">ArvStream</span> <span class="o">*</span><span class="n">stream</span><span class="p">,</span> <span class="n">ApplicationData</span> <span class="o">*</span><span class="n">data</span><span class="p">)</span>
+<span class="n">new_buffer_cb</span> <span class="p">(</span><span class="n">ArvStream</span> <span class="o">*</span><span class="n">stream</span><span class="p">,</span> <span class="n">ApplicationData</span> <span class="o">*</span><span class="n">data</span><span class="p">)</span>
 <span class="p">{</span>
 	<span class="n">ArvBuffer</span> <span class="o">*</span><span class="n">buffer</span><span class="p">;</span>
 
@@ -1179,7 +1245,7 @@ drawback of not exposing all the available features. See <a class="link" href="A
 <span class="p">}</span>
 
 <span class="k">static</span> <span class="n">gboolean</span>
-<span class="nf">periodic_task_cb</span> <span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="n">abstract_data</span><span class="p">)</span>
+<span class="n">periodic_task_cb</span> <span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="n">abstract_data</span><span class="p">)</span>
 <span class="p">{</span>
 	<span class="n">ApplicationData</span> <span class="o">*</span><span class="n">data</span> <span class="o">=</span> <span class="n">abstract_data</span><span class="p">;</span>
 
@@ -1195,7 +1261,7 @@ drawback of not exposing all the available features. See <a class="link" href="A
 <span class="p">}</span>
 
 <span class="k">static</span> <span class="kt">void</span>
-<span class="nf">control_lost_cb</span> <span class="p">(</span><span class="n">ArvGvDevice</span> <span class="o">*</span><span class="n">gv_device</span><span class="p">)</span>
+<span class="n">control_lost_cb</span> <span class="p">(</span><span class="n">ArvGvDevice</span> <span class="o">*</span><span class="n">gv_device</span><span class="p">)</span>
 <span class="p">{</span>
 	<span class="cm">/* Control of the device is lost. Display a message and force application exit */</span>
 	<span class="n">printf</span> <span class="p">(</span><span class="s">&quot;Control lost</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
@@ -1204,7 +1270,7 @@ drawback of not exposing all the available features. See <a class="link" href="A
 <span class="p">}</span>
 
 <span class="kt">int</span>
-<span class="nf">main</span> <span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span>
+<span class="n">main</span> <span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span>
 <span class="p">{</span>
 	<span class="n">ApplicationData</span> <span class="n">data</span><span class="p">;</span>
 	<span class="n">ArvCamera</span> <span class="o">*</span><span class="n">camera</span><span class="p">;</span>
@@ -1412,6 +1478,42 @@ first available camera.</p>
 </div>
 <hr>
 <div class="refsect2">
+<a name="arv-camera-new-with-device"></a><h3>arv_camera_new_with_device ()</h3>
+<pre class="programlisting"><a class="link" href="ArvCamera.html" title="ArvCamera"><span class="returnvalue">ArvCamera</span></a> *
+arv_camera_new_with_device (<em class="parameter"><code><a class="link" href="ArvDevice.html" title="ArvDevice"><span class="type">ArvDevice</span></a> *device</code></em>,
+                            <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Creates a new <a class="link" href="ArvCamera.html" title="ArvCamera"><span class="type">ArvCamera</span></a>, using <em class="parameter"><code>device</code></em>
+ as its internal device object.</p>
+<div class="refsect3">
+<a name="arv-camera-new-with-device.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>device</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ArvDevice.html" title="ArvDevice"><span class="type">ArvDevice</span></a>. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>a <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> placeholder, <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="arv-camera-new-with-device.returns"></a><h4>Returns</h4>
+<p> a new <a class="link" href="ArvCamera.html" title="ArvCamera"><span class="type">ArvCamera</span></a>.</p>
+</div>
+<p class="since">Since: <a class="link" href="ix05.html#api-index-0.8.6">0.8.6</a></p>
+</div>
+<hr>
+<div class="refsect2">
 <a name="arv-camera-create-stream"></a><h3>arv_camera_create_stream ()</h3>
 <pre class="programlisting"><a class="link" href="ArvStream.html" title="ArvStream"><span class="returnvalue">ArvStream</span></a> *
 arv_camera_create_stream (<em class="parameter"><code><a class="link" href="ArvCamera.html" title="ArvCamera"><span class="type">ArvCamera</span></a> *camera</code></em>,
@@ -1456,7 +1558,7 @@ arv_camera_create_stream (<em class="parameter"><code><a class="link" href="ArvC
 <div class="refsect3">
 <a name="arv-camera-create-stream.returns"></a><h4>Returns</h4>
 <p>a new <a class="link" href="ArvStream.html" title="ArvStream"><span class="type">ArvStream</span></a>, to be freed after use with <a href="../gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>. </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 <p class="since">Since: <a class="link" href="ix02.html#api-index-0.2.0">0.2.0</a></p>
 </div>
@@ -1484,7 +1586,7 @@ arv_camera_get_device (<em class="parameter"><code><a class="link" href="ArvCame
 <div class="refsect3">
 <a name="arv-camera-get-device.returns"></a><h4>Returns</h4>
 <p>underlying device object. </p>
-<p><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The data is owned by the callee, which is responsible of freeing it."><span class="acronym">transfer none</span></acronym>]</span></p>
 </div>
 <p class="since">Since: <a class="link" href="ix02.html#api-index-0.2.0">0.2.0</a></p>
 </div>
@@ -1555,6 +1657,40 @@ arv_camera_get_model_name (<em class="parameter"><code><a class="link" href="Arv
 <p> the camera model name.</p>
 </div>
 <p class="since">Since: <a class="link" href="ix05.html#api-index-0.8.0">0.8.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="arv-camera-get-device-serial-number"></a><h3>arv_camera_get_device_serial_number ()</h3>
+<pre class="programlisting">const <span class="returnvalue">char</span> *
+arv_camera_get_device_serial_number (<em class="parameter"><code><a class="link" href="ArvCamera.html" title="ArvCamera"><span class="type">ArvCamera</span></a> *camera</code></em>,
+                                     <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="refsect3">
+<a name="arv-camera-get-device-serial-number.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>camera</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ArvCamera.html" title="ArvCamera"><span class="type">ArvCamera</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>a <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> placeholder, <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="arv-camera-get-device-serial-number.returns"></a><h4>Returns</h4>
+<p> the camera device serial number.</p>
+</div>
+<p class="since">Since: <a class="link" href="ix05.html#api-index-0.8.8">0.8.8</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1643,7 +1779,11 @@ arv_camera_set_region (<em class="parameter"><code><a class="link" href="ArvCame
                        <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> height</code></em>,
                        <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
 <p>Defines the region of interest which will be transmitted in the video
-stream.</p>
+stream. Negative <em class="parameter"><code>x</code></em>
+ or <em class="parameter"><code>y</code></em>
+ values, or not strictly positive <em class="parameter"><code>width</code></em>
+ or <em class="parameter"><code>height</code></em>
+ values are ignored.</p>
 <div class="refsect3">
 <a name="arv-camera-set-region.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -2094,7 +2234,9 @@ arv_camera_set_binning (<em class="parameter"><code><a class="link" href="ArvCam
                         <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> dy</code></em>,
                         <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
 <p>Defines binning in both directions. Not all cameras support this
-feature.</p>
+feature. Negative <em class="parameter"><code>dx</code></em>
+ or <em class="parameter"><code>dy</code></em>
+ values are ignored.</p>
 <div class="refsect3">
 <a name="arv-camera-set-binning.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -2506,7 +2648,7 @@ arv_camera_dup_available_pixel_formats
 <a name="arv-camera-dup-available-pixel-formats.returns"></a><h4>Returns</h4>
 <p>a newly allocated array of <a class="link" href="ArvBuffer.html#ArvPixelFormat" title="ArvPixelFormat"><span class="type">ArvPixelFormat</span></a>, to be freed after use with
 <a href="../glib/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a>. </p>
-<p><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=n_pixel_formats][<acronym title="Free data container after the code is done."><span class="acronym">transfer container</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=n_pixel_formats][<acronym title="The caller owns the data container, but not the data inside it."><span class="acronym">transfer container</span></acronym>]</span></p>
 </div>
 <p class="since">Since: <a class="link" href="ix05.html#api-index-0.8.0">0.8.0</a></p>
 </div>
@@ -2551,7 +2693,7 @@ In general, these human-readable strings cannot be used as settings.</p>
 <a name="arv-camera-dup-available-pixel-formats-as-display-names.returns"></a><h4>Returns</h4>
 <p>a newly allocated array of string constants, to be freed after use with
 <a href="../glib/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a>. </p>
-<p><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=n_pixel_formats][<acronym title="Free data container after the code is done."><span class="acronym">transfer container</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=n_pixel_formats][<acronym title="The caller owns the data container, but not the data inside it."><span class="acronym">transfer container</span></acronym>]</span></p>
 </div>
 <p class="since">Since: <a class="link" href="ix05.html#api-index-0.8.0">0.8.0</a></p>
 </div>
@@ -2595,7 +2737,7 @@ arv_camera_dup_available_pixel_formats_as_strings
 <a name="arv-camera-dup-available-pixel-formats-as-strings.returns"></a><h4>Returns</h4>
 <p>a newly allocated array of strings, to be freed after use with
 <a href="../glib/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a>. </p>
-<p><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=n_pixel_formats][<acronym title="Free data container after the code is done."><span class="acronym">transfer container</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=n_pixel_formats][<acronym title="The caller owns the data container, but not the data inside it."><span class="acronym">transfer container</span></acronym>]</span></p>
 </div>
 <p class="since">Since: <a class="link" href="ix05.html#api-index-0.8.0">0.8.0</a></p>
 </div>
@@ -2730,7 +2872,7 @@ arv_camera_acquisition (<em class="parameter"><code><a class="link" href="ArvCam
 <div class="refsect3">
 <a name="arv-camera-acquisition.returns"></a><h4>Returns</h4>
 <p>A new <a class="link" href="ArvBuffer.html" title="ArvBuffer"><span class="type">ArvBuffer</span></a>, NULL on error. The returned buffer must be freed using <a href="../gobject/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>. </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 <p class="since">Since: <a class="link" href="ix05.html#api-index-0.8.0">0.8.0</a></p>
 </div>
@@ -3195,7 +3337,7 @@ arv_camera_dup_available_trigger_sources
 <div class="refsect3">
 <a name="arv-camera-dup-available-trigger-sources.returns"></a><h4>Returns</h4>
 <p>a newly allocated array of strings, which must be freed using <a href="../glib/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a>. </p>
-<p><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=n_sources][<acronym title="Free data container after the code is done."><span class="acronym">transfer container</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=n_sources][<acronym title="The caller owns the data container, but not the data inside it."><span class="acronym">transfer container</span></acronym>]</span></p>
 </div>
 <p class="since">Since: <a class="link" href="ix05.html#api-index-0.8.0">0.8.0</a></p>
 </div>
@@ -3237,7 +3379,7 @@ arv_camera_dup_available_triggers (<em class="parameter"><code><a class="link" h
 <div class="refsect3">
 <a name="arv-camera-dup-available-triggers.returns"></a><h4>Returns</h4>
 <p>a newly allocated array of strings, which must be freed using <a href="../glib/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a>. </p>
-<p><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=n_triggers][<acronym title="Free data container after the code is done."><span class="acronym">transfer container</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=n_triggers][<acronym title="The caller owns the data container, but not the data inside it."><span class="acronym">transfer container</span></acronym>]</span></p>
 </div>
 <p class="since">Since: <a class="link" href="ix05.html#api-index-0.8.0">0.8.0</a></p>
 </div>
@@ -3382,7 +3524,8 @@ arv_camera_set_exposure_time (<em class="parameter"><code><a class="link" href="
                               <em class="parameter"><code><span class="type">double</span> exposure_time_us</code></em>,
                               <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
 <p>Sets exposure time. User should take care to set a value compatible with
-the desired frame rate.</p>
+the desired frame rate. Negative <em class="parameter"><code>exposure_time_us</code></em>
+ is ignored.</p>
 <div class="refsect3">
 <a name="arv-camera-set-exposure-time.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -3562,6 +3705,14 @@ arv_camera_get_exposure_time_auto (<em class="parameter"><code><a class="link" h
 </div>
 <hr>
 <div class="refsect2">
+<a name="arv-camera-set-exposure-mode"></a><h3>arv_camera_set_exposure_mode ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+arv_camera_set_exposure_mode (<em class="parameter"><code><a class="link" href="ArvCamera.html" title="ArvCamera"><span class="type">ArvCamera</span></a> *camera</code></em>,
+                              <em class="parameter"><code><a class="link" href="ArvCamera.html#ArvExposureMode" title="enum ArvExposureMode"><span class="type">ArvExposureMode</span></a> mode</code></em>,
+                              <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
 <a name="arv-camera-is-gain-available"></a><h3>arv_camera_is_gain_available ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 arv_camera_is_gain_available (<em class="parameter"><code><a class="link" href="ArvCamera.html" title="ArvCamera"><span class="type">ArvCamera</span></a> *camera</code></em>,
@@ -3635,7 +3786,8 @@ arv_camera_is_gain_auto_available (<em class="parameter"><code><a class="link" h
 arv_camera_set_gain (<em class="parameter"><code><a class="link" href="ArvCamera.html" title="ArvCamera"><span class="type">ArvCamera</span></a> *camera</code></em>,
                      <em class="parameter"><code><span class="type">double</span> gain</code></em>,
                      <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
-<p>Sets the gain of the ADC converter.</p>
+<p>Sets the gain of the ADC converter. Negative <em class="parameter"><code>gain</code></em>
+ is ignored.</p>
 <div class="refsect3">
 <a name="arv-camera-set-gain.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -3969,7 +4121,7 @@ arv_camera_dup_available_enumerations (<em class="parameter"><code><a class="lin
 <a name="arv-camera-dup-available-enumerations.returns"></a><h4>Returns</h4>
 <p>a newly created array of integers, which must freed after use using g_free, or
 NULL on error. </p>
-<p><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=n_values][<acronym title="Free data container after the code is done."><span class="acronym">transfer container</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=n_values][<acronym title="The caller owns the data container, but not the data inside it."><span class="acronym">transfer container</span></acronym>]</span></p>
 </div>
 <p class="since">Since: <a class="link" href="ix05.html#api-index-0.8.0">0.8.0</a></p>
 </div>
@@ -4020,7 +4172,7 @@ arv_camera_dup_available_enumerations_as_strings
 <a name="arv-camera-dup-available-enumerations-as-strings.returns"></a><h4>Returns</h4>
 <p>a newly created array of const strings, which must freed after use using g_free,
 or <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> on error. </p>
-<p><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=n_values][<acronym title="Free data container after the code is done."><span class="acronym">transfer container</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=n_values][<acronym title="The caller owns the data container, but not the data inside it."><span class="acronym">transfer container</span></acronym>]</span></p>
 </div>
 <p class="since">Since: <a class="link" href="ix05.html#api-index-0.8.0">0.8.0</a></p>
 </div>
@@ -4071,7 +4223,7 @@ arv_camera_dup_available_enumerations_as_display_names
 <a name="arv-camera-dup-available-enumerations-as-display-names.returns"></a><h4>Returns</h4>
 <p>a newly created array of const strings, to be freed after use using g_free, or
 <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> on error. </p>
-<p><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=n_values][<acronym title="Free data container after the code is done."><span class="acronym">transfer container</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="Parameter points to an array of items."><span class="acronym">array</span></acronym> length=n_values][<acronym title="The caller owns the data container, but not the data inside it."><span class="acronym">transfer container</span></acronym>]</span></p>
 </div>
 <p class="since">Since: <a class="link" href="ix05.html#api-index-0.8.0">0.8.0</a></p>
 </div>
@@ -4548,6 +4700,76 @@ arv_camera_set_string (<em class="parameter"><code><a class="link" href="ArvCame
 </div>
 <hr>
 <div class="refsect2">
+<a name="arv-camera-set-range-check-policy"></a><h3>arv_camera_set_range_check_policy ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+arv_camera_set_range_check_policy (<em class="parameter"><code><a class="link" href="ArvCamera.html" title="ArvCamera"><span class="type">ArvCamera</span></a> *camera</code></em>,
+                                   <em class="parameter"><code><a class="link" href="ArvGc.html#ArvRangeCheckPolicy" title="enum ArvRangeCheckPolicy"><span class="type">ArvRangeCheckPolicy</span></a> policy</code></em>);</pre>
+<p>Sets the feature range check policy. When enabled, before being set, the value of all nodes with an <a class="link" href="ArvGcFloat.html" title="ArvGcFloat"><span class="type">ArvGcFloat</span></a> or
+<a class="link" href="ArvGcInteger.html" title="ArvGcInteger"><span class="type">ArvGcInteger</span></a> interface will be checked against their Min and Max properties.</p>
+<div class="warning"><p>Be aware that some camera may have wrong definition of Min and Max, as this check is defined as not
+mandatory in the Genicam specification. If this is the case, it will not possible to set the value of the features
+with faulty Min or Max definition. Range check is disabled by default.</p></div>
+<div class="refsect3">
+<a name="arv-camera-set-range-check-policy.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>camera</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ArvCamera.html" title="ArvCamera"><span class="type">ArvCamera</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>policy</p></td>
+<td class="parameter_description"><p>range check policy</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="ix05.html#api-index-0.8.8">0.8.8</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="arv-camera-set-register-cache-policy"></a><h3>arv_camera_set_register_cache_policy ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+arv_camera_set_register_cache_policy (<em class="parameter"><code><a class="link" href="ArvCamera.html" title="ArvCamera"><span class="type">ArvCamera</span></a> *camera</code></em>,
+                                      <em class="parameter"><code><a class="link" href="ArvGc.html#ArvRegisterCachePolicy" title="enum ArvRegisterCachePolicy"><span class="type">ArvRegisterCachePolicy</span></a> policy</code></em>);</pre>
+<p>Sets the Genicam register cache policy.</p>
+<div class="warning"><p>Be aware that some camera may have wrong Cachable properties defined in their Genicam metadata, which
+may lead to incorrect readouts. Using the debug cache policy, and activating genicam debug output (export
+ARV_DEBUG=genicam), can help you to check the cache validity. In this mode, every time the cache content is not in
+sync with the actual register value, a debug message is printed on the console.</p></div>
+<div class="refsect3">
+<a name="arv-camera-set-register-cache-policy.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>camera</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ArvCamera.html" title="ArvCamera"><span class="type">ArvCamera</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>policy</p></td>
+<td class="parameter_description"><p>cache policy</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="ix05.html#api-index-0.8.8">0.8.8</a></p>
+</div>
+<hr>
+<div class="refsect2">
 <a name="arv-camera-is-gv-device"></a><h3>arv_camera_is_gv_device ()</h3>
 <pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 arv_camera_is_gv_device (<em class="parameter"><code><a class="link" href="ArvCamera.html" title="ArvCamera"><span class="type">ArvCamera</span></a> *camera</code></em>);</pre>
@@ -4614,7 +4836,8 @@ arv_camera_gv_get_n_stream_channels (<em class="parameter"><code><a class="link"
 arv_camera_gv_select_stream_channel (<em class="parameter"><code><a class="link" href="ArvCamera.html" title="ArvCamera"><span class="type">ArvCamera</span></a> *camera</code></em>,
                                      <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#gint"><span class="type">gint</span></a> channel_id</code></em>,
                                      <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
-<p>Select the current stream channel.</p>
+<p>Select the current stream channel. Negative <em class="parameter"><code>channel_id</code></em>
+ is ignored.</p>
 <div class="refsect3">
 <a name="arv-camera-gv-select-stream-channel.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -4722,7 +4945,8 @@ arv_camera_gv_set_packet_delay (<em class="parameter"><code><a class="link" href
                                 <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
 <p>Configure the inter packet delay to insert between each packet for the current stream
 channel. This can be used as a crude flow-control mechanism if the application or the network
-infrastructure cannot keep up with the packets coming from the device.</p>
+infrastructure cannot keep up with the packets coming from the device. Negative <em class="parameter"><code>delay_ns</code></em>
+ is ignored.</p>
 <div class="refsect3">
 <a name="arv-camera-gv-set-packet-delay.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -4796,7 +5020,9 @@ arv_camera_gv_set_packet_size (<em class="parameter"><code><a class="link" href=
 <p>Specifies the stream packet size, in bytes, to send on the selected channel for a GVSP transmitter
 or specifies the maximum packet size supported by a GVSP receiver.</p>
 <p>This does not include data leader and data trailer and the last data packet which might be of
-smaller size (since packet size is not necessarily a multiple of block size for stream channel).</p>
+smaller size (since packet size is not necessarily a multiple of block size for stream channel).
+Negative <em class="parameter"><code>packet_size</code></em>
+ is ignored.</p>
 <div class="refsect3">
 <a name="arv-camera-gv-set-packet-size.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -4894,7 +5120,7 @@ arv_camera_gv_set_packet_size_adjustment
 </tbody>
 </table></div>
 </div>
-<p class="since">Since: <a class="link" href="ix06.html#api-index-0.8.3">0.8.3</a></p>
+<p class="since">Since: <a class="link" href="ix05.html#api-index-0.8.3">0.8.3</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -5073,6 +5299,8 @@ arv_camera_uv_is_bandwidth_control_available
 arv_camera_uv_set_bandwidth (<em class="parameter"><code><a class="link" href="ArvCamera.html" title="ArvCamera"><span class="type">ArvCamera</span></a> *camera</code></em>,
                              <em class="parameter"><code><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a> bandwidth</code></em>,
                              <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Set the bandwith limit or, if <em class="parameter"><code>bandwith</code></em>
+ is not strictly positive, disable the limit.</p>
 <div class="refsect3">
 <a name="arv-camera-uv-set-bandwidth.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -5089,7 +5317,7 @@ arv_camera_uv_set_bandwidth (<em class="parameter"><code><a class="link" href="A
 </tr>
 <tr>
 <td class="parameter_name"><p>bandwidth</p></td>
-<td class="parameter_description"><p>Desired bandwith limit in megabits/sec. Set to 0 to disable limit mode.</p></td>
+<td class="parameter_description"><p>Bandwith limit, in megabits/sec</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -5101,6 +5329,40 @@ arv_camera_uv_set_bandwidth (<em class="parameter"><code><a class="link" href="A
 </table></div>
 </div>
 <p class="since">Since: <a class="link" href="ix05.html#api-index-0.8.0">0.8.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="arv-camera-are-chunks-available"></a><h3>arv_camera_are_chunks_available ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+arv_camera_are_chunks_available (<em class="parameter"><code><a class="link" href="ArvCamera.html" title="ArvCamera"><span class="type">ArvCamera</span></a> *camera</code></em>,
+                                 <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="refsect3">
+<a name="arv-camera-are-chunks-available.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>camera</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ArvCamera.html" title="ArvCamera"><span class="type">ArvCamera</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>a <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> placeholder, <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="arv-camera-are-chunks-available.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if chunk data are available</p>
+</div>
+<p class="since">Since: <a class="link" href="ix05.html#api-index-0.8.8">0.8.8</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -5326,7 +5588,7 @@ arv_camera_create_chunk_parser (<em class="parameter"><code><a class="link" href
 <div class="refsect3">
 <a name="arv-camera-create-chunk-parser.returns"></a><h4>Returns</h4>
 <p>a new <a class="link" href="ArvChunkParser.html" title="ArvChunkParser"><span class="type">ArvChunkParser</span></a>. </p>
-<p><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></p>
+<p><span class="annotation">[<acronym title="The caller owns the data, and is responsible for free it."><span class="acronym">transfer full</span></acronym>]</span></p>
 </div>
 <p class="since">Since: <a class="link" href="ix03.html#api-index-0.4.0">0.4.0</a></p>
 </div>
@@ -5342,12 +5604,24 @@ arv_acquisition_mode_to_string (<em class="parameter"><code><a class="link" href
 <pre class="programlisting"><a class="link" href="ArvCamera.html#ArvAcquisitionMode" title="enum ArvAcquisitionMode"><span class="returnvalue">ArvAcquisitionMode</span></a>
 arv_acquisition_mode_from_string (<em class="parameter"><code>const <span class="type">char</span> *string</code></em>);</pre>
 </div>
+<hr>
+<div class="refsect2">
+<a name="arv-exposure-mode-from-string"></a><h3>arv_exposure_mode_from_string ()</h3>
+<pre class="programlisting"><a class="link" href="ArvCamera.html#ArvExposureMode" title="enum ArvExposureMode"><span class="returnvalue">ArvExposureMode</span></a>
+arv_exposure_mode_from_string (<em class="parameter"><code>const <span class="type">char</span> *string</code></em>);</pre>
+</div>
+<hr>
+<div class="refsect2">
+<a name="arv-exposure-mode-to-string"></a><h3>arv_exposure_mode_to_string ()</h3>
+<pre class="programlisting">const <span class="returnvalue">char</span> *
+arv_exposure_mode_to_string (<em class="parameter"><code><a class="link" href="ArvCamera.html#ArvExposureMode" title="enum ArvExposureMode"><span class="type">ArvExposureMode</span></a> value</code></em>);</pre>
+</div>
 </div>
 <div class="refsect1">
 <a name="ArvCamera.other_details"></a><h2>Types and Values</h2>
 <div class="refsect2">
 <a name="ARAVIS-VERSION:CAPS"></a><h3>ARAVIS_VERSION</h3>
-<pre class="programlisting">#define ARAVIS_VERSION "0.8.5"
+<pre class="programlisting">#define ARAVIS_VERSION "0.8.8"
 </pre>
 <p>The version of the Aravis library.</p>
 <p class="since">Since: <a class="link" href="ix05.html#api-index-0.8.0">0.8.0</a></p>
@@ -5363,7 +5637,7 @@ arv_acquisition_mode_from_string (<em class="parameter"><code>const <span class=
 <hr>
 <div class="refsect2">
 <a name="ARAVIS-MICRO-VERSION:CAPS"></a><h3>ARAVIS_MICRO_VERSION</h3>
-<pre class="programlisting">#define ARAVIS_MICRO_VERSION 5
+<pre class="programlisting">#define ARAVIS_MICRO_VERSION 8
 </pre>
 <p>The micor version of the Aravis library.</p>
 <p class="since">Since: <a class="link" href="ix04.html#api-index-0.6.0">0.6.0</a></p>
@@ -5490,6 +5764,13 @@ packet size, only on the first stream creation</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
+<tr>
+<td class="enum_member_name"><p><a name="ARV-GV-PACKET-SIZE-ADJUSTMENT-DEFAULT:CAPS"></a>ARV_GV_PACKET_SIZE_ADJUSTMENT_DEFAULT</p></td>
+<td class="enum_member_description">
+<p>default adjustment, which is ON_FAILURE_ONCE</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
 </tbody>
 </table></div>
 </div>
@@ -5509,7 +5790,7 @@ packet size, only on the first stream creation</p>
 <tr>
 <td class="enum_member_name"><p><a name="ARV-ACQUISITION-MODE-CONTINUOUS:CAPS"></a>ARV_ACQUISITION_MODE_CONTINUOUS</p></td>
 <td class="enum_member_description">
-<p>continuous acquisition</p>
+<p>frames are captured continuously until stopped with the AcquisitionStop command.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -5523,7 +5804,57 @@ packet size, only on the first stream creation</p>
 <tr>
 <td class="enum_member_name"><p><a name="ARV-ACQUISITION-MODE-MULTI-FRAME:CAPS"></a>ARV_ACQUISITION_MODE_MULTI_FRAME</p></td>
 <td class="enum_member_description">
-<p>multiple frames will be acquired</p>
+<p>the number of frames specified by AcquisitionFrameCount is captured.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ArvExposureMode"></a><h3>enum ArvExposureMode</h3>
+<div class="refsect3">
+<a name="ArvExposureMode.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="ARV-EXPOSURE-MODE-OFF:CAPS"></a>ARV_EXPOSURE_MODE_OFF</p></td>
+<td class="enum_member_description">
+<p>disables the Exposure and let the shutter open.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="ARV-EXPOSURE-MODE-TIMED:CAPS"></a>ARV_EXPOSURE_MODE_TIMED</p></td>
+<td class="enum_member_description">
+<p>timed exposure. The exposure duration time is set using the ExposureTime or ExposureAuto
+features and the exposure starts with the FrameStart or LineStart.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="ARV-EXPOSURE-MODE-TRIGGER-WIDTH:CAPS"></a>ARV_EXPOSURE_MODE_TRIGGER_WIDTH</p></td>
+<td class="enum_member_description">
+<p>uses the width of the current Frame or Line trigger signal(s) pulse to control the
+exposure duration. Note that if the Frame or Line TriggerActivation is RisingEdge or LevelHigh, the exposure duration
+will be the time the trigger stays High. If TriggerActivation is FallingEdge or LevelLow, the exposure time will last
+as long as the trigger stays Low.</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="ARV-EXPOSURE-MODE-TRIGGER-CONTROLLED:CAPS"></a>ARV_EXPOSURE_MODE_TRIGGER_CONTROLLED</p></td>
+<td class="enum_member_description">
+<p>uses one or more trigger signal(s) to control the exposure duration
+independently from the current Frame or Line triggers. See ExposureStart, ExposureEnd and ExposureActive of
+the TriggerSelector feature.</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -5537,22 +5868,30 @@ packet size, only on the first stream creation</p>
 <div class="refsect2">
 <a name="ArvCamera--device"></a><h3>The <code class="literal">“device”</code> property</h3>
 <pre class="programlisting">  “device”                   <a class="link" href="ArvDevice.html" title="ArvDevice"><span class="type">ArvDevice</span></a> *</pre>
-<p>The device associated with this camera.</p>
+<p>Internal device object</p>
 <p>Owner: ArvCamera</p>
 <p>Flags: Read / Write / Construct Only</p>
+<p class="stability">Stability Level: <acronym title="An interface that can be used within the GNOME stack itself, but that is not
+documented for end-users.  Such functions should only be used in specified and
+documented ways.
+"><span class="acronym">Private</span></acronym></p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ArvCamera--name"></a><h3>The <code class="literal">“name”</code> property</h3>
 <pre class="programlisting">  “name”                     <span class="type">char</span> *</pre>
-<p>The camera name.</p>
+<p>Internal device name for object construction</p>
 <p>Owner: ArvCamera</p>
 <p>Flags: Write / Construct Only</p>
 <p>Default value: NULL</p>
+<p class="stability">Stability Level: <acronym title="An interface that can be used within the GNOME stack itself, but that is not
+documented for end-users.  Such functions should only be used in specified and
+documented ways.
+"><span class="acronym">Private</span></acronym></p>
 </div>
 </div>
 </div>
 <div class="footer">
-<hr>Generated by GTK-Doc V1.33.0</div>
+<hr>Generated by GTK-Doc V1.33.1</div>
 </body>
 </html>
