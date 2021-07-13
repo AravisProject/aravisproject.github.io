@@ -36,6 +36,7 @@
         <sub name="ArvGcIntegerNode" link="ArvGcIntegerNode.html"/>
         <sub name="ArvGcFloatNode" link="ArvGcFloatNode.html"/>
         <sub name="ArvGcRegisterNode" link="ArvGcRegisterNode.html"/>
+        <sub name="ArvGcStringNode" link="ArvGcStringNode.html"/>
         <sub name="ArvGcStructEntryNode" link="ArvGcStructEntryNode.html"/>
         <sub name="ArvGcEnumeration" link="ArvGcEnumeration.html"/>
         <sub name="ArvGcEnumEntry" link="ArvGcEnumEntry.html"/>
@@ -78,9 +79,7 @@
         <sub name="ArvDebug" link="aravis-ArvDebug.html"/>
         <sub name="ArvEvaluator" link="ArvEvaluator.html"/>
         <sub name="ArvGst" link="aravis-ArvGst.html"/>
-        <sub name="ArvStatistic" link="aravis-ArvStatistic.html"/>
         <sub name="ArvStr" link="aravis-ArvStr.html"/>
-        <sub name="ArvValue" link="ArvValue.html"/>
         <sub name="ArvZip" link="aravis-ArvZip.html"/>
         <sub name="ArvXmlSchema" link="ArvXmlSchema.html"/>
       </sub>
@@ -300,6 +299,13 @@
     <keyword type="function" name="arv_make_thread_realtime ()" link="ArvStream.html#arv-make-thread-realtime" since="0.4.0"/>
     <keyword type="function" name="arv_make_thread_high_priority ()" link="ArvStream.html#arv-make-thread-high-priority" since="0.4.0"/>
     <keyword type="function" name="arv_stream_get_statistics ()" link="ArvStream.html#arv-stream-get-statistics" since="0.2.0"/>
+    <keyword type="function" name="arv_stream_get_n_infos ()" link="ArvStream.html#arv-stream-get-n-infos" since="0.8.11"/>
+    <keyword type="function" name="arv_stream_get_info_name ()" link="ArvStream.html#arv-stream-get-info-name" since="0.8.11"/>
+    <keyword type="function" name="arv_stream_get_info_type ()" link="ArvStream.html#arv-stream-get-info-type" since="0.8.11"/>
+    <keyword type="function" name="arv_stream_get_info_double ()" link="ArvStream.html#arv-stream-get-info-double" since="0.8.11"/>
+    <keyword type="function" name="arv_stream_get_info_double_by_name ()" link="ArvStream.html#arv-stream-get-info-double-by-name" since="0.8.11"/>
+    <keyword type="function" name="arv_stream_get_info_uint64 ()" link="ArvStream.html#arv-stream-get-info-uint64" since="0.8.11"/>
+    <keyword type="function" name="arv_stream_get_info_uint64_by_name ()" link="ArvStream.html#arv-stream-get-info-uint64-by-name" since="0.8.11"/>
     <keyword type="enum" name="enum ArvStreamCallbackType" link="ArvStream.html#ArvStreamCallbackType"/>
     <keyword type="struct" name="ArvStream" link="ArvStream.html#ArvStream-struct"/>
     <keyword type="property" name="The “callback” property" link="ArvStream.html#ArvStream--callback"/>
@@ -600,6 +606,8 @@
     <keyword type="struct" name="ArvGcFloatRegNode" link="ArvGcRegisterNode.html#ArvGcFloatRegNode-struct"/>
     <keyword type="struct" name="ArvGcStringRegNode" link="ArvGcRegisterNode.html#ArvGcStringRegNode-struct"/>
     <keyword type="struct" name="ArvGcStructRegNode" link="ArvGcRegisterNode.html#ArvGcStructRegNode-struct"/>
+    <keyword type="function" name="arv_gc_string_node_new ()" link="ArvGcStringNode.html#arv-gc-string-node-new"/>
+    <keyword type="struct" name="ArvGcStringNode" link="ArvGcStringNode.html#ArvGcStringNode-struct"/>
     <keyword type="function" name="arv_gc_struct_entry_node_new ()" link="ArvGcStructEntryNode.html#arv-gc-struct-entry-node-new"/>
     <keyword type="struct" name="ArvGcStructEntryNode" link="ArvGcStructEntryNode.html#ArvGcStructEntryNode-struct"/>
     <keyword type="function" name="arv_gc_enumeration_new ()" link="ArvGcEnumeration.html#arv-gc-enumeration-new"/>
@@ -773,13 +781,6 @@
     <keyword type="function" name="arv_pixel_format_from_gst_caps ()" link="aravis-ArvGst.html#arv-pixel-format-from-gst-caps"/>
     <keyword type="function" name="arv_pixel_format_to_gst_0_10_caps_string ()" link="aravis-ArvGst.html#arv-pixel-format-to-gst-0-10-caps-string"/>
     <keyword type="function" name="arv_pixel_format_from_gst_0_10_caps ()" link="aravis-ArvGst.html#arv-pixel-format-from-gst-0-10-caps"/>
-    <keyword type="function" name="arv_statistic_new ()" link="aravis-ArvStatistic.html#arv-statistic-new"/>
-    <keyword type="function" name="arv_statistic_free ()" link="aravis-ArvStatistic.html#arv-statistic-free"/>
-    <keyword type="function" name="arv_statistic_reset ()" link="aravis-ArvStatistic.html#arv-statistic-reset"/>
-    <keyword type="function" name="arv_statistic_fill ()" link="aravis-ArvStatistic.html#arv-statistic-fill"/>
-    <keyword type="function" name="arv_statistic_set_name ()" link="aravis-ArvStatistic.html#arv-statistic-set-name"/>
-    <keyword type="function" name="arv_statistic_to_string ()" link="aravis-ArvStatistic.html#arv-statistic-to-string"/>
-    <keyword type="struct" name="ArvStatistic" link="aravis-ArvStatistic.html#ArvStatistic"/>
     <keyword type="function" name="arv_str_strip ()" link="aravis-ArvStr.html#arv-str-strip" since="0.4.0"/>
     <keyword type="function" name="arv_str_is_uri ()" link="aravis-ArvStr.html#arv-str-is-uri"/>
     <keyword type="function" name="arv_str_to_uri ()" link="aravis-ArvStr.html#arv-str-to-uri"/>
@@ -790,16 +791,6 @@
     <keyword type="function" name="arv_str_skip_comma_and_spaces ()" link="aravis-ArvStr.html#arv-str-skip-comma-and-spaces"/>
     <keyword type="function" name="arv_str_skip_semicolon_and_spaces ()" link="aravis-ArvStr.html#arv-str-skip-semicolon-and-spaces"/>
     <keyword type="function" name="arv_str_skip_spaces ()" link="aravis-ArvStr.html#arv-str-skip-spaces"/>
-    <keyword type="function" name="arv_value_new_double ()" link="ArvValue.html#arv-value-new-double"/>
-    <keyword type="function" name="arv_value_new_int64 ()" link="ArvValue.html#arv-value-new-int64"/>
-    <keyword type="function" name="arv_value_free ()" link="ArvValue.html#arv-value-free"/>
-    <keyword type="function" name="arv_value_copy ()" link="ArvValue.html#arv-value-copy"/>
-    <keyword type="function" name="arv_value_set_int64 ()" link="ArvValue.html#arv-value-set-int64"/>
-    <keyword type="function" name="arv_value_set_double ()" link="ArvValue.html#arv-value-set-double"/>
-    <keyword type="function" name="arv_value_get_int64 ()" link="ArvValue.html#arv-value-get-int64"/>
-    <keyword type="function" name="arv_value_get_double ()" link="ArvValue.html#arv-value-get-double"/>
-    <keyword type="function" name="arv_value_holds_int64 ()" link="ArvValue.html#arv-value-holds-int64"/>
-    <keyword type="function" name="arv_value_holds_double ()" link="ArvValue.html#arv-value-holds-double"/>
     <keyword type="function" name="arv_zip_new ()" link="aravis-ArvZip.html#arv-zip-new"/>
     <keyword type="function" name="arv_zip_free ()" link="aravis-ArvZip.html#arv-zip-free"/>
     <keyword type="function" name="arv_zip_get_file ()" link="aravis-ArvZip.html#arv-zip-get-file"/>
