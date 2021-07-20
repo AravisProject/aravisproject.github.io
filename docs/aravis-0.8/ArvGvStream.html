@@ -73,32 +73,37 @@
 <tr>
 <td class="property_type"><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
 <td class="property_name"><a class="link" href="ArvGvStream.html#ArvGvStream--frame-retention" title="The “frame-retention” property">frame-retention</a></td>
-<td class="property_flags">Read / Write</td>
+<td class="property_flags">Read / Write / Construct</td>
+</tr>
+<tr>
+<td class="property_type"><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
+<td class="property_name"><a class="link" href="ArvGvStream.html#ArvGvStream--initial-packet-timeout" title="The “initial-packet-timeout” property">initial-packet-timeout</a></td>
+<td class="property_flags">Read / Write / Construct</td>
 </tr>
 <tr>
 <td class="property_type"><span class="type">double</span></td>
 <td class="property_name"><a class="link" href="ArvGvStream.html#ArvGvStream--packet-request-ratio" title="The “packet-request-ratio” property">packet-request-ratio</a></td>
-<td class="property_flags">Read / Write</td>
+<td class="property_flags">Read / Write / Construct</td>
 </tr>
 <tr>
 <td class="property_type"><a class="link" href="ArvGvStream.html#ArvGvStreamPacketResend" title="enum ArvGvStreamPacketResend"><span class="type">ArvGvStreamPacketResend</span></a></td>
 <td class="property_name"><a class="link" href="ArvGvStream.html#ArvGvStream--packet-resend" title="The “packet-resend” property">packet-resend</a></td>
-<td class="property_flags">Read / Write</td>
+<td class="property_flags">Read / Write / Construct</td>
 </tr>
 <tr>
 <td class="property_type"><a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></td>
 <td class="property_name"><a class="link" href="ArvGvStream.html#ArvGvStream--packet-timeout" title="The “packet-timeout” property">packet-timeout</a></td>
-<td class="property_flags">Read / Write</td>
+<td class="property_flags">Read / Write / Construct</td>
 </tr>
 <tr>
 <td class="property_type"><a class="link" href="ArvGvStream.html#ArvGvStreamSocketBuffer" title="enum ArvGvStreamSocketBuffer"><span class="type">ArvGvStreamSocketBuffer</span></a></td>
 <td class="property_name"><a class="link" href="ArvGvStream.html#ArvGvStream--socket-buffer" title="The “socket-buffer” property">socket-buffer</a></td>
-<td class="property_flags">Read / Write</td>
+<td class="property_flags">Read / Write / Construct</td>
 </tr>
 <tr>
 <td class="property_type"><span class="type">int</span></td>
 <td class="property_name"><a class="link" href="ArvGvStream.html#ArvGvStream--socket-buffer-size" title="The “socket-buffer-size” property">socket-buffer-size</a></td>
-<td class="property_flags">Read / Write</td>
+<td class="property_flags">Read / Write / Construct</td>
 </tr>
 </tbody>
 </table></div>
@@ -242,7 +247,7 @@ arv_gv_stream_get_statistics (<em class="parameter"><code><a class="link" href="
 <tr>
 <td class="enum_member_name"><p><a name="ARV-GV-STREAM-SOCKET-BUFFER-AUTO:CAPS"></a>ARV_GV_STREAM_SOCKET_BUFFER_AUTO</p></td>
 <td class="enum_member_description">
-<p>sockect buffer is set with respect to the payload size</p>
+<p>socket buffer size is set to the payload size</p>
 </td>
 <td class="enum_member_annotations"> </td>
 </tr>
@@ -291,18 +296,33 @@ arv_gv_stream_get_statistics (<em class="parameter"><code><a class="link" href="
 <div class="refsect2">
 <a name="ArvGvStream--frame-retention"></a><h3>The <code class="literal">“frame-retention”</code> property</h3>
 <pre class="programlisting">  “frame-retention”          <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
-<p>Packet retention, in µs.</p>
+<p>Amount of time Aravis is wating for frame completion after the last packet is received. A greater value will
+also increase the maximum frame latency in case of missing packets.</p>
 <p>Owner: ArvGvStream</p>
-<p>Flags: Read / Write</p>
-<p>Default value: 200000</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Default value: 100000</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ArvGvStream--initial-packet-timeout"></a><h3>The <code class="literal">“initial-packet-timeout”</code> property</h3>
+<pre class="programlisting">  “initial-packet-timeout”   <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
+<p>Delay before asking for a packet resend after the packet was detected missing for the first time. The reason
+for this delay is, depending on the network topology, stream packets are not always received in increasing id
+order. As the missing packet detection happens at each received packet, by verifying if each previous packet
+has been received, we could emit useless packet resend requests if they are not ordered.</p>
+<p>Owner: ArvGvStream</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Default value: 1000</p>
+<p class="since">Since: <a class="link" href="ix05.html#api-index-0.8.15">0.8.15</a></p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ArvGvStream--packet-request-ratio"></a><h3>The <code class="literal">“packet-request-ratio”</code> property</h3>
 <pre class="programlisting">  “packet-request-ratio”     <span class="type">double</span></pre>
-<p>Packet resend request limit as a percentage of frame packet number.</p>
+<p>Maximum number of packet resend requests for a given frame, as a percentage of the number of packets per
+frame.</p>
 <p>Owner: ArvGvStream</p>
-<p>Flags: Read / Write</p>
+<p>Flags: Read / Write / Construct</p>
 <p>Allowed values: [0,2]</p>
 <p>Default value: 0.25</p>
 </div>
@@ -310,36 +330,37 @@ arv_gv_stream_get_statistics (<em class="parameter"><code><a class="link" href="
 <div class="refsect2">
 <a name="ArvGvStream--packet-resend"></a><h3>The <code class="literal">“packet-resend”</code> property</h3>
 <pre class="programlisting">  “packet-resend”            <a class="link" href="ArvGvStream.html#ArvGvStreamPacketResend" title="enum ArvGvStreamPacketResend"><span class="type">ArvGvStreamPacketResend</span></a></pre>
-<p>Packet resend behaviour.</p>
+<p>Packet resend policy. This only applies if the device supports packet resend.</p>
 <p>Owner: ArvGvStream</p>
-<p>Flags: Read / Write</p>
+<p>Flags: Read / Write / Construct</p>
 <p>Default value: ARV_GV_STREAM_PACKET_RESEND_ALWAYS</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ArvGvStream--packet-timeout"></a><h3>The <code class="literal">“packet-timeout”</code> property</h3>
 <pre class="programlisting">  “packet-timeout”           <a href="../glib/glib-Basic-Types.html#guint"><span class="type">guint</span></a></pre>
-<p>Packet timeout, in µs.</p>
+<p>Timeout while waiting for a packet after a resend request, before asking again.</p>
 <p>Owner: ArvGvStream</p>
-<p>Flags: Read / Write</p>
-<p>Default value: 40000</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Default value: 20000</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ArvGvStream--socket-buffer"></a><h3>The <code class="literal">“socket-buffer”</code> property</h3>
 <pre class="programlisting">  “socket-buffer”            <a class="link" href="ArvGvStream.html#ArvGvStreamSocketBuffer" title="enum ArvGvStreamSocketBuffer"><span class="type">ArvGvStreamSocketBuffer</span></a></pre>
-<p>Socket buffer behaviour.</p>
+<p>Incoming socket buffer policy.</p>
 <p>Owner: ArvGvStream</p>
-<p>Flags: Read / Write</p>
-<p>Default value: ARV_GV_STREAM_SOCKET_BUFFER_AUTO</p>
+<p>Flags: Read / Write / Construct</p>
+<p>Default value: ARV_GV_STREAM_SOCKET_BUFFER_FIXED</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="ArvGvStream--socket-buffer-size"></a><h3>The <code class="literal">“socket-buffer-size”</code> property</h3>
 <pre class="programlisting">  “socket-buffer-size”       <span class="type">int</span></pre>
-<p>Socket buffer size, in bytes.</p>
+<p>Size in bytes of the incoming socket buffer. A greater value helps to lower the number of missings packets,
+as the expense of an increased memory usage.</p>
 <p>Owner: ArvGvStream</p>
-<p>Flags: Read / Write</p>
+<p>Flags: Read / Write / Construct</p>
 <p>Allowed values: &gt;= -1</p>
 <p>Default value: 0</p>
 </div>

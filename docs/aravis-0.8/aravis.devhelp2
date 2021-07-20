@@ -193,6 +193,7 @@
     <keyword type="function" name="arv_camera_get_boolean ()" link="ArvCamera.html#arv-camera-get-boolean" since="0.8.0"/>
     <keyword type="function" name="arv_camera_get_float ()" link="ArvCamera.html#arv-camera-get-float" since="0.8.0"/>
     <keyword type="function" name="arv_camera_get_float_bounds ()" link="ArvCamera.html#arv-camera-get-float-bounds" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_get_float_increment ()" link="ArvCamera.html#arv-camera-get-float-increment" since="0.8.16"/>
     <keyword type="function" name="arv_camera_get_integer ()" link="ArvCamera.html#arv-camera-get-integer" since="0.8.0"/>
     <keyword type="function" name="arv_camera_get_integer_bounds ()" link="ArvCamera.html#arv-camera-get-integer-bounds" since="0.8.0"/>
     <keyword type="function" name="arv_camera_get_integer_increment ()" link="ArvCamera.html#arv-camera-get-integer-increment" since="0.8.0"/>
@@ -276,6 +277,7 @@
     <keyword type="function" name="arv_device_set_float_feature_value ()" link="ArvDevice.html#arv-device-set-float-feature-value" since="0.8.0"/>
     <keyword type="function" name="arv_device_get_float_feature_value ()" link="ArvDevice.html#arv-device-get-float-feature-value" since="0.8.0"/>
     <keyword type="function" name="arv_device_get_float_feature_bounds ()" link="ArvDevice.html#arv-device-get-float-feature-bounds" since="0.8.0"/>
+    <keyword type="function" name="arv_device_get_float_feature_increment ()" link="ArvDevice.html#arv-device-get-float-feature-increment" since="0.8.16"/>
     <keyword type="function" name="arv_device_dup_available_enumeration_feature_values ()" link="ArvDevice.html#arv-device-dup-available-enumeration-feature-values" since="0.8.0"/>
     <keyword type="function" name="arv_device_dup_available_enumeration_feature_values_as_strings ()" link="ArvDevice.html#arv-device-dup-available-enumeration-feature-values-as-strings" since="0.8.0"/>
     <keyword type="function" name="arv_device_dup_available_enumeration_feature_values_as_display_names ()" link="ArvDevice.html#arv-device-dup-available-enumeration-feature-values-as-display-names" since="0.8.0"/>
@@ -666,6 +668,7 @@
     <keyword type="enum" name="enum ArvGvStreamPacketResend" link="ArvGvStream.html#ArvGvStreamPacketResend"/>
     <keyword type="struct" name="ArvGvStream" link="ArvGvStream.html#ArvGvStream-struct"/>
     <keyword type="property" name="The “frame-retention” property" link="ArvGvStream.html#ArvGvStream--frame-retention"/>
+    <keyword type="property" name="The “initial-packet-timeout” property" link="ArvGvStream.html#ArvGvStream--initial-packet-timeout"/>
     <keyword type="property" name="The “packet-request-ratio” property" link="ArvGvStream.html#ArvGvStream--packet-request-ratio"/>
     <keyword type="property" name="The “packet-resend” property" link="ArvGvStream.html#ArvGvStream--packet-resend"/>
     <keyword type="property" name="The “packet-timeout” property" link="ArvGvStream.html#ArvGvStream--packet-timeout"/>

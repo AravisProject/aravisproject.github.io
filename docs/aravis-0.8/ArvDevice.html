@@ -218,6 +218,14 @@
 </tr>
 <tr>
 <td class="function_type">
+<span class="returnvalue">double</span>
+</td>
+<td class="function_name">
+<a class="link" href="ArvDevice.html#arv-device-get-float-feature-increment" title="arv_device_get_float_feature_increment ()">arv_device_get_float_feature_increment</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
 <a href="../glib/glib-Basic-Types.html#gint64"><span class="returnvalue">gint64</span></a> *
 </td>
 <td class="function_name">
@@ -1256,6 +1264,49 @@ arv_device_get_float_feature_bounds (<em class="parameter"><code><a class="link"
 </table></div>
 </div>
 <p class="since">Since: <a class="link" href="ix05.html#api-index-0.8.0">0.8.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="arv-device-get-float-feature-increment"></a><h3>arv_device_get_float_feature_increment ()</h3>
+<pre class="programlisting"><span class="returnvalue">double</span>
+arv_device_get_float_feature_increment
+                               (<em class="parameter"><code><a class="link" href="ArvDevice.html" title="ArvDevice"><span class="type">ArvDevice</span></a> *device</code></em>,
+                                <em class="parameter"><code>const <span class="type">char</span> *feature</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Not all float features have evenly distributed allowed values, which means the returned increment may not reflect the allowed value
+set.</p>
+<div class="refsect3">
+<a name="arv-device-get-float-feature-increment.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>device</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ArvDevice.html" title="ArvDevice"><span class="type">ArvDevice</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>feature</p></td>
+<td class="parameter_description"><p>feature name</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>a <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> placeholder</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="arv-device-get-float-feature-increment.returns"></a><h4>Returns</h4>
+<p> feature value increment, or <a href="../glib/glib-Basic-Types.html#G-MINDOUBLE:CAPS"><span class="type">G_MINDOUBLE</span></a> on error.</p>
+</div>
+<p class="since">Since: <a class="link" href="ix05.html#api-index-0.8.16">0.8.16</a></p>
 </div>
 <hr>
 <div class="refsect2">
