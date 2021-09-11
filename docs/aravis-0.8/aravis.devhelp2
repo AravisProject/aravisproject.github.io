@@ -168,6 +168,7 @@
     <keyword type="function" name="arv_camera_dup_available_trigger_sources ()" link="ArvCamera.html#arv-camera-dup-available-trigger-sources" since="0.8.0"/>
     <keyword type="function" name="arv_camera_dup_available_triggers ()" link="ArvCamera.html#arv-camera-dup-available-triggers" since="0.8.0"/>
     <keyword type="function" name="arv_camera_clear_triggers ()" link="ArvCamera.html#arv-camera-clear-triggers" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_is_software_trigger_supported ()" link="ArvCamera.html#arv-camera-is-software-trigger-supported" since="0.8.17"/>
     <keyword type="function" name="arv_camera_software_trigger ()" link="ArvCamera.html#arv-camera-software-trigger" since="0.8.0"/>
     <keyword type="function" name="arv_camera_is_exposure_time_available ()" link="ArvCamera.html#arv-camera-is-exposure-time-available" since="0.8.0"/>
     <keyword type="function" name="arv_camera_is_exposure_auto_available ()" link="ArvCamera.html#arv-camera-is-exposure-auto-available" since="0.8.0"/>
@@ -187,6 +188,7 @@
     <keyword type="function" name="arv_camera_get_payload ()" link="ArvCamera.html#arv-camera-get-payload" since="0.8.0"/>
     <keyword type="function" name="arv_camera_is_feature_available ()" link="ArvCamera.html#arv-camera-is-feature-available" since="0.8.0"/>
     <keyword type="function" name="arv_camera_execute_command ()" link="ArvCamera.html#arv-camera-execute-command" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_is_enumeration_entry_available ()" link="ArvCamera.html#arv-camera-is-enumeration-entry-available" since="0.8.17"/>
     <keyword type="function" name="arv_camera_dup_available_enumerations ()" link="ArvCamera.html#arv-camera-dup-available-enumerations" since="0.8.0"/>
     <keyword type="function" name="arv_camera_dup_available_enumerations_as_strings ()" link="ArvCamera.html#arv-camera-dup-available-enumerations-as-strings" since="0.8.0"/>
     <keyword type="function" name="arv_camera_dup_available_enumerations_as_display_names ()" link="ArvCamera.html#arv-camera-dup-available-enumerations-as-display-names" since="0.8.0"/>
@@ -216,6 +218,7 @@
     <keyword type="function" name="arv_camera_gv_set_packet_size_adjustment ()" link="ArvCamera.html#arv-camera-gv-set-packet-size-adjustment" since="0.8.3"/>
     <keyword type="function" name="arv_camera_gv_set_stream_options ()" link="ArvCamera.html#arv-camera-gv-set-stream-options" since="0.6.0"/>
     <keyword type="function" name="arv_camera_is_uv_device ()" link="ArvCamera.html#arv-camera-is-uv-device" since="0.6.0"/>
+    <keyword type="function" name="arv_camera_uv_set_usb_mode ()" link="ArvCamera.html#arv-camera-uv-set-usb-mode" since="0.8.17"/>
     <keyword type="function" name="arv_camera_uv_get_bandwidth ()" link="ArvCamera.html#arv-camera-uv-get-bandwidth" since="0.8.0"/>
     <keyword type="function" name="arv_camera_uv_get_bandwidth_bounds ()" link="ArvCamera.html#arv-camera-uv-get-bandwidth-bounds" since="0.8.0"/>
     <keyword type="function" name="arv_camera_uv_is_bandwidth_control_available ()" link="ArvCamera.html#arv-camera-uv-is-bandwidth-control-available" since="0.8.0"/>
@@ -278,6 +281,7 @@
     <keyword type="function" name="arv_device_get_float_feature_value ()" link="ArvDevice.html#arv-device-get-float-feature-value" since="0.8.0"/>
     <keyword type="function" name="arv_device_get_float_feature_bounds ()" link="ArvDevice.html#arv-device-get-float-feature-bounds" since="0.8.0"/>
     <keyword type="function" name="arv_device_get_float_feature_increment ()" link="ArvDevice.html#arv-device-get-float-feature-increment" since="0.8.16"/>
+    <keyword type="function" name="arv_device_is_enumeration_entry_available ()" link="ArvDevice.html#arv-device-is-enumeration-entry-available" since="0.8.17"/>
     <keyword type="function" name="arv_device_dup_available_enumeration_feature_values ()" link="ArvDevice.html#arv-device-dup-available-enumeration-feature-values" since="0.8.0"/>
     <keyword type="function" name="arv_device_dup_available_enumeration_feature_values_as_strings ()" link="ArvDevice.html#arv-device-dup-available-enumeration-feature-values-as-strings" since="0.8.0"/>
     <keyword type="function" name="arv_device_dup_available_enumeration_feature_values_as_display_names ()" link="ArvDevice.html#arv-device-dup-available-enumeration-feature-values-as-display-names" since="0.8.0"/>
@@ -684,9 +688,11 @@
     <keyword type="property" name="The “serial-number” property" link="ArvGvFakeCamera.html#ArvGvFakeCamera--serial-number"/>
     <keyword type="function" name="arv_uv_interface_get_instance ()" link="ArvUvInterface.html#arv-uv-interface-get-instance"/>
     <keyword type="struct" name="ArvUvInterface" link="ArvUvInterface.html#ArvUvInterface-struct"/>
+    <keyword type="property" name="The “guid” property" link="ArvUvDevice.html#ArvUvDevice--guid"/>
     <keyword type="property" name="The “product” property" link="ArvUvDevice.html#ArvUvDevice--product"/>
     <keyword type="property" name="The “serial-number” property" link="ArvUvDevice.html#ArvUvDevice--serial-number"/>
     <keyword type="property" name="The “vendor” property" link="ArvUvDevice.html#ArvUvDevice--vendor"/>
+    <keyword type="property" name="The “usb-mode” property" link="ArvUvStream.html#ArvUvStream--usb-mode"/>
     <keyword type="function" name="arv_fake_interface_get_instance ()" link="ArvFakeInterface.html#arv-fake-interface-get-instance"/>
     <keyword type="struct" name="ArvFakeInterface" link="ArvFakeInterface.html#ArvFakeInterface-struct"/>
     <keyword type="function" name="arv_fake_device_new ()" link="ArvFakeDevice.html#arv-fake-device-new" since="0.8.0"/>
@@ -805,6 +811,7 @@
     <keyword type="function" name="arv_guint16_from_unaligned_le_ptr ()" link="aravis-ArvZip.html#arv-guint16-from-unaligned-le-ptr"/>
     <keyword type="function" name="arv_guint32_from_unaligned_le_ptr ()" link="aravis-ArvZip.html#arv-guint32-from-unaligned-le-ptr"/>
     <keyword type="struct" name="ArvZip" link="aravis-ArvZip.html#ArvZip"/>
+    <keyword type="function" name="arv_xml_schema_new_from_memory ()" link="ArvXmlSchema.html#arv-xml-schema-new-from-memory"/>
     <keyword type="function" name="arv_xml_schema_new_from_file ()" link="ArvXmlSchema.html#arv-xml-schema-new-from-file"/>
     <keyword type="function" name="arv_xml_schema_new_from_path ()" link="ArvXmlSchema.html#arv-xml-schema-new-from-path"/>
     <keyword type="function" name="arv_xml_schema_validate ()" link="ArvXmlSchema.html#arv-xml-schema-validate"/>
