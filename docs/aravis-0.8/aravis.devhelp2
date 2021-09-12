@@ -688,6 +688,10 @@
     <keyword type="property" name="The “serial-number” property" link="ArvGvFakeCamera.html#ArvGvFakeCamera--serial-number"/>
     <keyword type="function" name="arv_uv_interface_get_instance ()" link="ArvUvInterface.html#arv-uv-interface-get-instance"/>
     <keyword type="struct" name="ArvUvInterface" link="ArvUvInterface.html#ArvUvInterface-struct"/>
+    <keyword type="function" name="arv_uv_device_new ()" link="ArvUvDevice.html#arv-uv-device-new" since="0.8.0"/>
+    <keyword type="function" name="arv_uv_device_new_from_guid ()" link="ArvUvDevice.html#arv-uv-device-new-from-guid" since="0.8.17"/>
+    <keyword type="function" name="arv_uv_device_set_usb_mode ()" link="ArvUvDevice.html#arv-uv-device-set-usb-mode" since="0.8.17"/>
+    <keyword type="enum" name="enum ArvUvUsbMode" link="ArvUvDevice.html#ArvUvUsbMode"/>
     <keyword type="property" name="The “guid” property" link="ArvUvDevice.html#ArvUvDevice--guid"/>
     <keyword type="property" name="The “product” property" link="ArvUvDevice.html#ArvUvDevice--product"/>
     <keyword type="property" name="The “serial-number” property" link="ArvUvDevice.html#ArvUvDevice--serial-number"/>
@@ -923,6 +927,9 @@
     <keyword type="constant" name="ARV_GV_STREAM_SOCKET_BUFFER_AUTO" link="ArvGvStream.html#ARV-GV-STREAM-SOCKET-BUFFER-AUTO:CAPS"/>
     <keyword type="constant" name="ARV_GV_STREAM_PACKET_RESEND_NEVER" link="ArvGvStream.html#ARV-GV-STREAM-PACKET-RESEND-NEVER:CAPS"/>
     <keyword type="constant" name="ARV_GV_STREAM_PACKET_RESEND_ALWAYS" link="ArvGvStream.html#ARV-GV-STREAM-PACKET-RESEND-ALWAYS:CAPS"/>
+    <keyword type="constant" name="ARV_UV_USB_MODE_SYNC" link="ArvUvDevice.html#ARV-UV-USB-MODE-SYNC:CAPS"/>
+    <keyword type="constant" name="ARV_UV_USB_MODE_ASYNC" link="ArvUvDevice.html#ARV-UV-USB-MODE-ASYNC:CAPS"/>
+    <keyword type="constant" name="ARV_UV_USB_MODE_DEFAULT" link="ArvUvDevice.html#ARV-UV-USB-MODE-DEFAULT:CAPS"/>
     <keyword type="constant" name="ARV_XML_SCHEMA_ERROR_INVALID_STRUCTURE" link="ArvXmlSchema.html#ARV-XML-SCHEMA-ERROR-INVALID-STRUCTURE:CAPS"/>
   </functions>
 </book>
