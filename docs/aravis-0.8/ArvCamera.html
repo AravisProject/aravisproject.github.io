@@ -607,6 +607,62 @@
 </tr>
 <tr>
 <td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="ArvCamera.html#arv-camera-is-black-level-available" title="arv_camera_is_black_level_available ()">arv_camera_is_black_level_available</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">double</span>
+</td>
+<td class="function_name">
+<a class="link" href="ArvCamera.html#arv-camera-get-black-level" title="arv_camera_get_black_level ()">arv_camera_get_black_level</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ArvCamera.html#arv-camera-set-black-level" title="arv_camera_set_black_level ()">arv_camera_set_black_level</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ArvCamera.html#arv-camera-get-black-level-bounds" title="arv_camera_get_black_level_bounds ()">arv_camera_get_black_level_bounds</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="ArvCamera.html#arv-camera-is-black-level-auto-available" title="arv_camera_is_black_level_auto_available ()">arv_camera_is_black_level_auto_available</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="ArvCamera.html#ArvAuto" title="enum ArvAuto"><span class="returnvalue">ArvAuto</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="ArvCamera.html#arv-camera-get-black-level-auto" title="arv_camera_get_black_level_auto ()">arv_camera_get_black_level_auto</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ArvCamera.html#arv-camera-set-black-level-auto" title="arv_camera_set_black_level_auto ()">arv_camera_set_black_level_auto</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
 <a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
 </td>
 <td class="function_name">
@@ -1257,13 +1313,13 @@ drawback of not exposing all the available features. See <a class="link" href="A
 <span class="k">static</span> <span class="n">gboolean</span> <span class="n">cancel</span> <span class="o">=</span> <span class="n">FALSE</span><span class="p">;</span>
 
 <span class="k">static</span> <span class="kt">void</span>
-<span class="n">set_cancel</span> <span class="p">(</span><span class="kt">int</span> <span class="n">signal</span><span class="p">)</span>
+<span class="nf">set_cancel</span> <span class="p">(</span><span class="kt">int</span> <span class="n">signal</span><span class="p">)</span>
 <span class="p">{</span>
 	<span class="n">cancel</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="k">static</span> <span class="kt">void</span>
-<span class="n">new_buffer_cb</span> <span class="p">(</span><span class="n">ArvStream</span> <span class="o">*</span><span class="n">stream</span><span class="p">,</span> <span class="n">ApplicationData</span> <span class="o">*</span><span class="n">data</span><span class="p">)</span>
+<span class="nf">new_buffer_cb</span> <span class="p">(</span><span class="n">ArvStream</span> <span class="o">*</span><span class="n">stream</span><span class="p">,</span> <span class="n">ApplicationData</span> <span class="o">*</span><span class="n">data</span><span class="p">)</span>
 <span class="p">{</span>
 	<span class="n">ArvBuffer</span> <span class="o">*</span><span class="n">buffer</span><span class="p">;</span>
 
@@ -1277,7 +1333,7 @@ drawback of not exposing all the available features. See <a class="link" href="A
 <span class="p">}</span>
 
 <span class="k">static</span> <span class="n">gboolean</span>
-<span class="n">periodic_task_cb</span> <span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="n">abstract_data</span><span class="p">)</span>
+<span class="nf">periodic_task_cb</span> <span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="n">abstract_data</span><span class="p">)</span>
 <span class="p">{</span>
 	<span class="n">ApplicationData</span> <span class="o">*</span><span class="n">data</span> <span class="o">=</span> <span class="n">abstract_data</span><span class="p">;</span>
 
@@ -1293,7 +1349,7 @@ drawback of not exposing all the available features. See <a class="link" href="A
 <span class="p">}</span>
 
 <span class="k">static</span> <span class="kt">void</span>
-<span class="n">control_lost_cb</span> <span class="p">(</span><span class="n">ArvGvDevice</span> <span class="o">*</span><span class="n">gv_device</span><span class="p">)</span>
+<span class="nf">control_lost_cb</span> <span class="p">(</span><span class="n">ArvGvDevice</span> <span class="o">*</span><span class="n">gv_device</span><span class="p">)</span>
 <span class="p">{</span>
 	<span class="cm">/* Control of the device is lost. Display a message and force application exit */</span>
 	<span class="n">printf</span> <span class="p">(</span><span class="s">&quot;Control lost</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
@@ -1302,7 +1358,7 @@ drawback of not exposing all the available features. See <a class="link" href="A
 <span class="p">}</span>
 
 <span class="kt">int</span>
-<span class="n">main</span> <span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span>
+<span class="nf">main</span> <span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span>
 <span class="p">{</span>
 	<span class="n">ApplicationData</span> <span class="n">data</span><span class="p">;</span>
 	<span class="n">ArvCamera</span> <span class="o">*</span><span class="n">camera</span><span class="p">;</span>
@@ -3845,7 +3901,7 @@ arv_camera_is_gain_auto_available (<em class="parameter"><code><a class="link" h
 </div>
 <div class="refsect3">
 <a name="arv-camera-is-gain-auto-available.returns"></a><h4>Returns</h4>
-<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if Gain feature is available.</p>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if auto gain feature is available.</p>
 </div>
 <p class="since">Since: <a class="link" href="ix05.html#api-index-0.8.0">0.8.0</a></p>
 </div>
@@ -4034,6 +4090,259 @@ arv_camera_get_gain_auto (<em class="parameter"><code><a class="link" href="ArvC
 <p> auto gain mode selection</p>
 </div>
 <p class="since">Since: <a class="link" href="ix05.html#api-index-0.8.0">0.8.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="arv-camera-is-black-level-available"></a><h3>arv_camera_is_black_level_available ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+arv_camera_is_black_level_available (<em class="parameter"><code><a class="link" href="ArvCamera.html" title="ArvCamera"><span class="type">ArvCamera</span></a> *camera</code></em>,
+                                     <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="refsect3">
+<a name="arv-camera-is-black-level-available.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>camera</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ArvCamera.html" title="ArvCamera"><span class="type">ArvCamera</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>a <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> placeholder, <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="arv-camera-is-black-level-available.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if BlackLevel feature is available.</p>
+</div>
+<p class="since">Since: <a class="link" href="ix05.html#api-index-0.8.19">0.8.19</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="arv-camera-get-black-level"></a><h3>arv_camera_get_black_level ()</h3>
+<pre class="programlisting"><span class="returnvalue">double</span>
+arv_camera_get_black_level (<em class="parameter"><code><a class="link" href="ArvCamera.html" title="ArvCamera"><span class="type">ArvCamera</span></a> *camera</code></em>,
+                            <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="refsect3">
+<a name="arv-camera-get-black-level.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>camera</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ArvCamera.html" title="ArvCamera"><span class="type">ArvCamera</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>a <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> placeholder, <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="arv-camera-get-black-level.returns"></a><h4>Returns</h4>
+<p> the current blacklevel setting.</p>
+</div>
+<p class="since">Since: <a class="link" href="ix05.html#api-index-0.8.19">0.8.19</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="arv-camera-set-black-level"></a><h3>arv_camera_set_black_level ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+arv_camera_set_black_level (<em class="parameter"><code><a class="link" href="ArvCamera.html" title="ArvCamera"><span class="type">ArvCamera</span></a> *camera</code></em>,
+                            <em class="parameter"><code><span class="type">double</span> blacklevel</code></em>,
+                            <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="refsect3">
+<a name="arv-camera-set-black-level.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>camera</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ArvCamera.html" title="ArvCamera"><span class="type">ArvCamera</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>blacklevel</p></td>
+<td class="parameter_description"><p>blacklevel value</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>a <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> placeholder, <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="ix05.html#api-index-0.8.19">0.8.19</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="arv-camera-get-black-level-bounds"></a><h3>arv_camera_get_black_level_bounds ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+arv_camera_get_black_level_bounds (<em class="parameter"><code><a class="link" href="ArvCamera.html" title="ArvCamera"><span class="type">ArvCamera</span></a> *camera</code></em>,
+                                   <em class="parameter"><code><span class="type">double</span> *min</code></em>,
+                                   <em class="parameter"><code><span class="type">double</span> *max</code></em>,
+                                   <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Retrieves blacklevel bounds.</p>
+<div class="refsect3">
+<a name="arv-camera-get-black-level-bounds.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>camera</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ArvCamera.html" title="ArvCamera"><span class="type">ArvCamera</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>min</p></td>
+<td class="parameter_description"><p>minimum blacklevel. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>max</p></td>
+<td class="parameter_description"><p>maximum blacklevel. </p></td>
+<td class="parameter_annotations"><span class="annotation">[<acronym title="Parameter for returning results. Default is transfer full."><span class="acronym">out</span></acronym>]</span></td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>a <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> placeholder, <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="ix05.html#api-index-0.8.19">0.8.19</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="arv-camera-is-black-level-auto-available"></a><h3>arv_camera_is_black_level_auto_available ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
+arv_camera_is_black_level_auto_available
+                               (<em class="parameter"><code><a class="link" href="ArvCamera.html" title="ArvCamera"><span class="type">ArvCamera</span></a> *camera</code></em>,
+                                <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="refsect3">
+<a name="arv-camera-is-black-level-auto-available.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>camera</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ArvCamera.html" title="ArvCamera"><span class="type">ArvCamera</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>a <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> placeholder, <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ingore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="arv-camera-is-black-level-auto-available.returns"></a><h4>Returns</h4>
+<p> <a href="../glib/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> if auto black level feature is available.</p>
+</div>
+<p class="since">Since: <a class="link" href="ix05.html#api-index-0.8.19">0.8.19</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="arv-camera-get-black-level-auto"></a><h3>arv_camera_get_black_level_auto ()</h3>
+<pre class="programlisting"><a class="link" href="ArvCamera.html#ArvAuto" title="enum ArvAuto"><span class="returnvalue">ArvAuto</span></a>
+arv_camera_get_black_level_auto (<em class="parameter"><code><a class="link" href="ArvCamera.html" title="ArvCamera"><span class="type">ArvCamera</span></a> *camera</code></em>,
+                                 <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<div class="refsect3">
+<a name="arv-camera-get-black-level-auto.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>camera</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ArvCamera.html" title="ArvCamera"><span class="type">ArvCamera</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>a <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> placeholder, <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="arv-camera-get-black-level-auto.returns"></a><h4>Returns</h4>
+<p> auto black level mode selection</p>
+</div>
+<p class="since">Since: <a class="link" href="ix05.html#api-index-0.8.19">0.8.19</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="arv-camera-set-black-level-auto"></a><h3>arv_camera_set_black_level_auto ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+arv_camera_set_black_level_auto (<em class="parameter"><code><a class="link" href="ArvCamera.html" title="ArvCamera"><span class="type">ArvCamera</span></a> *camera</code></em>,
+                                 <em class="parameter"><code><a class="link" href="ArvCamera.html#ArvAuto" title="enum ArvAuto"><span class="type">ArvAuto</span></a> auto_mode</code></em>,
+                                 <em class="parameter"><code><a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>Configures automatic black level feature.</p>
+<div class="refsect3">
+<a name="arv-camera-set-black-level-auto.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>camera</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ArvCamera.html" title="ArvCamera"><span class="type">ArvCamera</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>auto_mode</p></td>
+<td class="parameter_description"><p>auto black_level mode selection</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>a <a href="../glib/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> placeholder, <a href="../glib/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="ix05.html#api-index-0.8.19">0.8.19</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -5809,7 +6118,7 @@ arv_exposure_mode_to_string (<em class="parameter"><code><a class="link" href="A
 <a name="ArvCamera.other_details"></a><h2>Types and Values</h2>
 <div class="refsect2">
 <a name="ARAVIS-VERSION:CAPS"></a><h3>ARAVIS_VERSION</h3>
-<pre class="programlisting">#define ARAVIS_VERSION "0.8.18"
+<pre class="programlisting">#define ARAVIS_VERSION "0.8.19"
 </pre>
 <p>The version of the Aravis library.</p>
 <p class="since">Since: <a class="link" href="ix05.html#api-index-0.8.0">0.8.0</a></p>
@@ -5825,7 +6134,7 @@ arv_exposure_mode_to_string (<em class="parameter"><code><a class="link" href="A
 <hr>
 <div class="refsect2">
 <a name="ARAVIS-MICRO-VERSION:CAPS"></a><h3>ARAVIS_MICRO_VERSION</h3>
-<pre class="programlisting">#define ARAVIS_MICRO_VERSION 18
+<pre class="programlisting">#define ARAVIS_MICRO_VERSION 19
 </pre>
 <p>The micor version of the Aravis library.</p>
 <p class="since">Since: <a class="link" href="ix04.html#api-index-0.6.0">0.6.0</a></p>

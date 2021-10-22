@@ -185,6 +185,13 @@
     <keyword type="function" name="arv_camera_get_gain_bounds ()" link="ArvCamera.html#arv-camera-get-gain-bounds" since="0.8.0"/>
     <keyword type="function" name="arv_camera_set_gain_auto ()" link="ArvCamera.html#arv-camera-set-gain-auto" since="0.8.0"/>
     <keyword type="function" name="arv_camera_get_gain_auto ()" link="ArvCamera.html#arv-camera-get-gain-auto" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_is_black_level_available ()" link="ArvCamera.html#arv-camera-is-black-level-available" since="0.8.19"/>
+    <keyword type="function" name="arv_camera_get_black_level ()" link="ArvCamera.html#arv-camera-get-black-level" since="0.8.19"/>
+    <keyword type="function" name="arv_camera_set_black_level ()" link="ArvCamera.html#arv-camera-set-black-level" since="0.8.19"/>
+    <keyword type="function" name="arv_camera_get_black_level_bounds ()" link="ArvCamera.html#arv-camera-get-black-level-bounds" since="0.8.19"/>
+    <keyword type="function" name="arv_camera_is_black_level_auto_available ()" link="ArvCamera.html#arv-camera-is-black-level-auto-available" since="0.8.19"/>
+    <keyword type="function" name="arv_camera_get_black_level_auto ()" link="ArvCamera.html#arv-camera-get-black-level-auto" since="0.8.19"/>
+    <keyword type="function" name="arv_camera_set_black_level_auto ()" link="ArvCamera.html#arv-camera-set-black-level-auto" since="0.8.19"/>
     <keyword type="function" name="arv_camera_get_payload ()" link="ArvCamera.html#arv-camera-get-payload" since="0.8.0"/>
     <keyword type="function" name="arv_camera_is_feature_available ()" link="ArvCamera.html#arv-camera-is-feature-available" since="0.8.0"/>
     <keyword type="function" name="arv_camera_execute_command ()" link="ArvCamera.html#arv-camera-execute-command" since="0.8.0"/>
@@ -687,7 +694,6 @@
     <keyword type="property" name="The “interface-name” property" link="ArvGvFakeCamera.html#ArvGvFakeCamera--interface-name"/>
     <keyword type="property" name="The “serial-number” property" link="ArvGvFakeCamera.html#ArvGvFakeCamera--serial-number"/>
     <keyword type="function" name="arv_uv_interface_get_instance ()" link="ArvUvInterface.html#arv-uv-interface-get-instance"/>
-    <keyword type="struct" name="ArvUvInterface" link="ArvUvInterface.html#ArvUvInterface-struct"/>
     <keyword type="function" name="arv_uv_device_new ()" link="ArvUvDevice.html#arv-uv-device-new" since="0.8.0"/>
     <keyword type="function" name="arv_uv_device_new_from_guid ()" link="ArvUvDevice.html#arv-uv-device-new-from-guid" since="0.8.17"/>
     <keyword type="function" name="arv_uv_device_set_usb_mode ()" link="ArvUvDevice.html#arv-uv-device-set-usb-mode" since="0.8.17"/>
