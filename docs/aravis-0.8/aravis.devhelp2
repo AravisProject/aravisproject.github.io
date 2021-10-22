@@ -85,10 +85,22 @@
       </sub>
       <sub name="Object Hierarchy" link="ch11.html"/>
       <sub name="Index" link="ix01.html"/>
-      <sub name="Index of new symbols in 0.2" link="ix02.html"/>
-      <sub name="Index of new symbols in 0.4" link="ix03.html"/>
-      <sub name="Index of new symbols in 0.6" link="ix04.html"/>
-      <sub name="Index of new symbols in 0.8" link="ix05.html"/>
+      <sub name="Index of new symbols in 0.2.0" link="ix02.html">
+        <sub name="" link="ix02.html#id-1.3.11.3"/>
+      </sub>
+      <sub name="Index of new symbols in 0.4.0" link="ix04.html"/>
+      <sub name="Index of new symbols in 0.6.0" link="ix05.html">
+        <sub name="" link="ix05.html#id-1.3.13.3"/>
+      </sub>
+      <sub name="Index of new symbols in 0.8.0" link="ix07.html"/>
+      <sub name="Index of new symbols in 0.8.3" link="ix08.html"/>
+      <sub name="Index of new symbols in 0.8.6" link="ix09.html"/>
+      <sub name="Index of new symbols in 0.8.8" link="ix10.html"/>
+      <sub name="Index of new symbols in 0.8.11" link="ix11.html"/>
+      <sub name="Index of new symbols in 0.8.15" link="ix12.html"/>
+      <sub name="Index of new symbols in 0.8.16" link="ix13.html"/>
+      <sub name="Index of new symbols in 0.8.17" link="ix14.html"/>
+      <sub name="Index of new symbols in 0.8.19" link="ix15.html"/>
       <sub name="Annotation Glossary" link="annotation-glossary.html"/>
     </sub>
     <sub name="Ethernet protocol (GV)" link="aravis-gv.html">
