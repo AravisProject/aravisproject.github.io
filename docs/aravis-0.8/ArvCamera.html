@@ -50,6 +50,30 @@
 </tr>
 <tr>
 <td class="function_type">
+<a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="ArvCamera.html#arv-get-major-version" title="arv_get_major_version ()">arv_get_major_version</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="ArvCamera.html#arv-get-micro-version" title="arv_get_micro_version ()">arv_get_micro_version</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+</td>
+<td class="function_name">
+<a class="link" href="ArvCamera.html#arv-get-minor-version" title="arv_get_minor_version ()">arv_get_minor_version</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
 <a class="link" href="ArvCamera.html#ArvAuto" title="enum ArvAuto"><span class="returnvalue">ArvAuto</span></a>
 </td>
 <td class="function_name">
@@ -1089,6 +1113,10 @@
 </tr>
 <tr>
 <td class="define_keyword">#define</td>
+<td class="function_name"><a class="link" href="ArvCamera.html#ARAVIS-API-VERSION:CAPS" title="ARAVIS_API_VERSION">ARAVIS_API_VERSION</a></td>
+</tr>
+<tr>
+<td class="define_keyword">#define</td>
 <td class="function_name"><a class="link" href="ArvCamera.html#ARAVIS-MAJOR-VERSION:CAPS" title="ARAVIS_MAJOR_VERSION">ARAVIS_MAJOR_VERSION</a></td>
 </tr>
 <tr>
@@ -1490,6 +1518,57 @@ against.</p>
 is the same as or newer than the passed-in version.</p>
 </div>
 <p class="since">Since: <a class="link" href="ix05.html#api-index-0.6.0">0.6.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="arv-get-major-version"></a><h3>arv_get_major_version ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+arv_get_major_version (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Returns the major version number of the Aravis library.</p>
+<p>For example, in Aravis version 0.8.20 this is 0.</p>
+<p>This function is in the library, so it represents the Aravis library
+your code is running against. Contrast with the <a class="link" href="ArvCamera.html#ARAVIS-MAJOR-VERSION:CAPS" title="ARAVIS_MAJOR_VERSION"><code class="literal">ARAVIS_MAJOR_VERSION</code></a>
+macro, which represents the major version of the Aravis headers you
+have included when compiling your code.</p>
+<div class="refsect3">
+<a name="arv-get-major-version.returns"></a><h4>Returns</h4>
+<p> the major version number of the Aravis library</p>
+</div>
+<p class="since">Since: <a class="link" href="ix16.html#api-index-0.8.20">0.8.20</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="arv-get-micro-version"></a><h3>arv_get_micro_version ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+arv_get_micro_version (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Returns the micro version number of the Aravis library.</p>
+<p>For example, in Aravis version 0.8.20 this is 20.</p>
+<p>This function is in the library, so it represents the Aravis library
+your code is running against. Contrast with the <a class="link" href="ArvCamera.html#ARAVIS-MICRO-VERSION:CAPS" title="ARAVIS_MICRO_VERSION"><code class="literal">ARAVIS_MICRO_VERSION</code></a>
+macro, which represents the micro version of the Aravis headers you
+have included when compiling your code.</p>
+<div class="refsect3">
+<a name="arv-get-micro-version.returns"></a><h4>Returns</h4>
+<p> the micro version number of the Aravis library</p>
+</div>
+<p class="since">Since: <a class="link" href="ix16.html#api-index-0.8.20">0.8.20</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="arv-get-minor-version"></a><h3>arv_get_minor_version ()</h3>
+<pre class="programlisting"><a href="../glib/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>
+arv_get_minor_version (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>Returns the minor version number of the Aravis library.</p>
+<p>For example, in Aravis version 0.8.20 this is 8.</p>
+<p>This function is in the library, so it represents the Aravis library
+your code is running against. Contrast with the <a class="link" href="ArvCamera.html#ARAVIS-MINOR-VERSION:CAPS" title="ARAVIS_MINOR_VERSION"><code class="literal">ARAVIS_MINOR_VERSION</code></a>
+macro, which represents the minor version of the Aravis headers you
+have included when compiling your code.</p>
+<div class="refsect3">
+<a name="arv-get-minor-version.returns"></a><h4>Returns</h4>
+<p> the minor version number of the Aravis library</p>
+</div>
+<p class="since">Since: <a class="link" href="ix16.html#api-index-0.8.20">0.8.20</a></p>
 </div>
 <hr>
 <div class="refsect2">
@@ -6122,6 +6201,14 @@ arv_exposure_mode_to_string (<em class="parameter"><code><a class="link" href="A
 </pre>
 <p>The version of the Aravis library.</p>
 <p class="since">Since: <a class="link" href="ix07.html#api-index-0.8.0">0.8.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ARAVIS-API-VERSION:CAPS"></a><h3>ARAVIS_API_VERSION</h3>
+<pre class="programlisting">#define ARAVIS_API_VERSION "0.8"
+</pre>
+<p>The version of the Aravis library API.</p>
+<p class="since">Since: <a class="link" href="ix16.html#api-index-0.8.20">0.8.20</a></p>
 </div>
 <hr>
 <div class="refsect2">

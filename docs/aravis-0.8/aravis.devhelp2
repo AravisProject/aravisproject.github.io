@@ -99,6 +99,7 @@
       <sub name="Index of new symbols in 0.8.16" link="ix13.html"/>
       <sub name="Index of new symbols in 0.8.17" link="ix14.html"/>
       <sub name="Index of new symbols in 0.8.19" link="ix15.html"/>
+      <sub name="Index of new symbols in 0.8.20" link="ix16.html"/>
       <sub name="Annotation Glossary" link="annotation-glossary.html"/>
     </sub>
     <sub name="Ethernet protocol (GV)" link="aravis-gv.html">
@@ -115,6 +116,7 @@
     <keyword type="function" name="arv_get_device_model ()" link="aravis-Arv.html#arv-get-device-model" since="0.6.0"/>
     <keyword type="function" name="arv_get_device_serial_nbr ()" link="aravis-Arv.html#arv-get-device-serial-nbr" since="0.6.0"/>
     <keyword type="function" name="arv_get_device_vendor ()" link="aravis-Arv.html#arv-get-device-vendor" since="0.6.0"/>
+    <keyword type="function" name="arv_get_device_manufacturer_info ()" link="aravis-Arv.html#arv-get-device-manufacturer-info" since="0.8.20"/>
     <keyword type="function" name="arv_get_device_address ()" link="aravis-Arv.html#arv-get-device-address" since="0.6.0"/>
     <keyword type="function" name="arv_get_device_protocol ()" link="aravis-Arv.html#arv-get-device-protocol" since="0.6.0"/>
     <keyword type="function" name="arv_open_device ()" link="aravis-Arv.html#arv-open-device" since="0.8.0"/>
@@ -124,6 +126,9 @@
     <keyword type="function" name="arv_enable_interface ()" link="aravis-Arv.html#arv-enable-interface"/>
     <keyword type="function" name="arv_shutdown ()" link="aravis-Arv.html#arv-shutdown"/>
     <keyword type="macro" name="ARAVIS_CHECK_VERSION()" link="ArvCamera.html#ARAVIS-CHECK-VERSION:CAPS" since="0.6.0"/>
+    <keyword type="function" name="arv_get_major_version ()" link="ArvCamera.html#arv-get-major-version" since="0.8.20"/>
+    <keyword type="function" name="arv_get_micro_version ()" link="ArvCamera.html#arv-get-micro-version" since="0.8.20"/>
+    <keyword type="function" name="arv_get_minor_version ()" link="ArvCamera.html#arv-get-minor-version" since="0.8.20"/>
     <keyword type="function" name="arv_auto_from_string ()" link="ArvCamera.html#arv-auto-from-string"/>
     <keyword type="function" name="arv_auto_to_string ()" link="ArvCamera.html#arv-auto-to-string"/>
     <keyword type="function" name="arv_camera_new ()" link="ArvCamera.html#arv-camera-new" since="0.8.0"/>
@@ -252,6 +257,7 @@
     <keyword type="function" name="arv_exposure_mode_from_string ()" link="ArvCamera.html#arv-exposure-mode-from-string"/>
     <keyword type="function" name="arv_exposure_mode_to_string ()" link="ArvCamera.html#arv-exposure-mode-to-string"/>
     <keyword type="macro" name="ARAVIS_VERSION" link="ArvCamera.html#ARAVIS-VERSION:CAPS" since="0.8.0"/>
+    <keyword type="macro" name="ARAVIS_API_VERSION" link="ArvCamera.html#ARAVIS-API-VERSION:CAPS" since="0.8.20"/>
     <keyword type="macro" name="ARAVIS_MAJOR_VERSION" link="ArvCamera.html#ARAVIS-MAJOR-VERSION:CAPS" since="0.6.0"/>
     <keyword type="macro" name="ARAVIS_MICRO_VERSION" link="ArvCamera.html#ARAVIS-MICRO-VERSION:CAPS" since="0.6.0"/>
     <keyword type="macro" name="ARAVIS_MINOR_VERSION" link="ArvCamera.html#ARAVIS-MINOR-VERSION:CAPS" since="0.6.0"/>
@@ -271,6 +277,7 @@
     <keyword type="function" name="arv_interface_get_device_physical_id ()" link="ArvInterface.html#arv-interface-get-device-physical-id" since="0.2.0"/>
     <keyword type="function" name="arv_interface_get_device_serial_nbr ()" link="ArvInterface.html#arv-interface-get-device-serial-nbr" since="0.6.0"/>
     <keyword type="function" name="arv_interface_get_device_vendor ()" link="ArvInterface.html#arv-interface-get-device-vendor" since="0.6.0"/>
+    <keyword type="function" name="arv_interface_get_device_manufacturer_info ()" link="ArvInterface.html#arv-interface-get-device-manufacturer-info" since="0.8.20"/>
     <keyword type="function" name="arv_interface_get_device_protocol ()" link="ArvInterface.html#arv-interface-get-device-protocol" since="0.6.0"/>
     <keyword type="function" name="arv_interface_get_n_devices ()" link="ArvInterface.html#arv-interface-get-n-devices" since="0.2.0"/>
     <keyword type="function" name="arv_interface_open_device ()" link="ArvInterface.html#arv-interface-open-device" since="0.2.0"/>
